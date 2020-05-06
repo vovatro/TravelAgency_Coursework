@@ -25,22 +25,22 @@ namespace DAL.TAContext
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AgencyWorker> AgencyWorkers { get; set; }
-        public virtual DbSet<ArchiveOfEndedTour> ArchiveOfEndedTours { get; set; }
-        public virtual DbSet<City> Cities { get; set; }
-        public virtual DbSet<Client> Clients { get; set; }
-        public virtual DbSet<Country> Countries { get; set; }
-        public virtual DbSet<Hotel> Hotels { get; set; }
-        public virtual DbSet<ImagesHotel> ImagesHotels { get; set; }
-        public virtual DbSet<ImagesShowPlace> ImagesShowPlaces { get; set; }
-        public virtual DbSet<ListClientShowInfoTour> ListClientShowInfoTours { get; set; }
-        public virtual DbSet<ListOfTouristBuy> ListOfTouristBuys { get; set; }
-        public virtual DbSet<PointInTour> PointInTours { get; set; }
-        public virtual DbSet<ResponsibleForTheCountry> ResponsibleForTheCountries { get; set; }
-        public virtual DbSet<ResponsibleForTheTour> ResponsibleForTheTours { get; set; }
-        public virtual DbSet<ShowPlace> ShowPlaces { get; set; }
-        public virtual DbSet<Tour> Tours { get; set; }
-        public virtual DbSet<WaysInTour> WaysInTours { get; set; }
-        public virtual DbSet<WaysOfTransportation> WaysOfTransportations { get; set; }
+        public virtual DbSet<AgencyWorker> AgencyWorker { get; set; }
+        public virtual DbSet<ArchiveOfEndedTours> ArchiveOfEndedTours { get; set; }
+        public virtual DbSet<City> City { get; set; }
+        public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<Country> Country { get; set; }
+        public virtual DbSet<Hotels> Hotels { get; set; }
+        public virtual DbSet<ImagesHotels> ImagesHotels { get; set; }
+        public virtual DbSet<ImagesShowPlace> ImagesShowPlace { get; set; }
+        public virtual DbSet<ListClientShowInfoTour> ListClientShowInfoTour { get; set; }
+        public virtual DbSet<ListOfTouristBuy> ListOfTouristBuy { get; set; }
+        public virtual DbSet<PointInTours> PointInTours { get; set; }
+        public virtual DbSet<ResponsibleForTheTours> ResponsibleForTheTours { get; set; }
+        public virtual DbSet<ShowPlace> ShowPlace { get; set; }
+        public virtual DbSet<Tours> Tours { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<WaysInTours> WaysInTours { get; set; }
+        public virtual DbSet<WaysOfTransportation> WaysOfTransportation { get; set; }
     }
 }

@@ -17,8 +17,8 @@ namespace DAL.TAContext
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ShowPlace()
         {
-            this.ImagesShowPlaces = new HashSet<ImagesShowPlace>();
-            this.PointInTours = new HashSet<PointInTour>();
+            this.ImagesShowPlace = new HashSet<ImagesShowPlace>();
+            this.PointInTours = new HashSet<PointInTours>();
         }
     
         public int Id { get; set; }
@@ -28,8 +28,8 @@ namespace DAL.TAContext
     
         public virtual City City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ImagesShowPlace> ImagesShowPlaces { get; set; }
+        public virtual ICollection<ImagesShowPlace> ImagesShowPlace { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PointInTour> PointInTours { get; set; }
+        public virtual ICollection<PointInTours> PointInTours { get; set; }
     }
 }

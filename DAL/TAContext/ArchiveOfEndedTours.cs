@@ -12,13 +12,11 @@ namespace DAL.TAContext
     using System;
     using System.Collections.Generic;
     
-    public partial class ResponsibleForTheTour
+    public partial class ArchiveOfEndedTours
     {
         public int Id { get; set; }
         public Nullable<int> ToursId { get; set; }
-        public Nullable<int> AgencyWorkerId { get; set; }
     
-        public virtual AgencyWorker AgencyWorker { get; set; }
-        public virtual Tour Tour { get; set; }
+        public virtual Tours Tours { get; set; }
     }
 }

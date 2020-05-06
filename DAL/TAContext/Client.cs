@@ -17,19 +17,23 @@ namespace DAL.TAContext
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Client()
         {
-            this.ListClientShowInfoTours = new HashSet<ListClientShowInfoTour>();
-            this.ListOfTouristBuys = new HashSet<ListOfTouristBuy>();
+            this.ListClientShowInfoTour = new HashSet<ListClientShowInfoTour>();
+            this.ListOfTouristBuy = new HashSet<ListOfTouristBuy>();
         }
     
         public int Id { get; set; }
-        public string FIO { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public string SurName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public System.DateTime DateOfBirth { get; set; }
+        public Nullable<int> UsersId { get; set; }
     
+        public virtual Users Users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ListClientShowInfoTour> ListClientShowInfoTours { get; set; }
+        public virtual ICollection<ListClientShowInfoTour> ListClientShowInfoTour { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ListOfTouristBuy> ListOfTouristBuys { get; set; }
+        public virtual ICollection<ListOfTouristBuy> ListOfTouristBuy { get; set; }
     }
 }

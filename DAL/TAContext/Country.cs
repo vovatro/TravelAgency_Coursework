@@ -17,16 +17,13 @@ namespace DAL.TAContext
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Country()
         {
-            this.Cities = new HashSet<City>();
-            this.ResponsibleForTheCountries = new HashSet<ResponsibleForTheCountry>();
+            this.City = new HashSet<City>();
         }
     
         public int Id { get; set; }
         public string CountryName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<City> Cities { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ResponsibleForTheCountry> ResponsibleForTheCountries { get; set; }
+        public virtual ICollection<City> City { get; set; }
     }
 }

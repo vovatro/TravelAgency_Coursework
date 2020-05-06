@@ -19,6 +19,6 @@ namespace DAL.TAContext
         public Nullable<int> ToursId { get; set; }
     
         public virtual Client Client { get; set; }
-        public virtual Tour Tour { get; set; }
+        public virtual Tours Tours { get; set; }
     }
 }

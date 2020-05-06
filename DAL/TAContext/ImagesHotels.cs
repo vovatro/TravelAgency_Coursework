@@ -12,17 +12,12 @@ namespace DAL.TAContext
     using System;
     using System.Collections.Generic;
     
-    public partial class WaysInTour
+    public partial class ImagesHotels
     {
         public int Id { get; set; }
-        public Nullable<int> ToursId { get; set; }
-        public Nullable<int> StartCityId { get; set; }
-        public Nullable<int> EndCityId { get; set; }
-        public Nullable<int> WaysOfTransportationId { get; set; }
+        public string ImageURL { get; set; }
+        public Nullable<int> HotelsId { get; set; }
     
-        public virtual City City { get; set; }
-        public virtual City City1 { get; set; }
-        public virtual Tour Tour { get; set; }
-        public virtual WaysOfTransportation WaysOfTransportation { get; set; }
+        public virtual Hotels Hotels { get; set; }
     }
 }

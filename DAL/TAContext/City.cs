@@ -17,10 +17,10 @@ namespace DAL.TAContext
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public City()
         {
-            this.Hotels = new HashSet<Hotel>();
-            this.ShowPlaces = new HashSet<ShowPlace>();
-            this.WaysInTours = new HashSet<WaysInTour>();
-            this.WaysInTours1 = new HashSet<WaysInTour>();
+            this.Hotels = new HashSet<Hotels>();
+            this.ShowPlace = new HashSet<ShowPlace>();
+            this.WaysInTours = new HashSet<WaysInTours>();
+            this.WaysInTours1 = new HashSet<WaysInTours>();
         }
     
         public int Id { get; set; }
@@ -29,12 +29,12 @@ namespace DAL.TAContext
     
         public virtual Country Country { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hotel> Hotels { get; set; }
+        public virtual ICollection<Hotels> Hotels { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ShowPlace> ShowPlaces { get; set; }
+        public virtual ICollection<ShowPlace> ShowPlace { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<WaysInTour> WaysInTours { get; set; }
+        public virtual ICollection<WaysInTours> WaysInTours { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<WaysInTour> WaysInTours1 { get; set; }
+        public virtual ICollection<WaysInTours> WaysInTours1 { get; set; }
     }
 }

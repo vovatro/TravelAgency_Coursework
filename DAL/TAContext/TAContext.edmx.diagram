@@ -4,44 +4,44 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f6a43e569714460e851222ff31bfdf8b" Name="Diagram1">
-        <EntityTypeShape EntityType="TravelAgencyModel.AgencyWorker" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.ArchiveOfEndedTour" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.City" Width="1.5" PointX="1.5" PointY="15.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.Client" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.Country" Width="1.5" PointX="1.5" PointY="19" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.Hotel" Width="1.5" PointX="3.75" PointY="21.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.ImagesHotel" Width="1.5" PointX="6" PointY="21.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.ImagesShowPlace" Width="1.5" PointX="6" PointY="17" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.ListClientShowInfoTour" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.ListOfTouristBuy" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.PointInTour" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.ResponsibleForTheCountry" Width="1.5" PointX="9" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.ResponsibleForTheTour" Width="1.5" PointX="6" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.ShowPlace" Width="1.5" PointX="3.75" PointY="15.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.Tour" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.WaysInTour" Width="1.5" PointX="6" PointY="12.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelAgencyModel.WaysOfTransportation" Width="1.5" PointX="3.75" PointY="19" IsExpanded="true" />
-        <AssociationConnector Association="TravelAgencyModel.FK__Responsib__Agenc__3F466844" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__Responsib__Agenc__45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__ArchiveOf__Tours__6B24EA82" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__City__CountryId__3B75D760" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__Hotels__CityId__59FA5E80" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__ShowPlace__CityI__5070F446" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__WaysInTou__EndCi__4CA06362" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__WaysInTou__Start__4BAC3F29" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__ListClien__Clien__6754599E" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__ListOfTou__Clien__6383C8BA" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__Responsib__Count__3E52440B" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__ImagesHot__Hotel__5DCAEF64" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__ImagesSho__ShowP__534D60F1" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__ListClien__Tours__68487DD7" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__ListOfTou__Tours__6477ECF3" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__PointInTo__ShowP__5629CD9C" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__PointInTo__Tours__571DF1D5" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__Responsib__Tours__44FF419A" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__WaysInTou__Tours__4AB81AF0" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelAgencyModel.FK__WaysInTou__WaysO__4D94879B" ManuallyRouted="false" />
+      <Diagram DiagramId="ec3d6c55bc7b45788ecc281e3444305f" Name="Diagram1">
+        <EntityTypeShape EntityType="TAContext.AgencyWorker" Width="1.5" PointX="3.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.ArchiveOfEndedTours" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.City" Width="1.5" PointX="1.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.Client" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.Country" Width="1.5" PointX="1.5" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.Hotels" Width="1.5" PointX="3.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.ImagesHotels" Width="1.5" PointX="6" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.ImagesShowPlace" Width="1.5" PointX="6" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.ListClientShowInfoTour" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.ListOfTouristBuy" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.PointInTours" Width="1.5" PointX="6" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.ResponsibleForTheTours" Width="1.5" PointX="6" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.ShowPlace" Width="1.5" PointX="3.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.Tours" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.Users" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.WaysInTours" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAContext.WaysOfTransportation" Width="1.5" PointX="3.75" PointY="20" IsExpanded="true" />
+        <AssociationConnector Association="TAContext.FK__AgencyWor__Users__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__Responsib__Agenc__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__ArchiveOf__Tours__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__City__CountryId__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__Hotels__CityId__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__ShowPlace__CityI__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__WaysInTou__EndCi__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__WaysInTou__Start__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__Client__UsersId__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__ListClien__Clien__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__ListOfTou__Clien__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__ImagesHot__Hotel__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__ImagesSho__ShowP__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__ListClien__Tours__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__ListOfTou__Tours__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__PointInTo__ShowP__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__PointInTo__Tours__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__Responsib__Tours__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__WaysInTou__Tours__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="TAContext.FK__WaysInTou__WaysO__5165187F" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

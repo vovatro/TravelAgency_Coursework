@@ -12,17 +12,17 @@ namespace DAL.TAContext
     using System;
     using System.Collections.Generic;
     
-    public partial class Tour
+    public partial class Tours
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Tour()
+        public Tours()
         {
-            this.ArchiveOfEndedTours = new HashSet<ArchiveOfEndedTour>();
-            this.ListClientShowInfoTours = new HashSet<ListClientShowInfoTour>();
-            this.ListOfTouristBuys = new HashSet<ListOfTouristBuy>();
-            this.PointInTours = new HashSet<PointInTour>();
-            this.ResponsibleForTheTours = new HashSet<ResponsibleForTheTour>();
-            this.WaysInTours = new HashSet<WaysInTour>();
+            this.ArchiveOfEndedTours = new HashSet<ArchiveOfEndedTours>();
+            this.ListClientShowInfoTour = new HashSet<ListClientShowInfoTour>();
+            this.ListOfTouristBuy = new HashSet<ListOfTouristBuy>();
+            this.PointInTours = new HashSet<PointInTours>();
+            this.ResponsibleForTheTours = new HashSet<ResponsibleForTheTours>();
+            this.WaysInTours = new HashSet<WaysInTours>();
         }
     
         public int Id { get; set; }
@@ -34,16 +34,16 @@ namespace DAL.TAContext
         public Nullable<bool> IsDeleted { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ArchiveOfEndedTour> ArchiveOfEndedTours { get; set; }
+        public virtual ICollection<ArchiveOfEndedTours> ArchiveOfEndedTours { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ListClientShowInfoTour> ListClientShowInfoTours { get; set; }
+        public virtual ICollection<ListClientShowInfoTour> ListClientShowInfoTour { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ListOfTouristBuy> ListOfTouristBuys { get; set; }
+        public virtual ICollection<ListOfTouristBuy> ListOfTouristBuy { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PointInTour> PointInTours { get; set; }
+        public virtual ICollection<PointInTours> PointInTours { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ResponsibleForTheTour> ResponsibleForTheTours { get; set; }
+        public virtual ICollection<ResponsibleForTheTours> ResponsibleForTheTours { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<WaysInTour> WaysInTours { get; set; }
+        public virtual ICollection<WaysInTours> WaysInTours { get; set; }
     }
 }

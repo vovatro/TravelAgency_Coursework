@@ -12,12 +12,22 @@ namespace DAL.TAContext
     using System;
     using System.Collections.Generic;
     
-    public partial class ImagesHotel
+    public partial class Hotels
     {
-        public int Id { get; set; }
-        public string ImageURL { get; set; }
-        public Nullable<int> HotelsId { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Hotels()
+        {
+            this.ImagesHotels = new HashSet<ImagesHotels>();
+        }
     
-        public virtual Hotel Hotel { get; set; }
+        public int Id { get; set; }
+        public string HotelsName { get; set; }
+        public Nullable<int> CityId { get; set; }
+        public decimal PriceDay { get; set; }
+        public int Stars { get; set; }
+    
+        public virtual City City { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ImagesHotels> ImagesHotels { get; set; }
     }
 }
