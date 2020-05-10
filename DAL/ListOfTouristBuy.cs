@@ -7,17 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL.TAContext
+namespace DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ImagesShowPlace
+    public partial class ListOfTouristBuy
     {
         public int Id { get; set; }
-        public string ImageURL { get; set; }
-        public Nullable<int> ShowPlaceId { get; set; }
+        public Nullable<int> ClientId { get; set; }
+        public Nullable<int> ToursId { get; set; }
     
-        public virtual ShowPlace ShowPlace { get; set; }
+        public virtual Person Person { get; set; }
+        public virtual Tours Tours { get; set; }
     }
 }

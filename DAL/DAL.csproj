@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E41F82E4-9E37-4229-B376-47018245F056}</ProjectGuid>
+    <ProjectGuid>{B426DC3A-DE3F-4C7C-89CE-C7047F429402}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL</RootNamespace>
@@ -50,78 +50,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Wrapper.cs" />
-    <Compile Include="Interfaces\IDBHalper.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TAContext\AgencyWorker.cs">
+    <Compile Include="City.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\ArchiveOfEndedTours.cs">
+    <Compile Include="Country.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\City.cs">
+    <Compile Include="Hotels.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\Client.cs">
+    <Compile Include="ImagesHotels.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\Country.cs">
+    <Compile Include="ImagesShowPlace.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\Hotels.cs">
+    <Compile Include="Interfaces\IWrapper.cs" />
+    <Compile Include="ListClientShowInfoTour.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\ImagesHotels.cs">
+    <Compile Include="ListOfTouristBuy.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\ImagesShowPlace.cs">
+    <Compile Include="Person.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\ListClientShowInfoTour.cs">
+    <Compile Include="PointInTours.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\ListOfTouristBuy.cs">
+    <Compile Include="ResponsibleForTheTours.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\PointInTours.cs">
+    <Compile Include="ShowPlace.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\ResponsibleForTheTours.cs">
-      <DependentUpon>TAContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TAContext\ShowPlace.cs">
-      <DependentUpon>TAContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TAContext\TAContext.Context.cs">
+    <Compile Include="TAContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TAContext.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\TAContext.cs">
+    <Compile Include="TAContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\TAContext.Designer.cs">
+    <Compile Include="TAContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TAContext.edmx</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\Tours.cs">
+    <Compile Include="Tours.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\Users.cs">
+    <Compile Include="WaysInTours.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\WaysInTours.cs">
+    <Compile Include="WaysOfTransportation.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TAContext\WaysOfTransportation.cs">
-      <DependentUpon>TAContext.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Wrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="TAContext\TAContext.edmx">
+    <EntityDeploy Include="TAContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TAContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
@@ -129,17 +120,17 @@
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <None Include="TAContext\TAContext.edmx.diagram">
+    <None Include="TAContext.edmx.diagram">
       <DependentUpon>TAContext.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TAContext\TAContext.Context.tt">
+    <Content Include="TAContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TAContext.Context.cs</LastGenOutput>
       <DependentUpon>TAContext.edmx</DependentUpon>
     </Content>
-    <Content Include="TAContext\TAContext.tt">
+    <Content Include="TAContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TAContext.edmx</DependentUpon>
       <LastGenOutput>TAContext.cs</LastGenOutput>

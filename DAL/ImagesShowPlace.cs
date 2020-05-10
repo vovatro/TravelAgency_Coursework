@@ -7,23 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL.TAContext
+namespace DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Country
+    public partial class ImagesShowPlace
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Country()
-        {
-            this.City = new HashSet<City>();
-        }
-    
         public int Id { get; set; }
-        public string CountryName { get; set; }
+        public string ImageURL { get; set; }
+        public Nullable<int> ShowPlaceId { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<City> City { get; set; }
+        public virtual ShowPlace ShowPlace { get; set; }
     }
 }

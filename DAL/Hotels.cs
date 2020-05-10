@@ -7,20 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL.TAContext
+namespace DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class PointInTours
+    public partial class Hotels
     {
-        public int Id { get; set; }
-        public Nullable<int> ShowPlaceId { get; set; }
-        public Nullable<int> ToursId { get; set; }
-        public System.DateTime DateOfVisit { get; set; }
-        public bool IsPriceInTours { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Hotels()
+        {
+            this.ImagesHotels = new HashSet<ImagesHotels>();
+        }
     
-        public virtual ShowPlace ShowPlace { get; set; }
-        public virtual Tours Tours { get; set; }
+        public int Id { get; set; }
+        public string HotelsName { get; set; }
+        public Nullable<int> CityId { get; set; }
+        public decimal PriceDay { get; set; }
+        public int Stars { get; set; }
+    
+        public virtual City City { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ImagesHotels> ImagesHotels { get; set; }
     }
 }

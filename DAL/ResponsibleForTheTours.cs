@@ -7,16 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL.TAContext
+namespace DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ArchiveOfEndedTours
+    public partial class ResponsibleForTheTours
     {
         public int Id { get; set; }
         public Nullable<int> ToursId { get; set; }
+        public Nullable<int> AgencyWorkerId { get; set; }
     
+        public virtual Person Person { get; set; }
         public virtual Tours Tours { get; set; }
     }
 }

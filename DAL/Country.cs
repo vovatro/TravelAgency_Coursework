@@ -7,18 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL.TAContext
+namespace DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ListOfTouristBuy
+    public partial class Country
     {
-        public int Id { get; set; }
-        public Nullable<int> ClientId { get; set; }
-        public Nullable<int> ToursId { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Country()
+        {
+            this.City = new HashSet<City>();
+        }
     
-        public virtual Client Client { get; set; }
-        public virtual Tours Tours { get; set; }
+        public int Id { get; set; }
+        public string CountryName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<City> City { get; set; }
     }
 }

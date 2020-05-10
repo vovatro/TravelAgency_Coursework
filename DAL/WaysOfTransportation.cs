@@ -7,31 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL.TAContext
+namespace DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class AgencyWorker
+    public partial class WaysOfTransportation
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public AgencyWorker()
+        public WaysOfTransportation()
         {
-            this.ResponsibleForTheTours = new HashSet<ResponsibleForTheTours>();
+            this.WaysInTours = new HashSet<WaysInTours>();
         }
     
         public int Id { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public string SurName { get; set; }
-        public string Position { get; set; }
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
-        public System.DateTime DateOfRecruitment { get; set; }
-        public Nullable<int> UsersId { get; set; }
+        public string NameTransport { get; set; }
     
-        public virtual Users Users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ResponsibleForTheTours> ResponsibleForTheTours { get; set; }
+        public virtual ICollection<WaysInTours> WaysInTours { get; set; }
     }
 }

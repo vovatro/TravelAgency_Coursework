@@ -9,7 +9,7 @@ namespace DAL.Interfaces
     public interface IWrapper<T>
     {
         IEnumerable<T> GetItems();
-       // T Find(T entry);
+        // T Find(T entry);
         void UpdateItem(T item);
         void AddItem(T item);
         void DeleteItem(T item);

@@ -7,23 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL.TAContext
+namespace DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class WaysOfTransportation
+    public partial class ShowPlace
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public WaysOfTransportation()
+        public ShowPlace()
         {
-            this.WaysInTours = new HashSet<WaysInTours>();
+            this.ImagesShowPlace = new HashSet<ImagesShowPlace>();
+            this.PointInTours = new HashSet<PointInTours>();
         }
     
         public int Id { get; set; }
-        public string NameTransport { get; set; }
+        public string ShowPlaceName { get; set; }
+        public decimal Price { get; set; }
+        public Nullable<int> CityId { get; set; }
     
+        public virtual City City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<WaysInTours> WaysInTours { get; set; }
+        public virtual ICollection<ImagesShowPlace> ImagesShowPlace { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PointInTours> PointInTours { get; set; }
     }
 }

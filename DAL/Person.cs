@@ -7,28 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL.TAContext
+namespace DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Person
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
+        public Person()
         {
-            this.AgencyWorker = new HashSet<AgencyWorker>();
-            this.Client = new HashSet<Client>();
+            this.ListClientShowInfoTour = new HashSet<ListClientShowInfoTour>();
+            this.ListOfTouristBuy = new HashSet<ListOfTouristBuy>();
+            this.ResponsibleForTheTours = new HashSet<ResponsibleForTheTours>();
         }
     
         public int Id { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public string SurName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public System.DateTime DateOfCreateAccount { get; set; }
+        public System.DateTime DateOfBirth { get; set; }
+        public string PersonStatus { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-        public string UserStatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AgencyWorker> AgencyWorker { get; set; }
+        public virtual ICollection<ListClientShowInfoTour> ListClientShowInfoTour { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Client> Client { get; set; }
+        public virtual ICollection<ListOfTouristBuy> ListOfTouristBuy { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ResponsibleForTheTours> ResponsibleForTheTours { get; set; }
     }
 }
