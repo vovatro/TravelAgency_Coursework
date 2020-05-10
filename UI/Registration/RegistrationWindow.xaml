@@ -1,0 +1,140 @@
+﻿<Window x:Class="UI.Registration.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI.Registration"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" Height="600" Width="800">
+    <Grid x:Name="grid">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF17373" Offset="0"/>
+                <GradientStop Color="#FF3C8986" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" >Прізвище</Label>
+            <TextBox x:Name="tb_lastName" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
+                     Grid.Column="1">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="1">Імя</Label>
+            <TextBox x:Name="tb_firstName" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
+                     Grid.Column="1" Grid.Row="1">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="2">По батькові</Label>
+            <TextBox x:Name="tb_surName" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
+                     Grid.Column="1" Grid.Row="2">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="3">Email</Label>
+            <TextBox x:Name="tb_EMAIL" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
+                     Grid.Row="3" Grid.Column="1">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="4">Телефон</Label>
+            <TextBox x:Name="tb_PHONE" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
+                     Grid.Row="4" Grid.Column="1">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="5">Дата народження</Label>
+            <DatePicker x:Name="tp_Birt" Grid.Row="5" Grid.Column="1" FontSize="25" Margin="10" Width="350"
+                        VerticalAlignment="Center">
+                <DatePicker.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </DatePicker.Background>
+            </DatePicker>
+
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="6" Foreground="#FF39FD39" FontWeight="Bold" FontStyle="Italic">Логін</Label>
+            <TextBox x:Name="tb_login" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
+                     Grid.Row="6" Grid.Column="1">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="7" Foreground="#FF39FD39" Background="#00000000" FontWeight="Bold" FontStyle="Italic">Пароль</Label>
+            <TextBox x:Name="tb_pasword" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
+                     Grid.Row="7" Grid.Column="1">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btn_ok" Height="50" FontSize="25" Margin="100 5 50 5" Width="200"
+                    Background="#FF186C68" Command="{Binding ButtonAddClOk}" >OK</Button>
+            <Button x:Name="btn_cancel" Height="50" FontSize="25" Margin="50 5 100 5"
+                    Width="200" Grid.Column="1" Command="{Binding ButtonAddClCencel}" Background="#FF186A67">Cancel</Button>
+
+        </Grid>
+    </Grid>
+</Window>

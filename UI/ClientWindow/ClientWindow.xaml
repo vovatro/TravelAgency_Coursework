@@ -1,12 +1,12 @@
-﻿<Window x:Class="ClientInterface.MainWindow"
+﻿<Window x:Class="UI.ClientWindow.ClientWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:local="clr-namespace:ClientInterface"
+        xmlns:local="clr-namespace:UI.ClientWindow"
         mc:Ignorable="d"
-        Title="Client Window" Height="450" Width="800" x:Name="ClientW">
+        Title="ClientWindow" Height="450" Width="800" x:Name="ClientW">
     <Window.Resources>
     </Window.Resources>
     <Grid>
@@ -47,6 +47,7 @@
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -54,7 +55,11 @@
                             <ColumnDefinition Width="50"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label FontSize="20">Прізвище, ім'я по батькові</Label>
-                        <TextBlock FontSize="20" Grid.Column="1" Text="{Binding FIO}" Margin="30 0 0 0"></TextBlock>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <TextBlock FontSize="20" Text="{Binding LastName}" Margin="30 0 0 0"></TextBlock>
+                            <TextBlock FontSize="20" Text="{Binding FirstName}" Margin="10 0 0 0"></TextBlock>
+                            <TextBlock FontSize="20" Text="{Binding SurName}" Margin="10 0 0 0"></TextBlock>
+                        </StackPanel>
                         <Button HorizontalAlignment="Center" Grid.Column="2"  VerticalAlignment="Center" Margin="2"
                                 Content="{md:PackIcon Kind=Pencil, Size=16}" RenderTransformOrigin="0.5,0.5"/>
 
@@ -67,6 +72,11 @@
                         <TextBlock FontSize="20" Grid.Row="2" Grid.Column="1" Text="{Binding PHONE}" Margin="30 0 0 0"></TextBlock>
                         <Button HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2"  VerticalAlignment="Center" Margin="2"
                                 Content="{md:PackIcon Kind=Pencil, Size=16}" RenderTransformOrigin="0.5,0.5"/>
+
+                        <Label FontSize="20" Grid.Row="3">Дата народження</Label>
+                        <TextBlock FontSize="20" Grid.Row="3" Grid.Column="1" Text="{Binding PHONE}" Margin="30 0 0 0"></TextBlock>
+                        <Button HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2"  VerticalAlignment="Center" Margin="2"
+                                Content="{md:PackIcon Kind=Pencil, Size=16}" RenderTransformOrigin="0.5,0.5"/>
                     </Grid>
                 </StackPanel>
             </TabItem>
@@ -78,7 +88,8 @@
                     <ListBox Name="lb_myTours"
                              Height="{Binding ElementName=sp_myTours, Path=ActualHeight}"
                              Width="{Binding ElementName=sp_myTours, Path=ActualWidth}"
-                             HorizontalContentAlignment="Stretch">
+                             HorizontalContentAlignment="Stretch"
+                             ItemsSource="{Binding}">
 
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -90,7 +101,7 @@
                                         <ColumnDefinition Width="100*"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
 
-                                    <TextBlock Margin="5 0 0 0" Text=""/>
+                                    <TextBlock Margin="5 0 0 0" Text="{Binding CityName}"/>
                                     <TextBlock Margin="5 0 0 0" Text="" Grid.Column="1"/>
                                     <TextBlock Margin="5 0 0 0" Text="" Grid.Column="2"/>
                                     <TextBlock Margin="5 0 20 0" Text="" Grid.Column="3"/>
@@ -105,36 +116,44 @@
 
 
             <TabItem Header="Доступні тури" FontSize="15">
-                <StackPanel x:Name="sp_ActualTours" Orientation="Horizontal" Margin="5 5 5 40">
-                    <ListBox Name="lb_ActualTours"
+                <StackPanel Orientation="Vertical">
+                    <StackPanel x:Name="sp_ActualTours" Orientation="Horizontal" Margin="5 5 5 40">
+                        <ListBox Name="lb_ActualTours"
                              Height="{Binding ElementName=sp_ActualTours, Path=ActualHeight}"
                              Width="{Binding ElementName=sp_ActualTours, Path=ActualWidth}"
                              HorizontalContentAlignment="Stretch">
-                        <ListBox.ItemTemplate>
+                            <ListBox.ItemTemplate>
 
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="130*"></ColumnDefinition>
-                                        <ColumnDefinition Width="120*"></ColumnDefinition>
-                                        <ColumnDefinition Width="130*"></ColumnDefinition>
-                                        <ColumnDefinition Width="100*"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="130*"></ColumnDefinition>
+                                            <ColumnDefinition Width="120*"></ColumnDefinition>
+                                            <ColumnDefinition Width="130*"></ColumnDefinition>
+                                            <ColumnDefinition Width="100*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
 
-                                    <TextBlock Margin="5 0 0 0" Text=""/>
-                                    <TextBlock Margin="5 0 0 0" Text="" Grid.Column="1"/>
-                                    <TextBlock Margin="5 0 0 0" Text="" Grid.Column="2"/>
-                                    <TextBlock Margin="5 0 20 0" Text="" Grid.Column="3"/>
-                                </Grid>
+                                        <TextBlock Margin="5 0 0 0" Text=""/>
+                                        <TextBlock Margin="5 0 0 0" Text="" Grid.Column="1"/>
+                                        <TextBlock Margin="5 0 0 0" Text="" Grid.Column="2"/>
+                                        <TextBlock Margin="5 0 20 0" Text="" Grid.Column="3"/>
+                                    </Grid>
 
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Width="220" Margin="50 10 0 0" FontSize="20" 
+                                 md:HintAssist.Hint="Бажана кількість міць" HorizontalContentAlignment="Center"></TextBox>
+                        <Button Margin="50 10 25 10" Height="35" FontSize="20" FontStyle="Italic"
+                                Command="{Binding BtnAddMyTours}">Бронювання</Button>
+                    </StackPanel>
                 </StackPanel>
             </TabItem>
 
 
-            
+
             <TabItem Header="Визначні місця" FontSize="15">
                 <Grid>
                     <Grid.RowDefinitions>

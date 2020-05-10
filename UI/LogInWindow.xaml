@@ -1,0 +1,34 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="LogIn" Height="450" Width="450">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF39E0E8" Offset="0"/>
+                <GradientStop Color="#FF85F18F" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel x:Name="sp_login" Orientation="Vertical" VerticalAlignment="Center"
+                    Visibility="Visible">
+            <TextBox x:Name="tb_login" FontSize="25" Margin="0 0 0 30" Width="300"
+                     md:HintAssist.Hint="Введіть Ваш логін"
+                     HorizontalAlignment="Center"
+                     HorizontalContentAlignment="Center"></TextBox>
+            <TextBox x:Name="tb_password" FontSize="25" Margin="0 0 0 30" Width="300"
+                     md:HintAssist.Hint="Введіть пароль"
+                     HorizontalAlignment="Center"
+                     HorizontalContentAlignment="Center"></TextBox>
+            <Button FontSize="25" Width="150" Height="60" Content="Вхід" Background="#FF5CDE47" BorderBrush="#FF1C9716"></Button>
+            <Button FontSize="25" Margin="0 20 0 0" Width="300" Height="40" Content="Реєстрація" Background="#FF84EC74" BorderBrush="#FF218525"/>
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>

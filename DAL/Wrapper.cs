@@ -37,28 +37,8 @@ namespace DAL
 
         public void DeleteItem(T item)
         {
-            //try
-            //{
-            //    var tempItem = Find(item);
-            //    db.Entry(tempItem).State = System.Data.Entity.EntityState.Deleted;
-            //    Commit();
-            //}
-            //catch (ArgumentNullException ex)
-            //{
-            //    throw;
-            //}
-        }
-
-        public T Find(T entry)
-        {
-            Client cl = new Client();
-            if (entry.GetType() == cl.GetType())
-            {
-                var tempItem = dbSet.FirstOrDefault(x => (x as Client).Email.Equals((entry as Client).Email));
-                if (tempItem != null)
-                    return tempItem;
-            }
-            throw new ArgumentNullException();
+            dbSet.Remove(item);
+            Commit();
         }
 
         public IEnumerable<T> GetItems()
@@ -68,17 +48,17 @@ namespace DAL
 
         public void UpdateItem(T item)
         {
-            //try
-            //{
-            //    var tempItem = Find(item);
-            //    tempItem = tempItem;
-            //    db.Entry(book).State = System.Data.Entity.EntityState.Modified;
-            //    Commit();
-            //}
-            //catch (ArgumentNullException ex)
-            //{
-            //    throw;
-            //}
+            try
+            {
+                var tempItem = dbSet.Find(item);
+                tempItem = item;
+                db.Entry(tempItem).State = System.Data.Entity.EntityState.Modified;
+                Commit();
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw;
+            }
         }
 
 
