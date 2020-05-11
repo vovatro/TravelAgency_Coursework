@@ -9,12 +9,13 @@ namespace UI.CommandsForLogIn
 {
     public class BtnRegistration: ICommand
     {
-        public UsersDTO Users { get; set; }
+        //public UsersDTO Users { get; set; }
 
-        public BtnLogIn(UsersDTO users)
-        {
-            Users = users;
-        }
+        //public BtnLogIn(UsersDTO users)
+        //{
+            
+        //    Users = users;
+        //}
 
         public event EventHandler CanExecuteChanged
         {

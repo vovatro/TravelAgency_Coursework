@@ -9,12 +9,12 @@ namespace UI.Registration.Commands
 {
     public class BtnCencel: ICommand
     {
-        public ClientsDTO Clients { get; set; }
+        //public ClientsDTO Clients { get; set; }
 
-        public BtnCencel(ClientsDTO clients)
-        {
-            Clients = clients;
-        }
+        //public BtnCencel(ClientsDTO clients)
+        //{
+        //    Clients = clients;
+        //}
 
         public event EventHandler CanExecuteChanged
         {
@@ -35,7 +35,7 @@ namespace UI.Registration.Commands
 
         public void Execute(object parameter)
         {
-            Clients.CencelAddCl();      //добавити функцію в клас
+            //Clients.CencelAddCl();      //добавити функцію в клас
         }
     }
 }

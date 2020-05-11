@@ -9,12 +9,12 @@ namespace UI.ClientWindow.Commands
 {
     public class BtnAddMyTours: ICommand
     {
-        public ActualToursDTO Tours { get; set; }
+        //public ActualToursDTO Tours { get; set; }
 
-        public BtnAddMyTours(ActualToursDTO tours)
-        {
-            Tours = tours;
-        }
+        //public BtnAddMyTours(ActualToursDTO tours)
+        //{
+        //    Tours = tours;
+        //}
 
         public event EventHandler CanExecuteChanged
         {

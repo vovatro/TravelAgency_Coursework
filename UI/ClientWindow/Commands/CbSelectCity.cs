@@ -9,12 +9,12 @@ namespace UI.ClientWindow.Commands
 {
     public class CbSelectCity: ICommand
     {
-        public ShowPlacesDTO ShowPlaces { get; set; }
+        //public ShowPlacesDTO ShowPlaces { get; set; }
 
-        public CbSelectCountry(ShowPlacesDTO showPlaces)
-        {
-            ShowPlaces = showPlaces;
-        }
+        //public CbSelectCountry(ShowPlacesDTO showPlaces)
+        //{
+        //    ShowPlaces = showPlaces;
+        //}
 
         public event EventHandler CanExecuteChanged
         {

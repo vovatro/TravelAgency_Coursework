@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using UI.ServiceReference1;
 
-namespace UI.ClientWindow.Commands
+namespace UI.Registration.Commands
 {
-    public class BtnRedagInfoClient : ICommand
+    public class BtnOk: ICommand
     {
-        //public ClientDTO Clients { get; set; }
+        //public ClientsDTO Clients { get; set; }
 
-        //public BtnRedagInfoClient(ClientDTO clients)
+        //public BtnOk(Clients clients)
         //{
-            
         //    Clients = clients;
         //}
 
@@ -37,7 +35,7 @@ namespace UI.ClientWindow.Commands
 
         public void Execute(object parameter)
         {
-            //Clients.CencelAddCl();        //добавити функцію update
+            //Clients.RegistrationOk();      //добавити функцію в клас
         }
     }
 }

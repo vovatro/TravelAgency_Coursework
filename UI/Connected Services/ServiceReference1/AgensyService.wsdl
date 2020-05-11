@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AgensyService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61430/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61430/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61430/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BLL.DTO" />
+      <xsd:import schemaLocation="http://localhost:61430/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DAL" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAgensyService_GetAllCitys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCitys" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllCitys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCitysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItem" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_DeleteItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItem" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllTours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllToursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetTour_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTour" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetTour_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTourResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_Disconect_InputMessage">
+    <wsdl:part name="parameters" element="tns:Disconect" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_Disconect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisconectResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAgensyService">
+    <wsdl:operation name="GetAllCitys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllCitys" message="tns:IAgensyService_GetAllCitys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllCitysResponse" message="tns:IAgensyService_GetAllCitys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItem" message="tns:IAgensyService_AddItem_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/DeleteItem" message="tns:IAgensyService_DeleteItem_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllTours" message="tns:IAgensyService_GetAllTours_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllToursResponse" message="tns:IAgensyService_GetAllTours_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetTour" message="tns:IAgensyService_GetTour_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetTourResponse" message="tns:IAgensyService_GetTour_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/Login" message="tns:IAgensyService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/LoginResponse" message="tns:IAgensyService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Disconect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/Disconect" message="tns:IAgensyService_Disconect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/DisconectResponse" message="tns:IAgensyService_Disconect_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAgensyService" type="tns:IAgensyService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllCitys">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllCitys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddItem">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/DeleteItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTour">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetTour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconect">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/Disconect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AgensyService">
+    <wsdl:port name="BasicHttpBinding_IAgensyService" binding="tns:BasicHttpBinding_IAgensyService">
+      <soap:address location="http://localhost:61430/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using UI.ServiceReference1;
 
 namespace UI.CommandsForLogIn
 {
     public class BtnLogIn: ICommand
     {
-        public UsersDTO Users { get; set; }
+        //public UserDTO Users { get; set; }
 
-        public BtnLogIn(UsersDTO users)
-        {
-            Users = users;
-        }
+        //public BtnLogIn(UsersDTO users)
+        //{
+        //    Users = users;
+        //}
 
         public event EventHandler CanExecuteChanged
         {
