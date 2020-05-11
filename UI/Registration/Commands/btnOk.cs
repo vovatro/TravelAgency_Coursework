@@ -9,12 +9,12 @@ namespace UI.Registration.Commands
 {
     public class BtnOk: ICommand
     {
-        public ClientsDTO Clients { get; set; }
+        //public ClientsDTO Clients { get; set; }
 
-        public BtnOk(Clients clients)
-        {
-            Clients = clients;
-        }
+        //public BtnOk(Clients clients)
+        //{
+        //    Clients = clients;
+        //}
 
         public event EventHandler CanExecuteChanged
         {
@@ -35,7 +35,7 @@ namespace UI.Registration.Commands
 
         public void Execute(object parameter)
         {
-            Clients.RegistrationOk();      //добавити функцію в клас
+            //Clients.RegistrationOk();      //добавити функцію в клас
         }
     }
 }
