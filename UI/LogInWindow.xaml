@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:UI"
+        xmlns:bind="clr-namespace:UI.Classes"
         mc:Ignorable="d"
         Title="LogIn" Height="450" Width="450">
-    <Grid>
+    <Window.Resources>
+        <bind:LogIn x:Key="bindLogin"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource bindLogin}">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF39E0E8" Offset="0"/>
@@ -19,13 +23,19 @@
             <TextBox x:Name="tb_login" FontSize="25" Margin="0 0 0 30" Width="300"
                      md:HintAssist.Hint="Введіть Ваш логін"
                      HorizontalAlignment="Center"
-                     HorizontalContentAlignment="Center"></TextBox>
+                     HorizontalContentAlignment="Center"
+                     Text="{Binding Login}"></TextBox>
             <TextBox x:Name="tb_password" FontSize="25" Margin="0 0 0 30" Width="300"
                      md:HintAssist.Hint="Введіть пароль"
                      HorizontalAlignment="Center"
-                     HorizontalContentAlignment="Center"></TextBox>
-            <Button FontSize="25" Width="150" Height="60" Content="Вхід" Background="#FF5CDE47" BorderBrush="#FF1C9716"></Button>
-            <Button FontSize="25" Margin="0 20 0 0" Width="300" Height="40" Content="Реєстрація" Background="#FF84EC74" BorderBrush="#FF218525"/>
+                     HorizontalContentAlignment="Center"
+                     Text="{Binding Password}"></TextBox>
+            <Button FontSize="25" Width="150" Height="60" Content="Вхід"
+                    Background="#FF5CDE47" BorderBrush="#FF1C9716"
+                    Command="{Binding ButtonLogin}"></Button>
+            <Button FontSize="25" Margin="0 20 0 0" Width="300" Height="40" Content="Реєстрація"
+                    Background="#FF84EC74" BorderBrush="#FF218525"
+                    Command="{Binding ButtonRegistr}"/>
         </StackPanel>
 
 

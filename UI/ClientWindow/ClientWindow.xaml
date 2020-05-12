@@ -6,10 +6,10 @@
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:UI.ClientWindow"
         mc:Ignorable="d"
-        Title="ClientWindow" Height="450" Width="800" x:Name="ClientW">
+        Title="ClientWindow" Height="450" Width="800" Closing="ClosingWindow">
     <Window.Resources>
     </Window.Resources>
-    <Grid>
+    <Grid x:Name="ClientW">
         <Grid.Effect>
             <DropShadowEffect BlurRadius="17" RenderingBias="Quality"/>
         </Grid.Effect>
@@ -25,7 +25,8 @@
 
 
 
-            <TabItem Header="Профіль" FontSize="15" Background="{x:Null}">
+            <TabItem Header="Профіль" FontSize="15" Background="{x:Null}" x:Name="ti_ProfilClient"
+                     DataContext="{Binding}">
                 <TabItem.OpacityMask>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -48,11 +49,13 @@
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                             <ColumnDefinition Width="2*"></ColumnDefinition>
-                            <ColumnDefinition Width="50"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label FontSize="20">Прізвище, ім'я по батькові</Label>
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
@@ -60,23 +63,17 @@
                             <TextBlock FontSize="20" Text="{Binding FirstName}" Margin="10 0 0 0"></TextBlock>
                             <TextBlock FontSize="20" Text="{Binding SurName}" Margin="10 0 0 0"></TextBlock>
                         </StackPanel>
-                        <Button HorizontalAlignment="Center" Grid.Column="2"  VerticalAlignment="Center" Margin="2"
-                                Content="{md:PackIcon Kind=Pencil, Size=16}" RenderTransformOrigin="0.5,0.5"/>
 
                         <Label FontSize="20" Grid.Row="1">Поштова адреса</Label>
-                        <TextBlock FontSize="20" Grid.Row="1" Grid.Column="1" Text="{Binding POSITION}" Margin="30 0 0 0"></TextBlock>
-                        <Button HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2"  VerticalAlignment="Center" Margin="2"
-                                Content="{md:PackIcon Kind=Pencil, Size=16}" RenderTransformOrigin="0.5,0.5"/>
+                        <TextBlock FontSize="20" Grid.Row="1" Grid.Column="1" Text="{Binding Email}" Margin="30 0 0 0"></TextBlock>
 
                         <Label FontSize="20" Grid.Row="2">Номер телефону</Label>
-                        <TextBlock FontSize="20" Grid.Row="2" Grid.Column="1" Text="{Binding PHONE}" Margin="30 0 0 0"></TextBlock>
-                        <Button HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2"  VerticalAlignment="Center" Margin="2"
-                                Content="{md:PackIcon Kind=Pencil, Size=16}" RenderTransformOrigin="0.5,0.5"/>
+                        <TextBlock FontSize="20" Grid.Row="2" Grid.Column="1" Text="{Binding Phone}" Margin="30 0 0 0"></TextBlock>
 
                         <Label FontSize="20" Grid.Row="3">Дата народження</Label>
-                        <TextBlock FontSize="20" Grid.Row="3" Grid.Column="1" Text="{Binding PHONE}" Margin="30 0 0 0"></TextBlock>
-                        <Button HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2"  VerticalAlignment="Center" Margin="2"
-                                Content="{md:PackIcon Kind=Pencil, Size=16}" RenderTransformOrigin="0.5,0.5"/>
+                        <TextBlock FontSize="20" Grid.Row="3" Grid.Column="1" Text="{Binding BirtDaySTR}" Margin="30 0 0 0"></TextBlock>
+                        <!--<Button HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2"  VerticalAlignment="Center" Margin="2"
+                                Content="{md:PackIcon Kind=Pencil, Size=16}" RenderTransformOrigin="0.5,0.5"/>-->
                     </Grid>
                 </StackPanel>
             </TabItem>
