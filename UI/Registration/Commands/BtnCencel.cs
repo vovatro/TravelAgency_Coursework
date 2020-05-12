@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using UI.Classes;
 
 namespace UI.Registration.Commands
 {
     public class BtnCencel: ICommand
     {
-        //public ClientsDTO Clients { get; set; }
+        private Registr registr;
 
-        //public BtnCencel(ClientsDTO clients)
-        //{
-        //    Clients = clients;
-        //}
+        public BtnCencel(Registr registr)
+        {
+            this.registr = registr;
+        }
 
         public event EventHandler CanExecuteChanged
         {
@@ -35,7 +36,7 @@ namespace UI.Registration.Commands
 
         public void Execute(object parameter)
         {
-            //Clients.CencelAddCl();      //добавити функцію в клас
+            registr.Cencel();
         }
     }
 }
