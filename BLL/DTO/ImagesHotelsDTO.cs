@@ -10,7 +10,11 @@ namespace BLL.DTO
     public class ImagesHotelsDTO
     {
         [DataMember]
+        public int Id { get; set; }
+        [DataMember]
         public string ImageURL { get; set; }
+        [DataMember]
+        public int HotelsId { get; set; }
         [DataMember]
         public HotelsDTO Hotels { get; set; }
     }

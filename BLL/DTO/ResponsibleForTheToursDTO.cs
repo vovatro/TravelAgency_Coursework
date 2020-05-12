@@ -10,7 +10,13 @@ namespace BLL.DTO
     public class ResponsibleForTheToursDTO
     {
         [DataMember]
-        public AgensyWorcerDTO AgensyWorcer { get; set; }
+        public int Id { get; set; }
+        [DataMember]
+        public int ToursId { get; set; }
+        [DataMember]
+        public int AgencyWorkerId { get; set; }
+        [DataMember]
+        public PersonDTO Person { get; set; }
         [DataMember]
         public ToursDTO Tours { get; set; }
     }

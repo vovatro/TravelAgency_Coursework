@@ -10,13 +10,17 @@ namespace BLL.DTO
     public class HotelsDTO
     {
         [DataMember]
+        public int Id { get; set; }
+        [DataMember]
         public string HotelsName { get; set; }
         [DataMember]
-        public CityDTO City { get; set; }
+        public int CityId { get; set; }
         [DataMember]
-        public int PriceDay { get; set; }
+        public decimal PriceDay { get; set; }
         [DataMember]
         public int Stars { get; set; }
+        [DataMember]
+        public CityDTO City { get; set; }
         [DataMember]
         public IEnumerable<ImagesHotelsDTO> ImagesHotels { get; set; }
     }

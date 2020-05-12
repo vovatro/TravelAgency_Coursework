@@ -78,18 +78,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\AgensyWorcerDTO.cs" />
     <Compile Include="DTO\CityDTO.cs" />
-    <Compile Include="DTO\ClientDTO.cs" />
+    <Compile Include="DTO\ImagesShowPlaceDTO.cs" />
+    <Compile Include="DTO\PersonDTO.cs" />
     <Compile Include="DTO\CountryDTO.cs" />
     <Compile Include="DTO\HotelsDTO.cs" />
     <Compile Include="DTO\ImagesHotelsDTO.cs" />
     <Compile Include="DTO\ListClientShowInfoTourDTO.cs" />
     <Compile Include="DTO\ListOfTouristBuyDTO.cs" />
+    <Compile Include="DTO\PointInToursDTO.cs" />
     <Compile Include="DTO\ResponsibleForTheToursDTO.cs" />
     <Compile Include="DTO\ShowPlaceDTO.cs" />
     <Compile Include="DTO\ToursDTO.cs" />
-    <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="DTO\WaysInToursDTO.cs" />
+    <Compile Include="DTO\WaysOfTransportationDTO.cs" />
+    <Compile Include="OtherClases\User.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

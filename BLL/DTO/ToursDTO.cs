@@ -1,4 +1,6 @@
 ﻿using DAL;
+using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace BLL.DTO
@@ -15,10 +17,20 @@ namespace BLL.DTO
         [DataMember]
         public System.DateTime EndDate { get; set; }
         [DataMember]
-        public int Price { get; set; }
+        public decimal Price { get; set; }
         [DataMember]
         public int MaxTourists { get; set; }
         [DataMember]
         public bool IsDeleted { get; set; }
+        [DataMember]
+        public virtual IEnumerable<ListClientShowInfoTourDTO> ListClientShowInfoTour { get; set; }
+        [DataMember]
+        public virtual IEnumerable<ListOfTouristBuyDTO> ListOfTouristBuy { get; set; }
+        [DataMember]
+        public virtual IEnumerable<PointInToursDTO> PointInTours { get; set; }
+        [DataMember]
+        public virtual IEnumerable<ResponsibleForTheToursDTO> ResponsibleForTheTours { get; set; }
+        [DataMember]
+        public virtual IEnumerable<WaysInToursDTO> WaysInTours { get; set; }
     }
 }

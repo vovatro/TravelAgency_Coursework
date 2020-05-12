@@ -15,21 +15,43 @@ namespace BLL
     {
         [OperationContract]
         IEnumerable<CityDTO> GetAllCitys();
+
         [OperationContract(IsOneWay = true)]
-        void AddItem(City item);
-        [OperationContract(IsOneWay = true)]
-        void DeleteItem(City item);
+        void AddItem(CityDTO item);
+
+        //[OperationContract(IsOneWay = true)]
+        //void DeleteItem(CityDTO item);
+
         [OperationContract]
         IEnumerable<ToursDTO> GetAllTours();
+
         [OperationContract]
         List<CityDTO> GetTour(Tours tours);
+
+        [OperationContract(IsOneWay = true)]
+        void Registration(PersonDTO person);
+
         [OperationContract]
-        Person Login();
+        PersonDTO Login(string login, string password);
+
         [OperationContract]
-        void Disconect(Person user);
+        bool IsPersonOnline(PersonDTO person);
+        [OperationContract]
+        bool IsUniqueLogin(string login);
+
+        [OperationContract(IsOneWay = true)]
+        void Disconect(PersonDTO person);
+
+
 
     }
 
+    public interface ICallback
+    {
+        [OperationContract(IsOneWay = true)]
+        void Win(string gameId);
+    }
 
-    
+
+
 }

@@ -15,13 +15,13 @@ namespace BLL.DTO
         public string CityName { get; set; }
         [DataMember]
         public CountryDTO Country { get; set; }
-        //[DataMember]
-        //public IEnumerable<HotelsDTO> Hotels { get; set; }
-        //[DataMember]
-        //public IEnumerable<ShowPlace> ShowPlace { get; set; }
-        //[DataMember]
-        //public IEnumerable<WaysInTours> WaysInTours { get; set; }
-        //[DataMember]
-        //public IEnumerable<WaysInTours> WaysInTours1 { get; set; }
+        [DataMember]
+        public IEnumerable<HotelsDTO> Hotels { get; set; }
+        [DataMember]
+        public IEnumerable<ShowPlaceDTO> ShowPlace { get; set; }
+        [DataMember]
+        public IEnumerable<WaysInToursDTO> WaysInTours { get; set; }
+        [DataMember]
+        public IEnumerable<WaysInToursDTO> WaysInTours1 { get; set; }
     }
 }
