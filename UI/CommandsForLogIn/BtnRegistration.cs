@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using UI.Classes;
 
 namespace UI.CommandsForLogIn
 {
     public class BtnRegistration: ICommand
     {
-        //public UsersDTO Users { get; set; }
+        private LogIn logIn;
 
-        //public BtnLogIn(UsersDTO users)
-        //{
-            
-        //    Users = users;
-        //}
+        public BtnRegistration(LogIn logIn)
+        {
+            this.logIn = logIn;
+        }
 
         public event EventHandler CanExecuteChanged
         {
@@ -36,7 +36,7 @@ namespace UI.CommandsForLogIn
 
         public void Execute(object parameter)
         {
-            //Clients.CencelAddCl();        //добавити функцію OpenRegistrationWindow
+            logIn.OpenRegistrWindow();
         }
     }
 }

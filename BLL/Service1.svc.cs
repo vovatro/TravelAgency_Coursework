@@ -388,7 +388,7 @@ namespace BLL
             return false;
         }
 
-        public bool IsUniqueLogin(string login)
+        public bool IsUniqueLogin(string login)     //перевірка чи пароль є унікальний
         {
             var temp = wrapperPerson.GetItems();
             foreach (var item in temp)

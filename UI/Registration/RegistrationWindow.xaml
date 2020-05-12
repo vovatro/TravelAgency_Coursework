@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI.Registration"
+        xmlns:bind1="clr-namespace:UI.Classes"
         mc:Ignorable="d"
         Title="RegistrationWindow" Height="600" Width="800">
-    <Grid x:Name="grid">
+    <Window.Resources>
+        <bind1:Registr x:Key="regContext"/>
+    </Window.Resources>
+    <Grid x:Name="grid" DataContext="{StaticResource regContext}">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFF17373" Offset="0"/>
@@ -36,7 +40,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" >Прізвище</Label>
             <TextBox x:Name="tb_lastName" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
-                     Grid.Column="1">
+                     Grid.Column="1" Text="{Binding LastName}">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>
@@ -47,7 +51,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="1">Імя</Label>
             <TextBox x:Name="tb_firstName" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
-                     Grid.Column="1" Grid.Row="1">
+                     Grid.Column="1" Grid.Row="1" Text="{Binding FirstName}">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>
@@ -58,7 +62,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="2">По батькові</Label>
             <TextBox x:Name="tb_surName" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
-                     Grid.Column="1" Grid.Row="2">
+                     Grid.Column="1" Grid.Row="2" Text="{Binding SurName}">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>
@@ -69,7 +73,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="3">Email</Label>
             <TextBox x:Name="tb_EMAIL" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
-                     Grid.Row="3" Grid.Column="1">
+                     Grid.Row="3" Grid.Column="1" Text="{Binding Email}">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>
@@ -80,7 +84,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="4">Телефон</Label>
             <TextBox x:Name="tb_PHONE" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
-                     Grid.Row="4" Grid.Column="1">
+                     Grid.Row="4" Grid.Column="1" Text="{Binding Phone}">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>
@@ -91,7 +95,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="5">Дата народження</Label>
             <DatePicker x:Name="tp_Birt" Grid.Row="5" Grid.Column="1" FontSize="25" Margin="10" Width="350"
-                        VerticalAlignment="Center">
+                        VerticalAlignment="Center" Text="{Binding BirtDay}">
                 <DatePicker.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>
@@ -102,7 +106,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="6" Foreground="#FF39FD39" FontWeight="Bold" FontStyle="Italic">Логін</Label>
             <TextBox x:Name="tb_login" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
-                     Grid.Row="6" Grid.Column="1">
+                     Grid.Row="6" Grid.Column="1" Text="{Binding Login}">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>
@@ -113,7 +117,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="7" Foreground="#FF39FD39" Background="#00000000" FontWeight="Bold" FontStyle="Italic">Пароль</Label>
             <TextBox x:Name="tb_pasword" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
-                     Grid.Row="7" Grid.Column="1">
+                     Grid.Row="7" Grid.Column="1" Text="{Binding Password}">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>
@@ -131,9 +135,9 @@
             </Grid.ColumnDefinitions>
 
             <Button x:Name="btn_ok" Height="50" FontSize="25" Margin="100 5 50 5" Width="200"
-                    Background="#FF186C68" Command="{Binding ButtonAddClOk}" >OK</Button>
+                    Background="#FF186C68" Command="{Binding ButtonOk}" >OK</Button>
             <Button x:Name="btn_cancel" Height="50" FontSize="25" Margin="50 5 100 5"
-                    Width="200" Grid.Column="1" Command="{Binding ButtonAddClCencel}" Background="#FF186A67">Cancel</Button>
+                    Width="200" Grid.Column="1" Command="{Binding ButtonCencel}" Background="#FF186A67">Cancel</Button>
 
         </Grid>
     </Grid>

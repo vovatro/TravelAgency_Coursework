@@ -1,116 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DAL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DAL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="City">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Country" nillable="true" type="tns:Country" />
-      <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Hotels" nillable="true" type="tns:ArrayOfHotels" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="ShowPlace" nillable="true" type="tns:ArrayOfShowPlace" />
-      <xs:element minOccurs="0" name="WaysInTours" nillable="true" type="tns:ArrayOfWaysInTours" />
-      <xs:element minOccurs="0" name="WaysInTours1" nillable="true" type="tns:ArrayOfWaysInTours" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="City" nillable="true" type="tns:City" />
-  <xs:complexType name="Country">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="City" nillable="true" type="tns:ArrayOfCity" />
-      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Country" nillable="true" type="tns:Country" />
-  <xs:complexType name="ArrayOfCity">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="City" nillable="true" type="tns:City" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCity" nillable="true" type="tns:ArrayOfCity" />
-  <xs:complexType name="ArrayOfHotels">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hotels" nillable="true" type="tns:Hotels" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfHotels" nillable="true" type="tns:ArrayOfHotels" />
-  <xs:complexType name="Hotels">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="City" nillable="true" type="tns:City" />
-      <xs:element minOccurs="0" name="CityId" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="HotelsName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="ImagesHotels" nillable="true" type="tns:ArrayOfImagesHotels" />
-      <xs:element minOccurs="0" name="PriceDay" type="xs:decimal" />
-      <xs:element minOccurs="0" name="Stars" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Hotels" nillable="true" type="tns:Hotels" />
-  <xs:complexType name="ArrayOfImagesHotels">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImagesHotels" nillable="true" type="tns:ImagesHotels" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfImagesHotels" nillable="true" type="tns:ArrayOfImagesHotels" />
-  <xs:complexType name="ImagesHotels">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Hotels" nillable="true" type="tns:Hotels" />
-      <xs:element minOccurs="0" name="HotelsId" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="ImageURL" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ImagesHotels" nillable="true" type="tns:ImagesHotels" />
-  <xs:complexType name="ArrayOfShowPlace">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShowPlace" nillable="true" type="tns:ShowPlace" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfShowPlace" nillable="true" type="tns:ArrayOfShowPlace" />
-  <xs:complexType name="ShowPlace">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="City" nillable="true" type="tns:City" />
-      <xs:element minOccurs="0" name="CityId" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="ImagesShowPlace" nillable="true" type="tns:ArrayOfImagesShowPlace" />
-      <xs:element minOccurs="0" name="PointInTours" nillable="true" type="tns:ArrayOfPointInTours" />
-      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
-      <xs:element minOccurs="0" name="ShowPlaceName" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ShowPlace" nillable="true" type="tns:ShowPlace" />
-  <xs:complexType name="ArrayOfImagesShowPlace">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImagesShowPlace" nillable="true" type="tns:ImagesShowPlace" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfImagesShowPlace" nillable="true" type="tns:ArrayOfImagesShowPlace" />
-  <xs:complexType name="ImagesShowPlace">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="ImageURL" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ShowPlace" nillable="true" type="tns:ShowPlace" />
-      <xs:element minOccurs="0" name="ShowPlaceId" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ImagesShowPlace" nillable="true" type="tns:ImagesShowPlace" />
-  <xs:complexType name="ArrayOfPointInTours">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="PointInTours" nillable="true" type="tns:PointInTours" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfPointInTours" nillable="true" type="tns:ArrayOfPointInTours" />
-  <xs:complexType name="PointInTours">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="DateOfVisit" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="IsPriceInTours" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ShowPlace" nillable="true" type="tns:ShowPlace" />
-      <xs:element minOccurs="0" name="ShowPlaceId" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Tours" nillable="true" type="tns:Tours" />
-      <xs:element minOccurs="0" name="ToursId" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="PointInTours" nillable="true" type="tns:PointInTours" />
   <xs:complexType name="Tours">
     <xs:sequence>
       <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
@@ -195,6 +84,102 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ResponsibleForTheTours" nillable="true" type="tns:ResponsibleForTheTours" />
+  <xs:complexType name="ArrayOfPointInTours">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PointInTours" nillable="true" type="tns:PointInTours" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPointInTours" nillable="true" type="tns:ArrayOfPointInTours" />
+  <xs:complexType name="PointInTours">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateOfVisit" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsPriceInTours" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ShowPlace" nillable="true" type="tns:ShowPlace" />
+      <xs:element minOccurs="0" name="ShowPlaceId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Tours" nillable="true" type="tns:Tours" />
+      <xs:element minOccurs="0" name="ToursId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PointInTours" nillable="true" type="tns:PointInTours" />
+  <xs:complexType name="ShowPlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="tns:City" />
+      <xs:element minOccurs="0" name="CityId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImagesShowPlace" nillable="true" type="tns:ArrayOfImagesShowPlace" />
+      <xs:element minOccurs="0" name="PointInTours" nillable="true" type="tns:ArrayOfPointInTours" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ShowPlaceName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShowPlace" nillable="true" type="tns:ShowPlace" />
+  <xs:complexType name="City">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="tns:Country" />
+      <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Hotels" nillable="true" type="tns:ArrayOfHotels" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ShowPlace" nillable="true" type="tns:ArrayOfShowPlace" />
+      <xs:element minOccurs="0" name="WaysInTours" nillable="true" type="tns:ArrayOfWaysInTours" />
+      <xs:element minOccurs="0" name="WaysInTours1" nillable="true" type="tns:ArrayOfWaysInTours" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="City" nillable="true" type="tns:City" />
+  <xs:complexType name="Country">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="tns:ArrayOfCity" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Country" nillable="true" type="tns:Country" />
+  <xs:complexType name="ArrayOfCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="City" nillable="true" type="tns:City" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCity" nillable="true" type="tns:ArrayOfCity" />
+  <xs:complexType name="ArrayOfHotels">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hotels" nillable="true" type="tns:Hotels" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHotels" nillable="true" type="tns:ArrayOfHotels" />
+  <xs:complexType name="Hotels">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="tns:City" />
+      <xs:element minOccurs="0" name="CityId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HotelsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImagesHotels" nillable="true" type="tns:ArrayOfImagesHotels" />
+      <xs:element minOccurs="0" name="PriceDay" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Stars" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Hotels" nillable="true" type="tns:Hotels" />
+  <xs:complexType name="ArrayOfImagesHotels">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImagesHotels" nillable="true" type="tns:ImagesHotels" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImagesHotels" nillable="true" type="tns:ArrayOfImagesHotels" />
+  <xs:complexType name="ImagesHotels">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hotels" nillable="true" type="tns:Hotels" />
+      <xs:element minOccurs="0" name="HotelsId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageURL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImagesHotels" nillable="true" type="tns:ImagesHotels" />
+  <xs:complexType name="ArrayOfShowPlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShowPlace" nillable="true" type="tns:ShowPlace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShowPlace" nillable="true" type="tns:ArrayOfShowPlace" />
   <xs:complexType name="ArrayOfWaysInTours">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="WaysInTours" nillable="true" type="tns:WaysInTours" />
@@ -223,4 +208,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="WaysOfTransportation" nillable="true" type="tns:WaysOfTransportation" />
+  <xs:complexType name="ArrayOfImagesShowPlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImagesShowPlace" nillable="true" type="tns:ImagesShowPlace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImagesShowPlace" nillable="true" type="tns:ArrayOfImagesShowPlace" />
+  <xs:complexType name="ImagesShowPlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowPlace" nillable="true" type="tns:ShowPlace" />
+      <xs:element minOccurs="0" name="ShowPlaceId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImagesShowPlace" nillable="true" type="tns:ImagesShowPlace" />
 </xs:schema>

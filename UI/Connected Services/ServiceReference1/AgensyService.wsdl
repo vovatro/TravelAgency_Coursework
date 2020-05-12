@@ -17,9 +17,6 @@
   <wsdl:message name="IAgensyService_AddItem_InputMessage">
     <wsdl:part name="parameters" element="tns:AddItem" />
   </wsdl:message>
-  <wsdl:message name="IAgensyService_DeleteItem_InputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteItem" />
-  </wsdl:message>
   <wsdl:message name="IAgensyService_GetAllTours_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllTours" />
   </wsdl:message>
@@ -32,17 +29,29 @@
   <wsdl:message name="IAgensyService_GetTour_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTourResponse" />
   </wsdl:message>
+  <wsdl:message name="IAgensyService_Registration_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registration" />
+  </wsdl:message>
   <wsdl:message name="IAgensyService_Login_InputMessage">
     <wsdl:part name="parameters" element="tns:Login" />
   </wsdl:message>
   <wsdl:message name="IAgensyService_Login_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginResponse" />
   </wsdl:message>
+  <wsdl:message name="IAgensyService_IsPersonOnline_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPersonOnline" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_IsPersonOnline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPersonOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_IsUniqueLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUniqueLogin" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_IsUniqueLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUniqueLoginResponse" />
+  </wsdl:message>
   <wsdl:message name="IAgensyService_Disconect_InputMessage">
     <wsdl:part name="parameters" element="tns:Disconect" />
-  </wsdl:message>
-  <wsdl:message name="IAgensyService_Disconect_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DisconectResponse" />
   </wsdl:message>
   <wsdl:portType name="IAgensyService">
     <wsdl:operation name="GetAllCitys">
@@ -52,9 +61,6 @@
     <wsdl:operation name="AddItem">
       <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItem" message="tns:IAgensyService_AddItem_InputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DeleteItem">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/DeleteItem" message="tns:IAgensyService_DeleteItem_InputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="GetAllTours">
       <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllTours" message="tns:IAgensyService_GetAllTours_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllToursResponse" message="tns:IAgensyService_GetAllTours_OutputMessage" />
@@ -63,13 +69,23 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetTour" message="tns:IAgensyService_GetTour_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetTourResponse" message="tns:IAgensyService_GetTour_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/Registration" message="tns:IAgensyService_Registration_InputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Login">
       <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/Login" message="tns:IAgensyService_Login_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/LoginResponse" message="tns:IAgensyService_Login_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="IsPersonOnline">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/IsPersonOnline" message="tns:IAgensyService_IsPersonOnline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/IsPersonOnlineResponse" message="tns:IAgensyService_IsPersonOnline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUniqueLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/IsUniqueLogin" message="tns:IAgensyService_IsUniqueLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/IsUniqueLoginResponse" message="tns:IAgensyService_IsUniqueLogin_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Disconect">
       <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/Disconect" message="tns:IAgensyService_Disconect_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/DisconectResponse" message="tns:IAgensyService_Disconect_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAgensyService" type="tns:IAgensyService">
@@ -85,12 +101,6 @@
     </wsdl:operation>
     <wsdl:operation name="AddItem">
       <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItem" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="DeleteItem">
-      <soap:operation soapAction="http://tempuri.org/IAgensyService/DeleteItem" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -113,8 +123,32 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/Registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
     <wsdl:operation name="Login">
       <soap:operation soapAction="http://tempuri.org/IAgensyService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPersonOnline">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/IsPersonOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUniqueLogin">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/IsUniqueLogin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -127,9 +161,6 @@
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="AgensyService">

@@ -4,18 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using UI.Classes;
 using UI.ServiceReference1;
 
 namespace UI.CommandsForLogIn
 {
     public class BtnLogIn: ICommand
     {
-        //public UserDTO Users { get; set; }
+        private LogIn logIn;
 
-        //public BtnLogIn(UsersDTO users)
-        //{
-        //    Users = users;
-        //}
+        public BtnLogIn(LogIn logIn)
+        {
+            this.logIn = logIn;
+        }
 
         public event EventHandler CanExecuteChanged
         {
@@ -36,7 +37,7 @@ namespace UI.CommandsForLogIn
 
         public void Execute(object parameter)
         {
-            //Clients.CencelAddCl();        //добавити функцію find
+            logIn.OpenNewWindow();
         }
     }
 }

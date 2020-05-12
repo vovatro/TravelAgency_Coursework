@@ -52,8 +52,8 @@ namespace DAL
                 db.Entry(tempItem).State = System.Data.Entity.EntityState.Modified;
                 Commit();
             }
-            catch (ArgumentNullException ex)
-            {
+            catch (ArgumentNullException )
+            {                
                 throw;
             }
         }

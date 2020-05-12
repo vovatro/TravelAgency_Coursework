@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using UI.ServiceReference1;
 
 namespace UI.WorkerWindow
 {
@@ -19,7 +20,7 @@ namespace UI.WorkerWindow
     /// </summary>
     public partial class WorkerWindow : Window
     {
-        public WorkerWindow()
+        public WorkerWindow(PersonDTO person)
         {
             InitializeComponent();
         }
