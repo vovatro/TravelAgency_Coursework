@@ -82,7 +82,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\CB_selectCountry.cs" />
+    <Compile Include="Classes\ClientsAgency.cs" />
+    <Compile Include="Classes\EndedTours.cs" />
     <Compile Include="Classes\LogIn.cs" />
+    <Compile Include="Classes\NextTours.cs" />
     <Compile Include="Classes\ProfilClient.cs" />
     <Compile Include="Classes\Registr.cs" />
     <Compile Include="Classes\ShowHotel.cs" />
@@ -100,6 +103,12 @@
     </Compile>
     <Compile Include="HelpClasses\HotelInfo.cs" />
     <Compile Include="HelpClasses\ShowPlaceInfo.cs" />
+    <Compile Include="RedagClientWindow\Commands\ButtonCencelRedag.cs" />
+    <Compile Include="RedagClientWindow\Commands\ButtonOkRedag.cs" />
+    <Compile Include="RedagClientWindow\Commands\ButtonOpenRedagCl.cs" />
+    <Compile Include="RedagClientWindow\RedagClientWindow.xaml.cs">
+      <DependentUpon>RedagClientWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Registration\Commands\BtnCencel.cs" />
     <Compile Include="Registration\Commands\BtnOk.cs" />
     <Compile Include="Registration\RegistrationWindow.xaml.cs">
@@ -127,6 +136,10 @@
       <DependentUpon>LogInWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RedagClientWindow\RedagClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Registration\RegistrationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
