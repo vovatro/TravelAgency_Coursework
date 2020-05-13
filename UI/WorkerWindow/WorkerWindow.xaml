@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI.WorkerWindow"
         mc:Ignorable="d"
-        Title="WorkerWindow" Height="450" Width="800">
+        Title="WorkerWindow" Height="600" Width="1000">
     <Window.Resources>
     </Window.Resources>
     <Grid x:Name="MainW">
@@ -44,13 +44,18 @@
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                             <ColumnDefinition Width="2*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label FontSize="20">Прізвище, ім'я по батькові</Label>
-                        <TextBlock FontSize="20" Grid.Column="1" Text="{Binding FIO}" Margin="30 0 0 0"></TextBlock>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <TextBlock FontSize="20" Text="{Binding LastName}" Margin="30 0 0 0"></TextBlock>
+                            <TextBlock FontSize="20" Text="{Binding FirstName}" Margin="10 0 0 0"></TextBlock>
+                            <TextBlock FontSize="20" Text="{Binding SurName}" Margin="10 0 0 0"></TextBlock>
+                        </StackPanel>
 
                         <Label FontSize="20" Grid.Row="1">Посада</Label>
                         <TextBlock FontSize="20" Grid.Row="1" Grid.Column="1" Text="{Binding POSITION}" Margin="30 0 0 0"></TextBlock>
@@ -63,6 +68,9 @@
 
                         <Label FontSize="20" Grid.Row="4">Початок роботи</Label>
                         <TextBlock FontSize="20" Grid.Row="4" Grid.Column="1" Text="{Binding DATE_REC}" Margin="30 0 0 0"></TextBlock>
+
+                        <Label FontSize="20" Grid.Row="5">Дата народження</Label>
+                        <TextBlock FontSize="20" Grid.Row="5" Grid.Column="1" Text="{Binding BirtDaySTR}" Margin="30 0 0 0"></TextBlock>
                     </Grid>
                 </StackPanel>
 
