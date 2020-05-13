@@ -9,10 +9,11 @@
 
 namespace DAL
 {
+    using DAL.Interfaces;
     using System;
     using System.Collections.Generic;
     
-    public partial class WaysInTours
+    public partial class WaysInTours : IReturnId
     {
         public int Id { get; set; }
         public Nullable<int> ToursId { get; set; }
@@ -24,5 +25,10 @@ namespace DAL
         public virtual City City1 { get; set; }
         public virtual Tours Tours { get; set; }
         public virtual WaysOfTransportation WaysOfTransportation { get; set; }
+
+        public int GetId()
+        {
+            return Id;
+        }
     }
 }

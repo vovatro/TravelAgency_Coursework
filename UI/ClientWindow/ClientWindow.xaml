@@ -161,7 +161,7 @@
                         <RowDefinition Height="7*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ComboBox x:Name="cb_Country" Width="300" Margin=" 30 10 30 10" FontSize="20"
+                       <ComboBox x:Name="cb_Country" Width="300" Margin=" 30 10 30 10" FontSize="20"
                                   ItemsSource="{Binding CB_COUNTRY_LIST}" SelectedItem="{Binding SelectCountry}">                            
                         </ComboBox>
                     </StackPanel>

@@ -9,10 +9,11 @@
 
 namespace DAL
 {
+    using DAL.Interfaces;
     using System;
     using System.Collections.Generic;
     
-    public partial class Tours
+    public partial class Tours : IReturnId
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tours()
@@ -42,5 +43,10 @@ namespace DAL
         public virtual ICollection<ResponsibleForTheTours> ResponsibleForTheTours { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<WaysInTours> WaysInTours { get; set; }
+
+        public int GetId()
+        {
+            return Id;
+        }
     }
 }

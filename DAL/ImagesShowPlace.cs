@@ -9,15 +9,21 @@
 
 namespace DAL
 {
+    using DAL.Interfaces;
     using System;
     using System.Collections.Generic;
     
-    public partial class ImagesShowPlace
+    public partial class ImagesShowPlace: IReturnId
     {
         public int Id { get; set; }
         public string ImageURL { get; set; }
         public Nullable<int> ShowPlaceId { get; set; }
     
         public virtual ShowPlace ShowPlace { get; set; }
+
+        public int GetId()
+        {
+            return Id;
+        }
     }
 }
