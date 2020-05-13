@@ -14,6 +14,8 @@ namespace BLL.DTO
         [DataMember]
         public string CityName { get; set; }
         [DataMember]
+        public int CountryId { get; set; }
+        [DataMember]
         public CountryDTO Country { get; set; }
         [DataMember]
         public IEnumerable<HotelsDTO> Hotels { get; set; }
