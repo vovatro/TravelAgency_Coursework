@@ -9,10 +9,11 @@
 
 namespace DAL
 {
+    using DAL.Interfaces;
     using System;
     using System.Collections.Generic;
     
-    public partial class Hotels
+    public partial class Hotels: IReturnId
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Hotels()
@@ -29,5 +30,10 @@ namespace DAL
         public virtual City City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ImagesHotels> ImagesHotels { get; set; }
+
+        public int GetId()
+        {
+            return Id;
+        }
     }
 }

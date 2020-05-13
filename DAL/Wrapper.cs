@@ -2,13 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class Wrapper<T> : IWrapper<T> where T : class
+
+    public class Wrapper<T> : IWrapper<T> where T : class, IReturnId
     {
         TravelAgencyEntities db;
         DbSet<T> dbSet = null;
@@ -45,19 +47,9 @@ namespace DAL
 
         public void UpdateItem(T item)
         {
-            try
-            {
-                var tempItem = dbSet.Find(item);
-                tempItem = item;
-                db.Entry(tempItem).State = System.Data.Entity.EntityState.Modified;
-                Commit();
-            }
-            catch (ArgumentNullException )
-            {                
-                throw;
-            }
+            dbSet.AddOrUpdate(item);
+            Commit();
         }
-
 
         private void Commit()
         {

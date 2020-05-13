@@ -66,6 +66,7 @@
     <Compile Include="ImagesShowPlace.cs">
       <DependentUpon>TAContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IReturnId.cs" />
     <Compile Include="Interfaces\IWrapper.cs" />
     <Compile Include="ListClientShowInfoTour.cs">
       <DependentUpon>TAContext.tt</DependentUpon>

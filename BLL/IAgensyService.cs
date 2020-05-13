@@ -13,7 +13,10 @@ namespace BLL
     [ServiceContract]
     public interface IAgensyService
     {
-
+        [OperationContract]
+        IEnumerable<ToursDTO> getActualTour();
+        [OperationContract]
+        IEnumerable<ToursDTO> getMyTour(PersonDTO person);
         #region AddItem
         [OperationContract(IsOneWay = true,Name = "AddItemCity")]
         void AddItem(CityDTO item);

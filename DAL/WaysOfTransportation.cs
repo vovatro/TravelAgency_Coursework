@@ -9,10 +9,11 @@
 
 namespace DAL
 {
+    using DAL.Interfaces;
     using System;
     using System.Collections.Generic;
     
-    public partial class WaysOfTransportation
+    public partial class WaysOfTransportation : IReturnId
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public WaysOfTransportation()
@@ -25,5 +26,10 @@ namespace DAL
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<WaysInTours> WaysInTours { get; set; }
+
+        public int GetId()
+        {
+            return Id;
+        }
     }
 }

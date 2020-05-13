@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BLL.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BLL.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfToursDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ToursDTO" nillable="true" type="tns:ToursDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfToursDTO" nillable="true" type="tns:ArrayOfToursDTO" />
+  <xs:complexType name="ToursDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxTourists" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TourName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ToursDTO" nillable="true" type="tns:ToursDTO" />
+  <xs:complexType name="PersonDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateOfCreateAccount" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListClientShowInfoTour" nillable="true" type="tns:ArrayOfListClientShowInfoTourDTO" />
+      <xs:element minOccurs="0" name="ListOfTouristBuy" nillable="true" type="tns:ArrayOfListOfTouristBuyDTO" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponsibleForTheTours" nillable="true" type="tns:ArrayOfResponsibleForTheToursDTO" />
+      <xs:element minOccurs="0" name="SurName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonDTO" nillable="true" type="tns:PersonDTO" />
+  <xs:complexType name="ArrayOfListClientShowInfoTourDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ListClientShowInfoTourDTO" nillable="true" type="tns:ListClientShowInfoTourDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfListClientShowInfoTourDTO" nillable="true" type="tns:ArrayOfListClientShowInfoTourDTO" />
+  <xs:complexType name="ListClientShowInfoTourDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:PersonDTO" />
+      <xs:element minOccurs="0" name="Tours" nillable="true" type="tns:ToursDTO" />
+      <xs:element minOccurs="0" name="ToursId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListClientShowInfoTourDTO" nillable="true" type="tns:ListClientShowInfoTourDTO" />
+  <xs:complexType name="ArrayOfListOfTouristBuyDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ListOfTouristBuyDTO" nillable="true" type="tns:ListOfTouristBuyDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfListOfTouristBuyDTO" nillable="true" type="tns:ArrayOfListOfTouristBuyDTO" />
+  <xs:complexType name="ListOfTouristBuyDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:PersonDTO" />
+      <xs:element minOccurs="0" name="Tours" nillable="true" type="tns:ToursDTO" />
+      <xs:element minOccurs="0" name="ToursId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfTouristBuyDTO" nillable="true" type="tns:ListOfTouristBuyDTO" />
+  <xs:complexType name="ArrayOfResponsibleForTheToursDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResponsibleForTheToursDTO" nillable="true" type="tns:ResponsibleForTheToursDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResponsibleForTheToursDTO" nillable="true" type="tns:ArrayOfResponsibleForTheToursDTO" />
+  <xs:complexType name="ResponsibleForTheToursDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgencyWorkerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:PersonDTO" />
+      <xs:element minOccurs="0" name="Tours" nillable="true" type="tns:ToursDTO" />
+      <xs:element minOccurs="0" name="ToursId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponsibleForTheToursDTO" nillable="true" type="tns:ResponsibleForTheToursDTO" />
+  <xs:complexType name="CityDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="tns:CountryDTO" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:int" />
+      <xs:element minOccurs="0" name="Hotels" nillable="true" type="tns:ArrayOfHotelsDTO" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ShowPlace" nillable="true" type="tns:ArrayOfShowPlaceDTO" />
+      <xs:element minOccurs="0" name="WaysInTours" nillable="true" type="tns:ArrayOfWaysInToursDTO" />
+      <xs:element minOccurs="0" name="WaysInTours1" nillable="true" type="tns:ArrayOfWaysInToursDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CityDTO" nillable="true" type="tns:CityDTO" />
+  <xs:complexType name="CountryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="tns:ArrayOfCityDTO" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CountryDTO" nillable="true" type="tns:CountryDTO" />
+  <xs:complexType name="ArrayOfCityDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CityDTO" nillable="true" type="tns:CityDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCityDTO" nillable="true" type="tns:ArrayOfCityDTO" />
+  <xs:complexType name="ArrayOfHotelsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HotelsDTO" nillable="true" type="tns:HotelsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHotelsDTO" nillable="true" type="tns:ArrayOfHotelsDTO" />
+  <xs:complexType name="HotelsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="tns:CityDTO" />
+      <xs:element minOccurs="0" name="CityId" type="xs:int" />
+      <xs:element minOccurs="0" name="HotelsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImagesHotels" nillable="true" type="tns:ArrayOfImagesHotelsDTO" />
+      <xs:element minOccurs="0" name="PriceDay" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Stars" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HotelsDTO" nillable="true" type="tns:HotelsDTO" />
+  <xs:complexType name="ArrayOfImagesHotelsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImagesHotelsDTO" nillable="true" type="tns:ImagesHotelsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImagesHotelsDTO" nillable="true" type="tns:ArrayOfImagesHotelsDTO" />
+  <xs:complexType name="ImagesHotelsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hotels" nillable="true" type="tns:HotelsDTO" />
+      <xs:element minOccurs="0" name="HotelsId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageURL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImagesHotelsDTO" nillable="true" type="tns:ImagesHotelsDTO" />
+  <xs:complexType name="ArrayOfShowPlaceDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShowPlaceDTO" nillable="true" type="tns:ShowPlaceDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShowPlaceDTO" nillable="true" type="tns:ArrayOfShowPlaceDTO" />
+  <xs:complexType name="ShowPlaceDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="tns:CityDTO" />
+      <xs:element minOccurs="0" name="CityId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImagesShowPlace" nillable="true" type="tns:ArrayOfImagesShowPlaceDTO" />
+      <xs:element minOccurs="0" name="PointInTours" nillable="true" type="tns:ArrayOfPointInToursDTO" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ShowPlaceName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShowPlaceDTO" nillable="true" type="tns:ShowPlaceDTO" />
+  <xs:complexType name="ArrayOfImagesShowPlaceDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImagesShowPlaceDTO" nillable="true" type="tns:ImagesShowPlaceDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImagesShowPlaceDTO" nillable="true" type="tns:ArrayOfImagesShowPlaceDTO" />
+  <xs:complexType name="ImagesShowPlaceDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowPlace" nillable="true" type="tns:ShowPlaceDTO" />
+      <xs:element minOccurs="0" name="ShowPlaceId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImagesShowPlaceDTO" nillable="true" type="tns:ImagesShowPlaceDTO" />
+  <xs:complexType name="ArrayOfPointInToursDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PointInToursDTO" nillable="true" type="tns:PointInToursDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPointInToursDTO" nillable="true" type="tns:ArrayOfPointInToursDTO" />
+  <xs:complexType name="PointInToursDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateOfVisit" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsPriceInTours" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ShowPlace" nillable="true" type="tns:ShowPlaceDTO" />
+      <xs:element minOccurs="0" name="ShowPlaceId" type="xs:int" />
+      <xs:element minOccurs="0" name="Tours" nillable="true" type="tns:ToursDTO" />
+      <xs:element minOccurs="0" name="ToursId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PointInToursDTO" nillable="true" type="tns:PointInToursDTO" />
+  <xs:complexType name="ArrayOfWaysInToursDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WaysInToursDTO" nillable="true" type="tns:WaysInToursDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWaysInToursDTO" nillable="true" type="tns:ArrayOfWaysInToursDTO" />
+  <xs:complexType name="WaysInToursDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="tns:CityDTO" />
+      <xs:element minOccurs="0" name="City1" nillable="true" type="tns:CityDTO" />
+      <xs:element minOccurs="0" name="EndCityId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="StartCityId" type="xs:int" />
+      <xs:element minOccurs="0" name="Tours" nillable="true" type="tns:ToursDTO" />
+      <xs:element minOccurs="0" name="ToursId" type="xs:int" />
+      <xs:element minOccurs="0" name="WaysOfTransportation" nillable="true" type="tns:WaysOfTransportationDTO" />
+      <xs:element minOccurs="0" name="WaysOfTransportationId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WaysInToursDTO" nillable="true" type="tns:WaysInToursDTO" />
+  <xs:complexType name="WaysOfTransportationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="NameTransport" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WaysInTours" nillable="true" type="tns:ArrayOfWaysInToursDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WaysOfTransportationDTO" nillable="true" type="tns:WaysOfTransportationDTO" />
+  <xs:complexType name="ArrayOfCountryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CountryDTO" nillable="true" type="tns:CountryDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountryDTO" nillable="true" type="tns:ArrayOfCountryDTO" />
+  <xs:complexType name="ArrayOfPersonDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonDTO" nillable="true" type="tns:PersonDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonDTO" nillable="true" type="tns:ArrayOfPersonDTO" />
+  <xs:complexType name="ArrayOfWaysOfTransportationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WaysOfTransportationDTO" nillable="true" type="tns:WaysOfTransportationDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWaysOfTransportationDTO" nillable="true" type="tns:ArrayOfWaysOfTransportationDTO" />
+</xs:schema>
