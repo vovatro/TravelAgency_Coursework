@@ -1,36 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using UI.HelpClasses;
 using UI.ServiceReference1;
 
 namespace UI.Classes
 {
-    public class ShowPlaces : INotifyPropertyChanged
+    public class ShowHotel : INotifyPropertyChanged
     {
         AgensyServiceClient proxy = null;
-        List<ShowPlaceInfo> list_showPlace;
+        List<HotelInfo> list_showHotel;
         IEnumerable<CountryDTO> countries;
         IEnumerable<CityDTO> cities;
 
-        public ShowPlaces()
+        public ShowHotel()
         {
             //cb_selCountry = new CB_selectCountry(this);
             proxy = new AgensyServiceClient();
             //countries = new IEnumerable<CountryDTO>;
-            list_showPlace = new List<ShowPlaceInfo>();
-            var t = from i in proxy.GetAllImagesShowPlace()
-                    join sp in proxy.GetAllShowPlace() on i.Id equals sp.Id
-                    join ct in proxy.GetAllCitys() on sp.CityId equals ct.Id
+            list_showHotel = new List<HotelInfo>();
+            var t = from i in proxy.GetAllImagesHotels()
+                    join h in proxy.GetAllHotels() on i.Id equals h.Id
+                    join ct in proxy.GetAllCitys() on h.CityId equals ct.Id
                     join c in proxy.GetAllCountry() on ct.CountryId equals c.Id
-                    select new { i.ImageURL, sp.ShowPlaceName, ct.CityName, c.CountryName };
-            spi_list = new List<ShowPlaceInfo>();
+                    select new { i.ImageURL, h.HotelsName, ct.CityName, c.CountryName };
+            hotel_list = new List<HotelInfo>();
             countries = proxy.GetAllCountry();
             cities = proxy.GetAllCitys();
 
@@ -42,14 +40,14 @@ namespace UI.Classes
                 CB_COUNTRY_LIST.Add(item.CountryName);
             }
 
-            
+
 
 
             foreach (var item in t)
             {
-                spi_list.Add(new ShowPlaceInfo { IMG = item.ImageURL, NAME = item.ShowPlaceName, CITY = item.CityName, COUNTRY = item.CountryName });
+                hotel_list.Add(new HotelInfo { IMG = item.ImageURL, NAME = item.HotelsName, CITY = item.CityName, COUNTRY = item.CountryName });
             }
-            list_showPlace = spi_list;
+            list_showHotel = hotel_list;
         }
 
 
@@ -68,17 +66,17 @@ namespace UI.Classes
         }
 
 
-        private List<ShowPlaceInfo> spi_list;
-        public List<ShowPlaceInfo> SPI_LIST
+        private List<HotelInfo> hotel_list;
+        public List<HotelInfo> Hotel_list
         {
             get
             {
-                return spi_list;
+                return hotel_list;
             }
             set
             {
-                spi_list = value;
-                OnPropertyChanged("SPI_LIST");
+                hotel_list = value;
+                OnPropertyChanged("Hotel_list");
             }
         }
 
@@ -98,26 +96,26 @@ namespace UI.Classes
             }
         }
 
-                
+
 
         public void selShowList()
         {
             if (SelectCountry == "Всі країни")
             {
-                spi_list = list_showPlace;
+                hotel_list = list_showHotel;
             }
             else
             {
-                spi_list.Clear();
-                var t = from i in proxy.GetAllImagesShowPlace()
-                        join sp in proxy.GetAllShowPlace() on i.Id equals sp.Id
-                        join ct in proxy.GetAllCitys() on sp.CityId equals ct.Id
+                hotel_list.Clear();
+                var t = from i in proxy.GetAllImagesHotels()
+                        join h in proxy.GetAllHotels() on i.Id equals h.Id
+                        join ct in proxy.GetAllCitys() on h.CityId equals ct.Id
                         join c in proxy.GetAllCountry() on ct.CountryId equals c.Id
                         where c.CountryName == SelectCountry
-                        select new { i.ImageURL, sp.ShowPlaceName, ct.CityName, c.CountryName };
+                        select new { i.ImageURL, h.HotelsName, ct.CityName, c.CountryName };
                 foreach (var item in t)
                 {
-                    spi_list.Add(new ShowPlaceInfo { IMG = item.ImageURL, NAME = item.ShowPlaceName, CITY = item.CityName, COUNTRY = item.CountryName });
+                    hotel_list.Add(new HotelInfo { IMG = item.ImageURL, NAME = item.HotelsName, CITY = item.CityName, COUNTRY = item.CountryName });
                 }
             }
         }

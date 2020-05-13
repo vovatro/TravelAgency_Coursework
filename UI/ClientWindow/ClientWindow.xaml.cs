@@ -42,5 +42,7 @@ namespace UI.ClientWindow
         {
             Application.Current.MainWindow.Close();
         }
+
+        
     }
 }

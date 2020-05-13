@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:UI.ClientWindow"
+        xmlns:bind="clr-namespace:UI.Classes"
         mc:Ignorable="d"
-        Title="ClientWindow" Height="450" Width="800" Closing="ClosingWindow">
+        Title="ClientWindow" Height="600" Width="800" Closing="ClosingWindow">
     <Window.Resources>
+        <bind:ShowPlaces x:Key="ShowPlaces_DataContext"/>
+        <bind:ShowHotel x:Key="ShowHotels_DataContext"/>
     </Window.Resources>
     <Grid x:Name="ClientW">
         <Grid.Effect>
@@ -116,7 +119,7 @@
                 <StackPanel Orientation="Vertical">
                     <StackPanel x:Name="sp_ActualTours" Orientation="Horizontal" Margin="5 5 5 40">
                         <ListBox Name="lb_ActualTours"
-                             Height="{Binding ElementName=sp_ActualTours, Path=ActualHeight}"
+                             Height="{Binding ElementName=sp_ActualTours, Path=Height}"
                              Width="{Binding ElementName=sp_ActualTours, Path=ActualWidth}"
                              HorizontalContentAlignment="Stretch">
                             <ListBox.ItemTemplate>
@@ -151,23 +154,23 @@
 
 
 
-            <TabItem Header="Визначні місця" FontSize="15">
+            <TabItem Header="Визначні місця" FontSize="15" DataContext="{StaticResource ShowPlaces_DataContext}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"></RowDefinition>
                         <RowDefinition Height="7*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ComboBox x:Name="cb_Country" Width="300" Margin=" 30 10 30 10" FontSize="20"></ComboBox>
-                        <ComboBox x:Name="cb_City" Width="300" Margin=" 30 10 30 10"
-                                  FontSize="20"></ComboBox>
+                        <ComboBox x:Name="cb_Country" Width="300" Margin=" 30 10 30 10" FontSize="20"
+                                  ItemsSource="{Binding CB_COUNTRY_LIST}" SelectedItem="{Binding SelectCountry}">                            
+                        </ComboBox>
                     </StackPanel>
 
                     <StackPanel x:Name="sp_InfoPlace" Orientation="Horizontal" Margin="5 5 5 40" Grid.Row="1">
                         <ListBox Name="lb_InfoPlace"
                                  Height="{Binding ElementName=sp_InfoPlace, Path=ActualHeight}"
                                  Width="{Binding ElementName=sp_InfoPlace, Path=ActualWidth}"
-                                 HorizontalContentAlignment="Stretch">
+                                 HorizontalContentAlignment="Stretch" ItemsSource="{Binding SPI_LIST, Mode=TwoWay}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <Grid>
@@ -176,20 +179,23 @@
                                             <ColumnDefinition Width="120*"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image></Image>
+                                        <Image Source="{Binding IMG}"></Image>
                                         <StackPanel Orientation="Vertical" Grid.Column="1">
 
                                             <StackPanel Orientation="Horizontal">
                                                 <Label FontSize="25" Grid.Column="0">Назва визначного місця:</Label>
-                                                <TextBlock Margin="5 0 0 0" FontSize="25" Grid.Column="1"/>
+                                                <TextBlock Margin="5 0 0 0" FontSize="25" Grid.Column="1"
+                                                           Text="{Binding NAME}"/>
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
                                                 <Label FontSize="25" Grid.Column="0">Місто:</Label>
-                                                <TextBlock Margin="5 0 0 0" FontSize="25" Grid.Column="1"/>
+                                                <TextBlock Margin="5 0 0 0" FontSize="25" Grid.Column="1"
+                                                           Text="{Binding CITY}"/>
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
                                                 <Label FontSize="25" Grid.Column="0">Країна:</Label>
-                                                <TextBlock Margin="5 0 20 0" FontSize="25" Grid.Column="1"/>
+                                                <TextBlock Margin="5 0 20 0" FontSize="25" Grid.Column="1"
+                                                           Text="{Binding COUNTRY}"/>
                                             </StackPanel>
 
                                         </StackPanel>
@@ -202,44 +208,58 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Готелі" FontSize="15">
-                <StackPanel x:Name="sp_InfoHotel" Orientation="Horizontal" Margin="5 5 5 40">
-                    <ListBox Name="lb_InfoHotel"
-                             Height="{Binding ElementName=sp_InfoHotel, Path=ActualHeight}"
-                             Width="{Binding ElementName=sp_InfoHotel, Path=ActualWidth}"
-                             HorizontalContentAlignment="Stretch">
-                        <ListBox.ItemTemplate>
+            <TabItem Header="Готелі" FontSize="15" DataContext="{StaticResource ShowHotels_DataContext}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="7*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <ComboBox x:Name="cb_CountryH" Width="300" Margin=" 30 10 30 10" FontSize="20"
+                                  ItemsSource="{Binding CB_COUNTRY_LIST}" SelectedItem="{Binding SelectCountry}">
+                        </ComboBox>
+                    </StackPanel>
 
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="30*"></ColumnDefinition>
-                                        <ColumnDefinition Width="120*"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
+                    <StackPanel x:Name="sp_Info_h" Orientation="Horizontal" Margin="5 5 5 40" Grid.Row="1">
+                        <ListBox Name="list_Info_h" ItemsSource="{Binding Hotel_list, Mode=TwoWay}" Height="{Binding ElementName=sp_Info_h, Path=ActualHeight}"
+                                 Width="{Binding ElementName=sp_Info_h, Path=ActualWidth}" HorizontalContentAlignment="Stretch">
+                            <ListBox.ItemTemplate>
 
-                                    <Image></Image>
-                                    <StackPanel Orientation="Vertical" Grid.Column="1">
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="30*"></ColumnDefinition>
+                                            <ColumnDefinition Width="120*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
 
-                                        <StackPanel Orientation="Horizontal">
-                                            <Label FontSize="25" Grid.Column="0">Назва визначного місця:</Label>
-                                            <TextBlock Margin="5 0 0 0" FontSize="25" Grid.Column="1"/>
+                                        <Image Source="{Binding IMG}"></Image>
+                                        <StackPanel Orientation="Vertical" Grid.Column="1">
+
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label FontSize="25" Grid.Column="0">Назва готелю:</Label>
+                                                <TextBlock Margin="5 0 0 0" FontSize="25" Grid.Column="1" Text="{Binding NAME}"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label FontSize="25" Grid.Column="0">Місто:</Label>
+                                                <TextBlock Margin="5 0 0 0" FontSize="25" Grid.Column="1" Text="{Binding CITY}"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label FontSize="25" Grid.Column="0">Країна:</Label>
+                                                <TextBlock Margin="5 0 20 0" FontSize="25" Grid.Column="1" Text="{Binding COUNTRY}"/>
+                                            </StackPanel>
+
                                         </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Label FontSize="25" Grid.Column="0">Місто:</Label>
-                                            <TextBlock Margin="5 0 0 0" FontSize="25" Grid.Column="1"/>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Label FontSize="25" Grid.Column="0">Країна:</Label>
-                                            <TextBlock Margin="5 0 20 0" FontSize="25" Grid.Column="1"/>
-                                        </StackPanel>
+                                    </Grid>
 
-                                    </StackPanel>
-                                </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </Grid>
 
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
+
+
+                
             </TabItem>
 
 

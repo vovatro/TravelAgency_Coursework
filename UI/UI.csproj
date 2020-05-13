@@ -81,9 +81,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\CB_selectCountry.cs" />
     <Compile Include="Classes\LogIn.cs" />
     <Compile Include="Classes\ProfilClient.cs" />
     <Compile Include="Classes\Registr.cs" />
+    <Compile Include="Classes\ShowHotel.cs" />
     <Compile Include="Classes\ShowPlaces.cs" />
     <Compile Include="ClientWindow\Commands\BtnAddMyTours.cs" />
     <Compile Include="ClientWindow\Commands\BtnRedagInfoClient.cs" />
