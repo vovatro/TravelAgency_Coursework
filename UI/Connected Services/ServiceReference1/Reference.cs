@@ -1875,1903 +1875,93 @@ namespace UI.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Tours", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class Tours : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime EndDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsDeletedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ListClientShowInfoTour[] ListClientShowInfoTourField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ListOfTouristBuy[] ListOfTouristBuyField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int MaxTouristsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.PointInTours[] PointInToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PriceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ResponsibleForTheTours[] ResponsibleForTheToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime StartDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TourNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.WaysInTours[] WaysInToursField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime EndDate {
-            get {
-                return this.EndDateField;
-            }
-            set {
-                if ((this.EndDateField.Equals(value) != true)) {
-                    this.EndDateField = value;
-                    this.RaisePropertyChanged("EndDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsDeleted {
-            get {
-                return this.IsDeletedField;
-            }
-            set {
-                if ((this.IsDeletedField.Equals(value) != true)) {
-                    this.IsDeletedField = value;
-                    this.RaisePropertyChanged("IsDeleted");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ListClientShowInfoTour[] ListClientShowInfoTour {
-            get {
-                return this.ListClientShowInfoTourField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ListClientShowInfoTourField, value) != true)) {
-                    this.ListClientShowInfoTourField = value;
-                    this.RaisePropertyChanged("ListClientShowInfoTour");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ListOfTouristBuy[] ListOfTouristBuy {
-            get {
-                return this.ListOfTouristBuyField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ListOfTouristBuyField, value) != true)) {
-                    this.ListOfTouristBuyField = value;
-                    this.RaisePropertyChanged("ListOfTouristBuy");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int MaxTourists {
-            get {
-                return this.MaxTouristsField;
-            }
-            set {
-                if ((this.MaxTouristsField.Equals(value) != true)) {
-                    this.MaxTouristsField = value;
-                    this.RaisePropertyChanged("MaxTourists");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.PointInTours[] PointInTours {
-            get {
-                return this.PointInToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PointInToursField, value) != true)) {
-                    this.PointInToursField = value;
-                    this.RaisePropertyChanged("PointInTours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Price {
-            get {
-                return this.PriceField;
-            }
-            set {
-                if ((this.PriceField.Equals(value) != true)) {
-                    this.PriceField = value;
-                    this.RaisePropertyChanged("Price");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ResponsibleForTheTours[] ResponsibleForTheTours {
-            get {
-                return this.ResponsibleForTheToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ResponsibleForTheToursField, value) != true)) {
-                    this.ResponsibleForTheToursField = value;
-                    this.RaisePropertyChanged("ResponsibleForTheTours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime StartDate {
-            get {
-                return this.StartDateField;
-            }
-            set {
-                if ((this.StartDateField.Equals(value) != true)) {
-                    this.StartDateField = value;
-                    this.RaisePropertyChanged("StartDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TourName {
-            get {
-                return this.TourNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TourNameField, value) != true)) {
-                    this.TourNameField = value;
-                    this.RaisePropertyChanged("TourName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.WaysInTours[] WaysInTours {
-            get {
-                return this.WaysInToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.WaysInToursField, value) != true)) {
-                    this.WaysInToursField = value;
-                    this.RaisePropertyChanged("WaysInTours");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ListClientShowInfoTour", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class ListClientShowInfoTour : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ClientIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Person PersonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Tours ToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ToursIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ClientId {
-            get {
-                return this.ClientIdField;
-            }
-            set {
-                if ((this.ClientIdField.Equals(value) != true)) {
-                    this.ClientIdField = value;
-                    this.RaisePropertyChanged("ClientId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Person Person {
-            get {
-                return this.PersonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PersonField, value) != true)) {
-                    this.PersonField = value;
-                    this.RaisePropertyChanged("Person");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Tours Tours {
-            get {
-                return this.ToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ToursField, value) != true)) {
-                    this.ToursField = value;
-                    this.RaisePropertyChanged("Tours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ToursId {
-            get {
-                return this.ToursIdField;
-            }
-            set {
-                if ((this.ToursIdField.Equals(value) != true)) {
-                    this.ToursIdField = value;
-                    this.RaisePropertyChanged("ToursId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ListOfTouristBuy", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class ListOfTouristBuy : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ClientIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Person PersonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Tours ToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ToursIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ClientId {
-            get {
-                return this.ClientIdField;
-            }
-            set {
-                if ((this.ClientIdField.Equals(value) != true)) {
-                    this.ClientIdField = value;
-                    this.RaisePropertyChanged("ClientId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Person Person {
-            get {
-                return this.PersonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PersonField, value) != true)) {
-                    this.PersonField = value;
-                    this.RaisePropertyChanged("Person");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Tours Tours {
-            get {
-                return this.ToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ToursField, value) != true)) {
-                    this.ToursField = value;
-                    this.RaisePropertyChanged("Tours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ToursId {
-            get {
-                return this.ToursIdField;
-            }
-            set {
-                if ((this.ToursIdField.Equals(value) != true)) {
-                    this.ToursIdField = value;
-                    this.RaisePropertyChanged("ToursId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PointInTours", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class PointInTours : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DateOfVisitField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsPriceInToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ShowPlace ShowPlaceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ShowPlaceIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Tours ToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ToursIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DateOfVisit {
-            get {
-                return this.DateOfVisitField;
-            }
-            set {
-                if ((this.DateOfVisitField.Equals(value) != true)) {
-                    this.DateOfVisitField = value;
-                    this.RaisePropertyChanged("DateOfVisit");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsPriceInTours {
-            get {
-                return this.IsPriceInToursField;
-            }
-            set {
-                if ((this.IsPriceInToursField.Equals(value) != true)) {
-                    this.IsPriceInToursField = value;
-                    this.RaisePropertyChanged("IsPriceInTours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ShowPlace ShowPlace {
-            get {
-                return this.ShowPlaceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ShowPlaceField, value) != true)) {
-                    this.ShowPlaceField = value;
-                    this.RaisePropertyChanged("ShowPlace");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ShowPlaceId {
-            get {
-                return this.ShowPlaceIdField;
-            }
-            set {
-                if ((this.ShowPlaceIdField.Equals(value) != true)) {
-                    this.ShowPlaceIdField = value;
-                    this.RaisePropertyChanged("ShowPlaceId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Tours Tours {
-            get {
-                return this.ToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ToursField, value) != true)) {
-                    this.ToursField = value;
-                    this.RaisePropertyChanged("Tours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ToursId {
-            get {
-                return this.ToursIdField;
-            }
-            set {
-                if ((this.ToursIdField.Equals(value) != true)) {
-                    this.ToursIdField = value;
-                    this.RaisePropertyChanged("ToursId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResponsibleForTheTours", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class ResponsibleForTheTours : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> AgencyWorkerIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Person PersonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Tours ToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ToursIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> AgencyWorkerId {
-            get {
-                return this.AgencyWorkerIdField;
-            }
-            set {
-                if ((this.AgencyWorkerIdField.Equals(value) != true)) {
-                    this.AgencyWorkerIdField = value;
-                    this.RaisePropertyChanged("AgencyWorkerId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Person Person {
-            get {
-                return this.PersonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PersonField, value) != true)) {
-                    this.PersonField = value;
-                    this.RaisePropertyChanged("Person");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Tours Tours {
-            get {
-                return this.ToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ToursField, value) != true)) {
-                    this.ToursField = value;
-                    this.RaisePropertyChanged("Tours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ToursId {
-            get {
-                return this.ToursIdField;
-            }
-            set {
-                if ((this.ToursIdField.Equals(value) != true)) {
-                    this.ToursIdField = value;
-                    this.RaisePropertyChanged("ToursId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="WaysInTours", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class WaysInTours : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.City CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.City City1Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EndCityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> StartCityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Tours ToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ToursIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.WaysOfTransportation WaysOfTransportationField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> WaysOfTransportationIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.City City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.City City1 {
-            get {
-                return this.City1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.City1Field, value) != true)) {
-                    this.City1Field = value;
-                    this.RaisePropertyChanged("City1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> EndCityId {
-            get {
-                return this.EndCityIdField;
-            }
-            set {
-                if ((this.EndCityIdField.Equals(value) != true)) {
-                    this.EndCityIdField = value;
-                    this.RaisePropertyChanged("EndCityId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> StartCityId {
-            get {
-                return this.StartCityIdField;
-            }
-            set {
-                if ((this.StartCityIdField.Equals(value) != true)) {
-                    this.StartCityIdField = value;
-                    this.RaisePropertyChanged("StartCityId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Tours Tours {
-            get {
-                return this.ToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ToursField, value) != true)) {
-                    this.ToursField = value;
-                    this.RaisePropertyChanged("Tours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ToursId {
-            get {
-                return this.ToursIdField;
-            }
-            set {
-                if ((this.ToursIdField.Equals(value) != true)) {
-                    this.ToursIdField = value;
-                    this.RaisePropertyChanged("ToursId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.WaysOfTransportation WaysOfTransportation {
-            get {
-                return this.WaysOfTransportationField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.WaysOfTransportationField, value) != true)) {
-                    this.WaysOfTransportationField = value;
-                    this.RaisePropertyChanged("WaysOfTransportation");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> WaysOfTransportationId {
-            get {
-                return this.WaysOfTransportationIdField;
-            }
-            set {
-                if ((this.WaysOfTransportationIdField.Equals(value) != true)) {
-                    this.WaysOfTransportationIdField = value;
-                    this.RaisePropertyChanged("WaysOfTransportationId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class Person : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DateOfBirthField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DateOfCreateAccountField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LastNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ListClientShowInfoTour[] ListClientShowInfoTourField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ListOfTouristBuy[] ListOfTouristBuyField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LoginField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PasswordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PersonStatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PhoneNumberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ResponsibleForTheTours[] ResponsibleForTheToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SurNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DateOfBirth {
-            get {
-                return this.DateOfBirthField;
-            }
-            set {
-                if ((this.DateOfBirthField.Equals(value) != true)) {
-                    this.DateOfBirthField = value;
-                    this.RaisePropertyChanged("DateOfBirth");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DateOfCreateAccount {
-            get {
-                return this.DateOfCreateAccountField;
-            }
-            set {
-                if ((this.DateOfCreateAccountField.Equals(value) != true)) {
-                    this.DateOfCreateAccountField = value;
-                    this.RaisePropertyChanged("DateOfCreateAccount");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
-            get {
-                return this.EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FirstName {
-            get {
-                return this.FirstNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
-                    this.FirstNameField = value;
-                    this.RaisePropertyChanged("FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LastName {
-            get {
-                return this.LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
-                    this.LastNameField = value;
-                    this.RaisePropertyChanged("LastName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ListClientShowInfoTour[] ListClientShowInfoTour {
-            get {
-                return this.ListClientShowInfoTourField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ListClientShowInfoTourField, value) != true)) {
-                    this.ListClientShowInfoTourField = value;
-                    this.RaisePropertyChanged("ListClientShowInfoTour");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ListOfTouristBuy[] ListOfTouristBuy {
-            get {
-                return this.ListOfTouristBuyField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ListOfTouristBuyField, value) != true)) {
-                    this.ListOfTouristBuyField = value;
-                    this.RaisePropertyChanged("ListOfTouristBuy");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Login {
-            get {
-                return this.LoginField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LoginField, value) != true)) {
-                    this.LoginField = value;
-                    this.RaisePropertyChanged("Login");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Password {
-            get {
-                return this.PasswordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
-                    this.PasswordField = value;
-                    this.RaisePropertyChanged("Password");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PersonStatus {
-            get {
-                return this.PersonStatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PersonStatusField, value) != true)) {
-                    this.PersonStatusField = value;
-                    this.RaisePropertyChanged("PersonStatus");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PhoneNumber {
-            get {
-                return this.PhoneNumberField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PhoneNumberField, value) != true)) {
-                    this.PhoneNumberField = value;
-                    this.RaisePropertyChanged("PhoneNumber");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ResponsibleForTheTours[] ResponsibleForTheTours {
-            get {
-                return this.ResponsibleForTheToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ResponsibleForTheToursField, value) != true)) {
-                    this.ResponsibleForTheToursField = value;
-                    this.RaisePropertyChanged("ResponsibleForTheTours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SurName {
-            get {
-                return this.SurNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SurNameField, value) != true)) {
-                    this.SurNameField = value;
-                    this.RaisePropertyChanged("SurName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ShowPlace", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class ShowPlace : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.City CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ImagesShowPlace[] ImagesShowPlaceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.PointInTours[] PointInToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PriceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ShowPlaceNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.City City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CityId {
-            get {
-                return this.CityIdField;
-            }
-            set {
-                if ((this.CityIdField.Equals(value) != true)) {
-                    this.CityIdField = value;
-                    this.RaisePropertyChanged("CityId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ImagesShowPlace[] ImagesShowPlace {
-            get {
-                return this.ImagesShowPlaceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImagesShowPlaceField, value) != true)) {
-                    this.ImagesShowPlaceField = value;
-                    this.RaisePropertyChanged("ImagesShowPlace");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.PointInTours[] PointInTours {
-            get {
-                return this.PointInToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PointInToursField, value) != true)) {
-                    this.PointInToursField = value;
-                    this.RaisePropertyChanged("PointInTours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Price {
-            get {
-                return this.PriceField;
-            }
-            set {
-                if ((this.PriceField.Equals(value) != true)) {
-                    this.PriceField = value;
-                    this.RaisePropertyChanged("Price");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ShowPlaceName {
-            get {
-                return this.ShowPlaceNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ShowPlaceNameField, value) != true)) {
-                    this.ShowPlaceNameField = value;
-                    this.RaisePropertyChanged("ShowPlaceName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="City", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class City : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CityNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Country CountryField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CountryIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Hotels[] HotelsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ShowPlace[] ShowPlaceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.WaysInTours[] WaysInToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.WaysInTours[] WaysInTours1Field;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CityName {
-            get {
-                return this.CityNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityNameField, value) != true)) {
-                    this.CityNameField = value;
-                    this.RaisePropertyChanged("CityName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Country Country {
-            get {
-                return this.CountryField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
-                    this.CountryField = value;
-                    this.RaisePropertyChanged("Country");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CountryId {
-            get {
-                return this.CountryIdField;
-            }
-            set {
-                if ((this.CountryIdField.Equals(value) != true)) {
-                    this.CountryIdField = value;
-                    this.RaisePropertyChanged("CountryId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Hotels[] Hotels {
-            get {
-                return this.HotelsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HotelsField, value) != true)) {
-                    this.HotelsField = value;
-                    this.RaisePropertyChanged("Hotels");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ShowPlace[] ShowPlace {
-            get {
-                return this.ShowPlaceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ShowPlaceField, value) != true)) {
-                    this.ShowPlaceField = value;
-                    this.RaisePropertyChanged("ShowPlace");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.WaysInTours[] WaysInTours {
-            get {
-                return this.WaysInToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.WaysInToursField, value) != true)) {
-                    this.WaysInToursField = value;
-                    this.RaisePropertyChanged("WaysInTours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.WaysInTours[] WaysInTours1 {
-            get {
-                return this.WaysInTours1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.WaysInTours1Field, value) != true)) {
-                    this.WaysInTours1Field = value;
-                    this.RaisePropertyChanged("WaysInTours1");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ImagesShowPlace", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class ImagesShowPlace : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ImageURLField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ShowPlace ShowPlaceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ShowPlaceIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ImageURL {
-            get {
-                return this.ImageURLField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImageURLField, value) != true)) {
-                    this.ImageURLField = value;
-                    this.RaisePropertyChanged("ImageURL");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ShowPlace ShowPlace {
-            get {
-                return this.ShowPlaceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ShowPlaceField, value) != true)) {
-                    this.ShowPlaceField = value;
-                    this.RaisePropertyChanged("ShowPlace");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ShowPlaceId {
-            get {
-                return this.ShowPlaceIdField;
-            }
-            set {
-                if ((this.ShowPlaceIdField.Equals(value) != true)) {
-                    this.ShowPlaceIdField = value;
-                    this.RaisePropertyChanged("ShowPlaceId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Country", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class Country : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.City[] CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CountryNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.City[] City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CountryName {
-            get {
-                return this.CountryNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CountryNameField, value) != true)) {
-                    this.CountryNameField = value;
-                    this.RaisePropertyChanged("CountryName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Hotels", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class Hotels : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.City CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string HotelsNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ImagesHotels[] ImagesHotelsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PriceDayField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StarsField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.City City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CityId {
-            get {
-                return this.CityIdField;
-            }
-            set {
-                if ((this.CityIdField.Equals(value) != true)) {
-                    this.CityIdField = value;
-                    this.RaisePropertyChanged("CityId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string HotelsName {
-            get {
-                return this.HotelsNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HotelsNameField, value) != true)) {
-                    this.HotelsNameField = value;
-                    this.RaisePropertyChanged("HotelsName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ImagesHotels[] ImagesHotels {
-            get {
-                return this.ImagesHotelsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImagesHotelsField, value) != true)) {
-                    this.ImagesHotelsField = value;
-                    this.RaisePropertyChanged("ImagesHotels");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal PriceDay {
-            get {
-                return this.PriceDayField;
-            }
-            set {
-                if ((this.PriceDayField.Equals(value) != true)) {
-                    this.PriceDayField = value;
-                    this.RaisePropertyChanged("PriceDay");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Stars {
-            get {
-                return this.StarsField;
-            }
-            set {
-                if ((this.StarsField.Equals(value) != true)) {
-                    this.StarsField = value;
-                    this.RaisePropertyChanged("Stars");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ImagesHotels", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class ImagesHotels : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.Hotels HotelsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> HotelsIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ImageURLField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.Hotels Hotels {
-            get {
-                return this.HotelsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HotelsField, value) != true)) {
-                    this.HotelsField = value;
-                    this.RaisePropertyChanged("Hotels");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> HotelsId {
-            get {
-                return this.HotelsIdField;
-            }
-            set {
-                if ((this.HotelsIdField.Equals(value) != true)) {
-                    this.HotelsIdField = value;
-                    this.RaisePropertyChanged("HotelsId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ImageURL {
-            get {
-                return this.ImageURLField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImageURLField, value) != true)) {
-                    this.ImageURLField = value;
-                    this.RaisePropertyChanged("ImageURL");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="WaysOfTransportation", Namespace="http://schemas.datacontract.org/2004/07/DAL")]
-    [System.SerializableAttribute()]
-    public partial class WaysOfTransportation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameTransportField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.WaysInTours[] WaysInToursField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NameTransport {
-            get {
-                return this.NameTransportField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameTransportField, value) != true)) {
-                    this.NameTransportField = value;
-                    this.RaisePropertyChanged("NameTransport");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.WaysInTours[] WaysInTours {
-            get {
-                return this.WaysInToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.WaysInToursField, value) != true)) {
-                    this.WaysInToursField = value;
-                    this.RaisePropertyChanged("WaysInTours");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IAgensyService")]
     public interface IAgensyService {
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemCity")]
+        void AddItemCity(UI.ServiceReference1.CityDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemCity")]
+        System.Threading.Tasks.Task AddItemCityAsync(UI.ServiceReference1.CityDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemCountry")]
+        void AddItemCountry(UI.ServiceReference1.CountryDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemCountry")]
+        System.Threading.Tasks.Task AddItemCountryAsync(UI.ServiceReference1.CountryDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemHotels")]
+        void AddItemHotels(UI.ServiceReference1.HotelsDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemHotels")]
+        System.Threading.Tasks.Task AddItemHotelsAsync(UI.ServiceReference1.HotelsDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemImagesHotels")]
+        void AddItemImagesHotels(UI.ServiceReference1.ImagesHotelsDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemImagesHotels")]
+        System.Threading.Tasks.Task AddItemImagesHotelsAsync(UI.ServiceReference1.ImagesHotelsDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemImagesShowPlace")]
+        void AddItemImagesShowPlace(UI.ServiceReference1.ImagesShowPlaceDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemImagesShowPlace")]
+        System.Threading.Tasks.Task AddItemImagesShowPlaceAsync(UI.ServiceReference1.ImagesShowPlaceDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemListClientShowInfoTour")]
+        void AddItemListClientShowInfoTour(UI.ServiceReference1.ListClientShowInfoTourDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemListClientShowInfoTour")]
+        System.Threading.Tasks.Task AddItemListClientShowInfoTourAsync(UI.ServiceReference1.ListClientShowInfoTourDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemListOfTouristBuy")]
+        void AddItemListOfTouristBuy(UI.ServiceReference1.ListOfTouristBuyDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemListOfTouristBuy")]
+        System.Threading.Tasks.Task AddItemListOfTouristBuyAsync(UI.ServiceReference1.ListOfTouristBuyDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemPerson")]
+        void AddItemPerson(UI.ServiceReference1.PersonDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemPerson")]
+        System.Threading.Tasks.Task AddItemPersonAsync(UI.ServiceReference1.PersonDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemPointInTours")]
+        void AddItemPointInTours(UI.ServiceReference1.PointInToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemPointInTours")]
+        System.Threading.Tasks.Task AddItemPointInToursAsync(UI.ServiceReference1.PointInToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemResponsibleForTheTours")]
+        void AddItemResponsibleForTheTours(UI.ServiceReference1.ResponsibleForTheToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemResponsibleForTheTours")]
+        System.Threading.Tasks.Task AddItemResponsibleForTheToursAsync(UI.ServiceReference1.ResponsibleForTheToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemShowPlace")]
+        void AddItemShowPlace(UI.ServiceReference1.ShowPlaceDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemShowPlace")]
+        System.Threading.Tasks.Task AddItemShowPlaceAsync(UI.ServiceReference1.ShowPlaceDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemTours")]
+        void AddItemTours(UI.ServiceReference1.ToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemTours")]
+        System.Threading.Tasks.Task AddItemToursAsync(UI.ServiceReference1.ToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemWaysInTours")]
+        void AddItemWaysInTours(UI.ServiceReference1.WaysInToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemWaysInTours")]
+        System.Threading.Tasks.Task AddItemWaysInToursAsync(UI.ServiceReference1.WaysInToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemWaysOfTransportation")]
+        void AddItemWaysOfTransportation(UI.ServiceReference1.WaysOfTransportationDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemWaysOfTransportation")]
+        System.Threading.Tasks.Task AddItemWaysOfTransportationAsync(UI.ServiceReference1.WaysOfTransportationDTO item);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllCitys", ReplyAction="http://tempuri.org/IAgensyService/GetAllCitysResponse")]
         UI.ServiceReference1.CityDTO[] GetAllCitys();
@@ -3779,23 +1969,83 @@ namespace UI.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllCitys", ReplyAction="http://tempuri.org/IAgensyService/GetAllCitysResponse")]
         System.Threading.Tasks.Task<UI.ServiceReference1.CityDTO[]> GetAllCitysAsync();
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItem")]
-        void AddItem(UI.ServiceReference1.CityDTO item);
-        
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItem")]
-        System.Threading.Tasks.Task AddItemAsync(UI.ServiceReference1.CityDTO item);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllTours", ReplyAction="http://tempuri.org/IAgensyService/GetAllToursResponse")]
         UI.ServiceReference1.ToursDTO[] GetAllTours();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllTours", ReplyAction="http://tempuri.org/IAgensyService/GetAllToursResponse")]
         System.Threading.Tasks.Task<UI.ServiceReference1.ToursDTO[]> GetAllToursAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetTour", ReplyAction="http://tempuri.org/IAgensyService/GetTourResponse")]
-        UI.ServiceReference1.CityDTO[] GetTour(UI.ServiceReference1.Tours tours);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllCountry", ReplyAction="http://tempuri.org/IAgensyService/GetAllCountryResponse")]
+        UI.ServiceReference1.CountryDTO[] GetAllCountry();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetTour", ReplyAction="http://tempuri.org/IAgensyService/GetTourResponse")]
-        System.Threading.Tasks.Task<UI.ServiceReference1.CityDTO[]> GetTourAsync(UI.ServiceReference1.Tours tours);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllCountry", ReplyAction="http://tempuri.org/IAgensyService/GetAllCountryResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.CountryDTO[]> GetAllCountryAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllHotels", ReplyAction="http://tempuri.org/IAgensyService/GetAllHotelsResponse")]
+        UI.ServiceReference1.HotelsDTO[] GetAllHotels();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllHotels", ReplyAction="http://tempuri.org/IAgensyService/GetAllHotelsResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.HotelsDTO[]> GetAllHotelsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllImagesHotels", ReplyAction="http://tempuri.org/IAgensyService/GetAllImagesHotelsResponse")]
+        UI.ServiceReference1.ImagesHotelsDTO[] GetAllImagesHotels();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllImagesHotels", ReplyAction="http://tempuri.org/IAgensyService/GetAllImagesHotelsResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.ImagesHotelsDTO[]> GetAllImagesHotelsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllImagesShowPlace", ReplyAction="http://tempuri.org/IAgensyService/GetAllImagesShowPlaceResponse")]
+        UI.ServiceReference1.ImagesShowPlaceDTO[] GetAllImagesShowPlace();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllImagesShowPlace", ReplyAction="http://tempuri.org/IAgensyService/GetAllImagesShowPlaceResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.ImagesShowPlaceDTO[]> GetAllImagesShowPlaceAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllListClientShowInfoTour", ReplyAction="http://tempuri.org/IAgensyService/GetAllListClientShowInfoTourResponse")]
+        UI.ServiceReference1.ListClientShowInfoTourDTO[] GetAllListClientShowInfoTour();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllListClientShowInfoTour", ReplyAction="http://tempuri.org/IAgensyService/GetAllListClientShowInfoTourResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.ListClientShowInfoTourDTO[]> GetAllListClientShowInfoTourAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllListOfTouristBuy", ReplyAction="http://tempuri.org/IAgensyService/GetAllListOfTouristBuyResponse")]
+        UI.ServiceReference1.ListOfTouristBuyDTO[] GetAllListOfTouristBuy();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllListOfTouristBuy", ReplyAction="http://tempuri.org/IAgensyService/GetAllListOfTouristBuyResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.ListOfTouristBuyDTO[]> GetAllListOfTouristBuyAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllPerson", ReplyAction="http://tempuri.org/IAgensyService/GetAllPersonResponse")]
+        UI.ServiceReference1.PersonDTO[] GetAllPerson();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllPerson", ReplyAction="http://tempuri.org/IAgensyService/GetAllPersonResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.PersonDTO[]> GetAllPersonAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllPointInTours", ReplyAction="http://tempuri.org/IAgensyService/GetAllPointInToursResponse")]
+        UI.ServiceReference1.PointInToursDTO[] GetAllPointInTours();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllPointInTours", ReplyAction="http://tempuri.org/IAgensyService/GetAllPointInToursResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.PointInToursDTO[]> GetAllPointInToursAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllResponsibleForTheTours", ReplyAction="http://tempuri.org/IAgensyService/GetAllResponsibleForTheToursResponse")]
+        UI.ServiceReference1.ResponsibleForTheToursDTO[] GetAllResponsibleForTheTours();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllResponsibleForTheTours", ReplyAction="http://tempuri.org/IAgensyService/GetAllResponsibleForTheToursResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.ResponsibleForTheToursDTO[]> GetAllResponsibleForTheToursAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllShowPlace", ReplyAction="http://tempuri.org/IAgensyService/GetAllShowPlaceResponse")]
+        UI.ServiceReference1.ShowPlaceDTO[] GetAllShowPlace();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllShowPlace", ReplyAction="http://tempuri.org/IAgensyService/GetAllShowPlaceResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.ShowPlaceDTO[]> GetAllShowPlaceAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllWaysInTours", ReplyAction="http://tempuri.org/IAgensyService/GetAllWaysInToursResponse")]
+        UI.ServiceReference1.WaysInToursDTO[] GetAllWaysInTours();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllWaysInTours", ReplyAction="http://tempuri.org/IAgensyService/GetAllWaysInToursResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.WaysInToursDTO[]> GetAllWaysInToursAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllWaysOfTransportation", ReplyAction="http://tempuri.org/IAgensyService/GetAllWaysOfTransportationResponse")]
+        UI.ServiceReference1.WaysOfTransportationDTO[] GetAllWaysOfTransportation();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/GetAllWaysOfTransportation", ReplyAction="http://tempuri.org/IAgensyService/GetAllWaysOfTransportationResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.WaysOfTransportationDTO[]> GetAllWaysOfTransportationAsync();
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/Registration")]
         void Registration(UI.ServiceReference1.PersonDTO person);
@@ -3826,6 +2076,90 @@ namespace UI.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/Disconect")]
         System.Threading.Tasks.Task DisconectAsync(UI.ServiceReference1.PersonDTO person);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateCity")]
+        void UpdateCity(UI.ServiceReference1.CityDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateCity")]
+        System.Threading.Tasks.Task UpdateCityAsync(UI.ServiceReference1.CityDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateCountry")]
+        void UpdateCountry(UI.ServiceReference1.CountryDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateCountry")]
+        System.Threading.Tasks.Task UpdateCountryAsync(UI.ServiceReference1.CountryDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateHotels")]
+        void UpdateHotels(UI.ServiceReference1.HotelsDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateHotels")]
+        System.Threading.Tasks.Task UpdateHotelsAsync(UI.ServiceReference1.HotelsDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateImageHotels")]
+        void UpdateImageHotels(UI.ServiceReference1.ImagesHotelsDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateImageHotels")]
+        System.Threading.Tasks.Task UpdateImageHotelsAsync(UI.ServiceReference1.ImagesHotelsDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateImageShowPlace")]
+        void UpdateImageShowPlace(UI.ServiceReference1.ImagesShowPlaceDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateImageShowPlace")]
+        System.Threading.Tasks.Task UpdateImageShowPlaceAsync(UI.ServiceReference1.ImagesShowPlaceDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateListClientShowInfoTour")]
+        void UpdateListClientShowInfoTour(UI.ServiceReference1.ListClientShowInfoTourDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateListClientShowInfoTour")]
+        System.Threading.Tasks.Task UpdateListClientShowInfoTourAsync(UI.ServiceReference1.ListClientShowInfoTourDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateListOfTouristBuy")]
+        void UpdateListOfTouristBuy(UI.ServiceReference1.ListOfTouristBuyDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateListOfTouristBuy")]
+        System.Threading.Tasks.Task UpdateListOfTouristBuyAsync(UI.ServiceReference1.ListOfTouristBuyDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdatePerson")]
+        void UpdatePerson(UI.ServiceReference1.PersonDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdatePerson")]
+        System.Threading.Tasks.Task UpdatePersonAsync(UI.ServiceReference1.PersonDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdatePointInTours")]
+        void UpdatePointInTours(UI.ServiceReference1.PointInToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdatePointInTours")]
+        System.Threading.Tasks.Task UpdatePointInToursAsync(UI.ServiceReference1.PointInToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateResponsibleForTheTours")]
+        void UpdateResponsibleForTheTours(UI.ServiceReference1.ResponsibleForTheToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateResponsibleForTheTours")]
+        System.Threading.Tasks.Task UpdateResponsibleForTheToursAsync(UI.ServiceReference1.ResponsibleForTheToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateShowPlace")]
+        void UpdateShowPlace(UI.ServiceReference1.ShowPlaceDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateShowPlace")]
+        System.Threading.Tasks.Task UpdateShowPlaceAsync(UI.ServiceReference1.ShowPlaceDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateTours")]
+        void UpdateTours(UI.ServiceReference1.ToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateTours")]
+        System.Threading.Tasks.Task UpdateToursAsync(UI.ServiceReference1.ToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateWaysInTours")]
+        void UpdateWaysInTours(UI.ServiceReference1.WaysInToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateWaysInTours")]
+        System.Threading.Tasks.Task UpdateWaysInToursAsync(UI.ServiceReference1.WaysInToursDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateWaysOfTransportation")]
+        void UpdateWaysOfTransportation(UI.ServiceReference1.WaysOfTransportationDTO item);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/UpdateWaysOfTransportation")]
+        System.Threading.Tasks.Task UpdateWaysOfTransportationAsync(UI.ServiceReference1.WaysOfTransportationDTO item);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -3855,20 +2189,124 @@ namespace UI.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
+        public void AddItemCity(UI.ServiceReference1.CityDTO item) {
+            base.Channel.AddItemCity(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemCityAsync(UI.ServiceReference1.CityDTO item) {
+            return base.Channel.AddItemCityAsync(item);
+        }
+        
+        public void AddItemCountry(UI.ServiceReference1.CountryDTO item) {
+            base.Channel.AddItemCountry(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemCountryAsync(UI.ServiceReference1.CountryDTO item) {
+            return base.Channel.AddItemCountryAsync(item);
+        }
+        
+        public void AddItemHotels(UI.ServiceReference1.HotelsDTO item) {
+            base.Channel.AddItemHotels(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemHotelsAsync(UI.ServiceReference1.HotelsDTO item) {
+            return base.Channel.AddItemHotelsAsync(item);
+        }
+        
+        public void AddItemImagesHotels(UI.ServiceReference1.ImagesHotelsDTO item) {
+            base.Channel.AddItemImagesHotels(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemImagesHotelsAsync(UI.ServiceReference1.ImagesHotelsDTO item) {
+            return base.Channel.AddItemImagesHotelsAsync(item);
+        }
+        
+        public void AddItemImagesShowPlace(UI.ServiceReference1.ImagesShowPlaceDTO item) {
+            base.Channel.AddItemImagesShowPlace(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemImagesShowPlaceAsync(UI.ServiceReference1.ImagesShowPlaceDTO item) {
+            return base.Channel.AddItemImagesShowPlaceAsync(item);
+        }
+        
+        public void AddItemListClientShowInfoTour(UI.ServiceReference1.ListClientShowInfoTourDTO item) {
+            base.Channel.AddItemListClientShowInfoTour(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemListClientShowInfoTourAsync(UI.ServiceReference1.ListClientShowInfoTourDTO item) {
+            return base.Channel.AddItemListClientShowInfoTourAsync(item);
+        }
+        
+        public void AddItemListOfTouristBuy(UI.ServiceReference1.ListOfTouristBuyDTO item) {
+            base.Channel.AddItemListOfTouristBuy(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemListOfTouristBuyAsync(UI.ServiceReference1.ListOfTouristBuyDTO item) {
+            return base.Channel.AddItemListOfTouristBuyAsync(item);
+        }
+        
+        public void AddItemPerson(UI.ServiceReference1.PersonDTO item) {
+            base.Channel.AddItemPerson(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemPersonAsync(UI.ServiceReference1.PersonDTO item) {
+            return base.Channel.AddItemPersonAsync(item);
+        }
+        
+        public void AddItemPointInTours(UI.ServiceReference1.PointInToursDTO item) {
+            base.Channel.AddItemPointInTours(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemPointInToursAsync(UI.ServiceReference1.PointInToursDTO item) {
+            return base.Channel.AddItemPointInToursAsync(item);
+        }
+        
+        public void AddItemResponsibleForTheTours(UI.ServiceReference1.ResponsibleForTheToursDTO item) {
+            base.Channel.AddItemResponsibleForTheTours(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemResponsibleForTheToursAsync(UI.ServiceReference1.ResponsibleForTheToursDTO item) {
+            return base.Channel.AddItemResponsibleForTheToursAsync(item);
+        }
+        
+        public void AddItemShowPlace(UI.ServiceReference1.ShowPlaceDTO item) {
+            base.Channel.AddItemShowPlace(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemShowPlaceAsync(UI.ServiceReference1.ShowPlaceDTO item) {
+            return base.Channel.AddItemShowPlaceAsync(item);
+        }
+        
+        public void AddItemTours(UI.ServiceReference1.ToursDTO item) {
+            base.Channel.AddItemTours(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemToursAsync(UI.ServiceReference1.ToursDTO item) {
+            return base.Channel.AddItemToursAsync(item);
+        }
+        
+        public void AddItemWaysInTours(UI.ServiceReference1.WaysInToursDTO item) {
+            base.Channel.AddItemWaysInTours(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemWaysInToursAsync(UI.ServiceReference1.WaysInToursDTO item) {
+            return base.Channel.AddItemWaysInToursAsync(item);
+        }
+        
+        public void AddItemWaysOfTransportation(UI.ServiceReference1.WaysOfTransportationDTO item) {
+            base.Channel.AddItemWaysOfTransportation(item);
+        }
+        
+        public System.Threading.Tasks.Task AddItemWaysOfTransportationAsync(UI.ServiceReference1.WaysOfTransportationDTO item) {
+            return base.Channel.AddItemWaysOfTransportationAsync(item);
+        }
+        
         public UI.ServiceReference1.CityDTO[] GetAllCitys() {
             return base.Channel.GetAllCitys();
         }
         
         public System.Threading.Tasks.Task<UI.ServiceReference1.CityDTO[]> GetAllCitysAsync() {
             return base.Channel.GetAllCitysAsync();
-        }
-        
-        public void AddItem(UI.ServiceReference1.CityDTO item) {
-            base.Channel.AddItem(item);
-        }
-        
-        public System.Threading.Tasks.Task AddItemAsync(UI.ServiceReference1.CityDTO item) {
-            return base.Channel.AddItemAsync(item);
         }
         
         public UI.ServiceReference1.ToursDTO[] GetAllTours() {
@@ -3879,12 +2317,100 @@ namespace UI.ServiceReference1 {
             return base.Channel.GetAllToursAsync();
         }
         
-        public UI.ServiceReference1.CityDTO[] GetTour(UI.ServiceReference1.Tours tours) {
-            return base.Channel.GetTour(tours);
+        public UI.ServiceReference1.CountryDTO[] GetAllCountry() {
+            return base.Channel.GetAllCountry();
         }
         
-        public System.Threading.Tasks.Task<UI.ServiceReference1.CityDTO[]> GetTourAsync(UI.ServiceReference1.Tours tours) {
-            return base.Channel.GetTourAsync(tours);
+        public System.Threading.Tasks.Task<UI.ServiceReference1.CountryDTO[]> GetAllCountryAsync() {
+            return base.Channel.GetAllCountryAsync();
+        }
+        
+        public UI.ServiceReference1.HotelsDTO[] GetAllHotels() {
+            return base.Channel.GetAllHotels();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.HotelsDTO[]> GetAllHotelsAsync() {
+            return base.Channel.GetAllHotelsAsync();
+        }
+        
+        public UI.ServiceReference1.ImagesHotelsDTO[] GetAllImagesHotels() {
+            return base.Channel.GetAllImagesHotels();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.ImagesHotelsDTO[]> GetAllImagesHotelsAsync() {
+            return base.Channel.GetAllImagesHotelsAsync();
+        }
+        
+        public UI.ServiceReference1.ImagesShowPlaceDTO[] GetAllImagesShowPlace() {
+            return base.Channel.GetAllImagesShowPlace();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.ImagesShowPlaceDTO[]> GetAllImagesShowPlaceAsync() {
+            return base.Channel.GetAllImagesShowPlaceAsync();
+        }
+        
+        public UI.ServiceReference1.ListClientShowInfoTourDTO[] GetAllListClientShowInfoTour() {
+            return base.Channel.GetAllListClientShowInfoTour();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.ListClientShowInfoTourDTO[]> GetAllListClientShowInfoTourAsync() {
+            return base.Channel.GetAllListClientShowInfoTourAsync();
+        }
+        
+        public UI.ServiceReference1.ListOfTouristBuyDTO[] GetAllListOfTouristBuy() {
+            return base.Channel.GetAllListOfTouristBuy();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.ListOfTouristBuyDTO[]> GetAllListOfTouristBuyAsync() {
+            return base.Channel.GetAllListOfTouristBuyAsync();
+        }
+        
+        public UI.ServiceReference1.PersonDTO[] GetAllPerson() {
+            return base.Channel.GetAllPerson();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.PersonDTO[]> GetAllPersonAsync() {
+            return base.Channel.GetAllPersonAsync();
+        }
+        
+        public UI.ServiceReference1.PointInToursDTO[] GetAllPointInTours() {
+            return base.Channel.GetAllPointInTours();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.PointInToursDTO[]> GetAllPointInToursAsync() {
+            return base.Channel.GetAllPointInToursAsync();
+        }
+        
+        public UI.ServiceReference1.ResponsibleForTheToursDTO[] GetAllResponsibleForTheTours() {
+            return base.Channel.GetAllResponsibleForTheTours();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.ResponsibleForTheToursDTO[]> GetAllResponsibleForTheToursAsync() {
+            return base.Channel.GetAllResponsibleForTheToursAsync();
+        }
+        
+        public UI.ServiceReference1.ShowPlaceDTO[] GetAllShowPlace() {
+            return base.Channel.GetAllShowPlace();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.ShowPlaceDTO[]> GetAllShowPlaceAsync() {
+            return base.Channel.GetAllShowPlaceAsync();
+        }
+        
+        public UI.ServiceReference1.WaysInToursDTO[] GetAllWaysInTours() {
+            return base.Channel.GetAllWaysInTours();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.WaysInToursDTO[]> GetAllWaysInToursAsync() {
+            return base.Channel.GetAllWaysInToursAsync();
+        }
+        
+        public UI.ServiceReference1.WaysOfTransportationDTO[] GetAllWaysOfTransportation() {
+            return base.Channel.GetAllWaysOfTransportation();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.WaysOfTransportationDTO[]> GetAllWaysOfTransportationAsync() {
+            return base.Channel.GetAllWaysOfTransportationAsync();
         }
         
         public void Registration(UI.ServiceReference1.PersonDTO person) {
@@ -3925,6 +2451,118 @@ namespace UI.ServiceReference1 {
         
         public System.Threading.Tasks.Task DisconectAsync(UI.ServiceReference1.PersonDTO person) {
             return base.Channel.DisconectAsync(person);
+        }
+        
+        public void UpdateCity(UI.ServiceReference1.CityDTO item) {
+            base.Channel.UpdateCity(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateCityAsync(UI.ServiceReference1.CityDTO item) {
+            return base.Channel.UpdateCityAsync(item);
+        }
+        
+        public void UpdateCountry(UI.ServiceReference1.CountryDTO item) {
+            base.Channel.UpdateCountry(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateCountryAsync(UI.ServiceReference1.CountryDTO item) {
+            return base.Channel.UpdateCountryAsync(item);
+        }
+        
+        public void UpdateHotels(UI.ServiceReference1.HotelsDTO item) {
+            base.Channel.UpdateHotels(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateHotelsAsync(UI.ServiceReference1.HotelsDTO item) {
+            return base.Channel.UpdateHotelsAsync(item);
+        }
+        
+        public void UpdateImageHotels(UI.ServiceReference1.ImagesHotelsDTO item) {
+            base.Channel.UpdateImageHotels(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateImageHotelsAsync(UI.ServiceReference1.ImagesHotelsDTO item) {
+            return base.Channel.UpdateImageHotelsAsync(item);
+        }
+        
+        public void UpdateImageShowPlace(UI.ServiceReference1.ImagesShowPlaceDTO item) {
+            base.Channel.UpdateImageShowPlace(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateImageShowPlaceAsync(UI.ServiceReference1.ImagesShowPlaceDTO item) {
+            return base.Channel.UpdateImageShowPlaceAsync(item);
+        }
+        
+        public void UpdateListClientShowInfoTour(UI.ServiceReference1.ListClientShowInfoTourDTO item) {
+            base.Channel.UpdateListClientShowInfoTour(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateListClientShowInfoTourAsync(UI.ServiceReference1.ListClientShowInfoTourDTO item) {
+            return base.Channel.UpdateListClientShowInfoTourAsync(item);
+        }
+        
+        public void UpdateListOfTouristBuy(UI.ServiceReference1.ListOfTouristBuyDTO item) {
+            base.Channel.UpdateListOfTouristBuy(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateListOfTouristBuyAsync(UI.ServiceReference1.ListOfTouristBuyDTO item) {
+            return base.Channel.UpdateListOfTouristBuyAsync(item);
+        }
+        
+        public void UpdatePerson(UI.ServiceReference1.PersonDTO item) {
+            base.Channel.UpdatePerson(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdatePersonAsync(UI.ServiceReference1.PersonDTO item) {
+            return base.Channel.UpdatePersonAsync(item);
+        }
+        
+        public void UpdatePointInTours(UI.ServiceReference1.PointInToursDTO item) {
+            base.Channel.UpdatePointInTours(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdatePointInToursAsync(UI.ServiceReference1.PointInToursDTO item) {
+            return base.Channel.UpdatePointInToursAsync(item);
+        }
+        
+        public void UpdateResponsibleForTheTours(UI.ServiceReference1.ResponsibleForTheToursDTO item) {
+            base.Channel.UpdateResponsibleForTheTours(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateResponsibleForTheToursAsync(UI.ServiceReference1.ResponsibleForTheToursDTO item) {
+            return base.Channel.UpdateResponsibleForTheToursAsync(item);
+        }
+        
+        public void UpdateShowPlace(UI.ServiceReference1.ShowPlaceDTO item) {
+            base.Channel.UpdateShowPlace(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateShowPlaceAsync(UI.ServiceReference1.ShowPlaceDTO item) {
+            return base.Channel.UpdateShowPlaceAsync(item);
+        }
+        
+        public void UpdateTours(UI.ServiceReference1.ToursDTO item) {
+            base.Channel.UpdateTours(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateToursAsync(UI.ServiceReference1.ToursDTO item) {
+            return base.Channel.UpdateToursAsync(item);
+        }
+        
+        public void UpdateWaysInTours(UI.ServiceReference1.WaysInToursDTO item) {
+            base.Channel.UpdateWaysInTours(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateWaysInToursAsync(UI.ServiceReference1.WaysInToursDTO item) {
+            return base.Channel.UpdateWaysInToursAsync(item);
+        }
+        
+        public void UpdateWaysOfTransportation(UI.ServiceReference1.WaysOfTransportationDTO item) {
+            base.Channel.UpdateWaysOfTransportation(item);
+        }
+        
+        public System.Threading.Tasks.Task UpdateWaysOfTransportationAsync(UI.ServiceReference1.WaysOfTransportationDTO item) {
+            return base.Channel.UpdateWaysOfTransportationAsync(item);
         }
     }
 }
