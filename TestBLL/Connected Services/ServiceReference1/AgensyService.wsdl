@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AgensyService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61430/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61430/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61430/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BLL.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAgensyService_getActualTour_InputMessage">
+    <wsdl:part name="parameters" element="tns:getActualTour" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_getActualTour_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getActualTourResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_getMyTour_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMyTour" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_getMyTour_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMyTourResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemCity" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemCountry" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemHotels_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemHotels" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemImagesHotels_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemImagesHotels" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemImagesShowPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemImagesShowPlace" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemListClientShowInfoTour_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemListClientShowInfoTour" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemListOfTouristBuy_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemListOfTouristBuy" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemPerson" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemPointInTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemPointInTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemResponsibleForTheTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemResponsibleForTheTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemShowPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemShowPlace" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemWaysInTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemWaysInTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_AddItemWaysOfTransportation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemWaysOfTransportation" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllCitys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCitys" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllCitys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCitysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllTours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllToursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCountry" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllHotels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHotels" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllHotels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHotelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllImagesHotels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImagesHotels" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllImagesHotels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImagesHotelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllImagesShowPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImagesShowPlace" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllImagesShowPlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImagesShowPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllListClientShowInfoTour_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllListClientShowInfoTour" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllListClientShowInfoTour_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllListClientShowInfoTourResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllListOfTouristBuy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllListOfTouristBuy" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllListOfTouristBuy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllListOfTouristBuyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPerson" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllPointInTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPointInTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllPointInTours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPointInToursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllResponsibleForTheTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResponsibleForTheTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllResponsibleForTheTours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResponsibleForTheToursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllShowPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShowPlace" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllShowPlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShowPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllWaysInTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWaysInTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllWaysInTours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWaysInToursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllWaysOfTransportation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWaysOfTransportation" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_GetAllWaysOfTransportation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWaysOfTransportationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_Registration_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registration" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_IsPersonOnline_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPersonOnline" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_IsPersonOnline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPersonOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_IsUniqueLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUniqueLogin" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_IsUniqueLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUniqueLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_Disconect_InputMessage">
+    <wsdl:part name="parameters" element="tns:Disconect" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCity" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCountry" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateHotels_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHotels" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateImageHotels_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateImageHotels" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateImageShowPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateImageShowPlace" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateListClientShowInfoTour_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateListClientShowInfoTour" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateListOfTouristBuy_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateListOfTouristBuy" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdatePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePerson" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdatePointInTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePointInTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateResponsibleForTheTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponsibleForTheTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateShowPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShowPlace" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateWaysInTours_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWaysInTours" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_UpdateWaysOfTransportation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWaysOfTransportation" />
+  </wsdl:message>
+  <wsdl:portType name="IAgensyService">
+    <wsdl:operation name="getActualTour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/getActualTour" message="tns:IAgensyService_getActualTour_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/getActualTourResponse" message="tns:IAgensyService_getActualTour_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyTour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/getMyTour" message="tns:IAgensyService_getMyTour_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/getMyTourResponse" message="tns:IAgensyService_getMyTour_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemCity" message="tns:IAgensyService_AddItemCity_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemCountry" message="tns:IAgensyService_AddItemCountry_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemHotels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemHotels" message="tns:IAgensyService_AddItemHotels_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemImagesHotels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemImagesHotels" message="tns:IAgensyService_AddItemImagesHotels_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemImagesShowPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemImagesShowPlace" message="tns:IAgensyService_AddItemImagesShowPlace_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemListClientShowInfoTour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemListClientShowInfoTour" message="tns:IAgensyService_AddItemListClientShowInfoTour_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemListOfTouristBuy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemListOfTouristBuy" message="tns:IAgensyService_AddItemListOfTouristBuy_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemPerson" message="tns:IAgensyService_AddItemPerson_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemPointInTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemPointInTours" message="tns:IAgensyService_AddItemPointInTours_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemResponsibleForTheTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemResponsibleForTheTours" message="tns:IAgensyService_AddItemResponsibleForTheTours_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemShowPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemShowPlace" message="tns:IAgensyService_AddItemShowPlace_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemTours" message="tns:IAgensyService_AddItemTours_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemWaysInTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemWaysInTours" message="tns:IAgensyService_AddItemWaysInTours_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemWaysOfTransportation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemWaysOfTransportation" message="tns:IAgensyService_AddItemWaysOfTransportation_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCitys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllCitys" message="tns:IAgensyService_GetAllCitys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllCitysResponse" message="tns:IAgensyService_GetAllCitys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllTours" message="tns:IAgensyService_GetAllTours_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllToursResponse" message="tns:IAgensyService_GetAllTours_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllCountry" message="tns:IAgensyService_GetAllCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllCountryResponse" message="tns:IAgensyService_GetAllCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHotels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllHotels" message="tns:IAgensyService_GetAllHotels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllHotelsResponse" message="tns:IAgensyService_GetAllHotels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImagesHotels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllImagesHotels" message="tns:IAgensyService_GetAllImagesHotels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllImagesHotelsResponse" message="tns:IAgensyService_GetAllImagesHotels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImagesShowPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllImagesShowPlace" message="tns:IAgensyService_GetAllImagesShowPlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllImagesShowPlaceResponse" message="tns:IAgensyService_GetAllImagesShowPlace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllListClientShowInfoTour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllListClientShowInfoTour" message="tns:IAgensyService_GetAllListClientShowInfoTour_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllListClientShowInfoTourResponse" message="tns:IAgensyService_GetAllListClientShowInfoTour_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllListOfTouristBuy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllListOfTouristBuy" message="tns:IAgensyService_GetAllListOfTouristBuy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllListOfTouristBuyResponse" message="tns:IAgensyService_GetAllListOfTouristBuy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllPerson" message="tns:IAgensyService_GetAllPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllPersonResponse" message="tns:IAgensyService_GetAllPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPointInTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllPointInTours" message="tns:IAgensyService_GetAllPointInTours_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllPointInToursResponse" message="tns:IAgensyService_GetAllPointInTours_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllResponsibleForTheTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllResponsibleForTheTours" message="tns:IAgensyService_GetAllResponsibleForTheTours_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllResponsibleForTheToursResponse" message="tns:IAgensyService_GetAllResponsibleForTheTours_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShowPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllShowPlace" message="tns:IAgensyService_GetAllShowPlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllShowPlaceResponse" message="tns:IAgensyService_GetAllShowPlace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWaysInTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllWaysInTours" message="tns:IAgensyService_GetAllWaysInTours_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllWaysInToursResponse" message="tns:IAgensyService_GetAllWaysInTours_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWaysOfTransportation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/GetAllWaysOfTransportation" message="tns:IAgensyService_GetAllWaysOfTransportation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/GetAllWaysOfTransportationResponse" message="tns:IAgensyService_GetAllWaysOfTransportation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/Registration" message="tns:IAgensyService_Registration_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/Login" message="tns:IAgensyService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/LoginResponse" message="tns:IAgensyService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPersonOnline">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/IsPersonOnline" message="tns:IAgensyService_IsPersonOnline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/IsPersonOnlineResponse" message="tns:IAgensyService_IsPersonOnline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUniqueLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/IsUniqueLogin" message="tns:IAgensyService_IsUniqueLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/IsUniqueLoginResponse" message="tns:IAgensyService_IsUniqueLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Disconect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/Disconect" message="tns:IAgensyService_Disconect_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateCity" message="tns:IAgensyService_UpdateCity_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateCountry" message="tns:IAgensyService_UpdateCountry_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHotels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateHotels" message="tns:IAgensyService_UpdateHotels_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageHotels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateImageHotels" message="tns:IAgensyService_UpdateImageHotels_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageShowPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateImageShowPlace" message="tns:IAgensyService_UpdateImageShowPlace_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateListClientShowInfoTour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateListClientShowInfoTour" message="tns:IAgensyService_UpdateListClientShowInfoTour_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateListOfTouristBuy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateListOfTouristBuy" message="tns:IAgensyService_UpdateListOfTouristBuy_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdatePerson" message="tns:IAgensyService_UpdatePerson_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePointInTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdatePointInTours" message="tns:IAgensyService_UpdatePointInTours_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResponsibleForTheTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateResponsibleForTheTours" message="tns:IAgensyService_UpdateResponsibleForTheTours_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShowPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateShowPlace" message="tns:IAgensyService_UpdateShowPlace_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateTours" message="tns:IAgensyService_UpdateTours_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWaysInTours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateWaysInTours" message="tns:IAgensyService_UpdateWaysInTours_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWaysOfTransportation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/UpdateWaysOfTransportation" message="tns:IAgensyService_UpdateWaysOfTransportation_InputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAgensyService" type="tns:IAgensyService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getActualTour">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/getActualTour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyTour">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/getMyTour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemCity">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemCountry">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemHotels">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemImagesHotels">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemImagesHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemImagesShowPlace">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemImagesShowPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemListClientShowInfoTour">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemListClientShowInfoTour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemListOfTouristBuy">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemListOfTouristBuy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemPerson">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemPointInTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemPointInTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemResponsibleForTheTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemResponsibleForTheTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemShowPlace">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemShowPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemWaysInTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemWaysInTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemWaysOfTransportation">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemWaysOfTransportation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCitys">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllCitys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCountry">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHotels">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImagesHotels">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllImagesHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImagesShowPlace">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllImagesShowPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllListClientShowInfoTour">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllListClientShowInfoTour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllListOfTouristBuy">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllListOfTouristBuy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPerson">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPointInTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllPointInTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllResponsibleForTheTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllResponsibleForTheTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShowPlace">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllShowPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWaysInTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllWaysInTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWaysOfTransportation">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/GetAllWaysOfTransportation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/Registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPersonOnline">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/IsPersonOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUniqueLogin">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/IsUniqueLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconect">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/Disconect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCity">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCountry">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHotels">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageHotels">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateImageHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageShowPlace">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateImageShowPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateListClientShowInfoTour">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateListClientShowInfoTour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateListOfTouristBuy">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateListOfTouristBuy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdatePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePointInTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdatePointInTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResponsibleForTheTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateResponsibleForTheTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShowPlace">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateShowPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWaysInTours">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateWaysInTours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWaysOfTransportation">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/UpdateWaysOfTransportation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AgensyService">
+    <wsdl:port name="BasicHttpBinding_IAgensyService" binding="tns:BasicHttpBinding_IAgensyService">
+      <soap:address location="http://localhost:61430/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

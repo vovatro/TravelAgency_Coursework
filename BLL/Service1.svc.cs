@@ -52,7 +52,6 @@ namespace BLL
             wrapperWaysInTours = new Wrapper<WaysInTours>();
             #endregion
             users = new List<User>();
-
             #region MapperConfiguration
             var config = new MapperConfiguration(x =>
                 {
@@ -85,7 +84,7 @@ namespace BLL
                     .ForMember("ListOfTouristBuy", opt => opt.MapFrom(c => mapper.Map<IEnumerable<ListOfTouristBuyDTO>, IEnumerable<ListOfTouristBuy>>(c.ListOfTouristBuy)))
                     .ForMember("PointInTours", opt => opt.MapFrom(c => mapper.Map<IEnumerable<PointInToursDTO>, IEnumerable<PointInTours>>(c.PointInTours)))
                     .ForMember("ResponsibleForTheTours", opt => opt.MapFrom(c => mapper.Map<IEnumerable<ResponsibleForTheToursDTO>, IEnumerable<ResponsibleForTheTours>>(c.ResponsibleForTheTours)))
-                    .ForMember("WaysInTours", opt => opt.MapFrom(c => mapper.Map<IEnumerable<WaysInToursDTO>, IEnumerable<WaysInTours>>(c.WaysInTours))); ;
+                    .ForMember("WaysInTours", opt => opt.MapFrom(c => mapper.Map<IEnumerable<WaysInToursDTO>, IEnumerable<WaysInTours>>(c.WaysInTours))); 
                     #endregion
 
                     #region Country
@@ -492,6 +491,36 @@ namespace BLL
         {
             wrapperWaysOfTransportation.UpdateItem(mapper.Map<WaysOfTransportationDTO, WaysOfTransportation>(item));
         }
+
+
         #endregion
+
+        public IEnumerable<ToursDTO> getActualTour()
+        {
+            IEnumerable<Tours> actualTours = new List<Tours>();
+            var temp = wrapperTours.GetItems();
+            actualTours = (from item in temp
+                          where DateTime.Now < item.StartDate  
+                          select item).ToList();
+            actualTours = (from item in actualTours
+                           where item.ListOfTouristBuy.Count < item.MaxTourists
+                           select item).ToList();
+            return mapper.Map<IEnumerable<Tours>, IEnumerable<ToursDTO>>(actualTours);
+        }
+
+        public IEnumerable<ToursDTO> getMyTour(PersonDTO person)
+        {
+            var test = GetAllListOfTouristBuy();
+            var temp = from item in test
+                       where item.ClientId == person.Id
+                       select item.ToursId;
+            List<ToursDTO> resault = new List<ToursDTO>();
+            var tempTours = GetAllTours();
+            foreach (var item in temp)
+            {
+                resault.Add(tempTours.First(x => x.Id == item));
+            }
+            return resault;
+        }
     }
 }
