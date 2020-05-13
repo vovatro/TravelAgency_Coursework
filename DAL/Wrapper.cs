@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class Wrapper<T> : IWrapper<T> where T : class
+    
+    public class Wrapper<T> : IWrapper<T> where T : class, IReturnId 
     {
         TravelAgencyEntities db;
         DbSet<T> dbSet = null;
@@ -47,7 +48,7 @@ namespace DAL
         {
             try
             {
-                var tempItem = dbSet.Find(item);
+                var tempItem = Find(item);
                 tempItem = item;
                 db.Entry(tempItem).State = System.Data.Entity.EntityState.Modified;
                 Commit();
@@ -58,7 +59,10 @@ namespace DAL
             }
         }
 
-
+        private T Find(T item)
+        {
+            return dbSet.First(x => x.GetId() == item.GetId());
+        }
         private void Commit()
         {
             db.SaveChanges();

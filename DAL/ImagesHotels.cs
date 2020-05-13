@@ -9,15 +9,21 @@
 
 namespace DAL
 {
+    using DAL.Interfaces;
     using System;
     using System.Collections.Generic;
     
-    public partial class ImagesHotels
+    public partial class ImagesHotels: IReturnId
     {
         public int Id { get; set; }
         public string ImageURL { get; set; }
         public Nullable<int> HotelsId { get; set; }
     
         public virtual Hotels Hotels { get; set; }
+
+        public int GetId()
+        {
+            return Id;
+        }
     }
 }
