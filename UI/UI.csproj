@@ -84,6 +84,7 @@
     <Compile Include="Classes\LogIn.cs" />
     <Compile Include="Classes\ProfilClient.cs" />
     <Compile Include="Classes\Registr.cs" />
+    <Compile Include="Classes\ShowPlaces.cs" />
     <Compile Include="ClientWindow\Commands\BtnAddMyTours.cs" />
     <Compile Include="ClientWindow\Commands\BtnRedagInfoClient.cs" />
     <Compile Include="ClientWindow\Commands\CbSelectCity.cs" />
@@ -95,6 +96,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="HelpClasses\HotelInfo.cs" />
+    <Compile Include="HelpClasses\ShowPlaceInfo.cs" />
     <Compile Include="Registration\Commands\BtnCencel.cs" />
     <Compile Include="Registration\Commands\BtnOk.cs" />
     <Compile Include="Registration\RegistrationWindow.xaml.cs">
