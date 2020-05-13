@@ -408,7 +408,7 @@ namespace BLL
                 if (item.Login == login && item.Password == password)
                     tempPerson = item;
             }
-            return null;
+            return tempPerson;
         }
 
         public void Registration(PersonDTO person)
