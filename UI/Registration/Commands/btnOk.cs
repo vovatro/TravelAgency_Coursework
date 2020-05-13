@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using UI.Classes;
 
 namespace UI.Registration.Commands
 {
     public class BtnOk: ICommand
     {
-        //public ClientsDTO Clients { get; set; }
+        private Registr registr;
 
-        //public BtnOk(Clients clients)
-        //{
-        //    Clients = clients;
-        //}
+        public BtnOk(Registr registr)
+        {
+            this.registr = registr;
+        }
 
         public event EventHandler CanExecuteChanged
         {
@@ -35,7 +36,7 @@ namespace UI.Registration.Commands
 
         public void Execute(object parameter)
         {
-            //Clients.RegistrationOk();      //добавити функцію в клас
+            registr.Ok();
         }
     }
 }
