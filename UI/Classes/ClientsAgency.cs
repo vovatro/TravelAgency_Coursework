@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using UI.ServiceReference1;
 using UI.RedagClientWindow;
 using UI.RedagClientWindow.Commands;
+using System.Windows;
 
 namespace UI.Classes
 {
@@ -104,13 +105,25 @@ namespace UI.Classes
             redagWindow.Close();
         }
 
-        public void OkRadag()
+        public async void OkRadag()
         {
-            //if (RedagWindow.tb_PIB.Text != "" && RedagWindow.tb_EMAIL.Text != "" && RedagWindow.tb_PHONE.Text != "" && RedagWindow.tp_Birt.SelectedDate != null)
-            //{
-            //    h.SetClient(selectClient.Id, RedagWindow.tb_PIB.Text, RedagWindow.tb_EMAIL.Text, RedagWindow.tb_PHONE.Text, RedagWindow.tp_Birt.SelectedDate.Value.Date);
-            //    redagWindow.Close();
-            //}
+            if (RedagWindow.tb_P.Text != "" && RedagWindow.tb_I.Text != "" && RedagWindow.tb_B.Text != "" &&
+                RedagWindow.tb_EMAIL.Text != "" && RedagWindow.tb_PHONE.Text != "" && RedagWindow.tp_Birt.SelectedDate != null)
+            {
+                PersonDTO temp = selectClient;
+                temp.LastName = redagWindow.tb_P.Text;
+                temp.FirstName = redagWindow.tb_I.Text;
+                temp.SurName = redagWindow.tb_B.Text;
+                temp.Email = redagWindow.tb_EMAIL.Text;
+                temp.PhoneNumber = redagWindow.tb_PHONE.Text;
+                temp.DateOfBirth = redagWindow.tp_Birt.SelectedDate.Value.Date;
+                await proxy.UpdatePersonAsync(temp);
+                redagWindow.Close();
+            }
+            else
+            {
+                MessageBox.Show("Заповніть всі пусті поля!!!");
+            }
         }
     }
 }
