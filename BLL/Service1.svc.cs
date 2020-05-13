@@ -388,7 +388,7 @@ namespace BLL
             return false;
         }
 
-        public bool IsUniqueLogin(string login)     //перевірка чи пароль є унікальний
+        public bool IsUniqueLogin(string login)
         {
             var temp = wrapperPerson.GetItems();
             foreach (var item in temp)
@@ -408,7 +408,7 @@ namespace BLL
                 if (item.Login == login && item.Password == password)
                     tempPerson = item;
             }
-            return tempPerson;
+            return null;
         }
 
         public void Registration(PersonDTO person)
