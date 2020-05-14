@@ -11,10 +11,16 @@ namespace UI.Registration.Commands
     public class BtnOk: ICommand
     {
         private Registr registr;
+        private AddWorker addWorker;
 
         public BtnOk(Registr registr)
         {
             this.registr = registr;
+        }
+
+        public BtnOk(AddWorker addWorker)
+        {
+            this.addWorker = addWorker;
         }
 
         public event EventHandler CanExecuteChanged
