@@ -11,17 +11,18 @@ using UI.ServiceReference1;
 
 namespace UI.Classes
 {
-    public class Registr : INotifyPropertyChanged
+    public class AddWorker : INotifyPropertyChanged
     {
         AgensyServiceClient proxy;
 
         public BtnOk ButtonOk { get; set; }
         public BtnCencel ButtonCencel { get; set; }
 
-        public Registr()
+        
+        public AddWorker()
         {
             proxy = new AgensyServiceClient();
-            PersonStatus = "client";
+            PersonStatus = "manager";
             birtDay = new DateTime();
             birtDay = DateTime.Now;
             Login = "";
@@ -151,7 +152,7 @@ namespace UI.Classes
                             MessageBox.Show("Заповніть всі пусті поля!!!");
                     }
                     else
-                        MessageBox.Show("Користувач з таким логіном вже існує!!!");
+                        MessageBox.Show("Працівник з таким логіном вже існує!!!");
                 }
                 else
                     MessageBox.Show("Заповніть всі пусті поля!!!");

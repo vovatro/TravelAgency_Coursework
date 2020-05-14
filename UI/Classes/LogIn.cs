@@ -111,6 +111,7 @@ namespace UI.Classes
                         {
                             workerWind = new WorkerWindow.WorkerWindow(temp);
                             workerWind.Show();
+                            Application.Current.MainWindow.Hide();
                         }
                     }
                     else

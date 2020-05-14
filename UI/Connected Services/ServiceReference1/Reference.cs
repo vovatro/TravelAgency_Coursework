@@ -15,1022 +15,6 @@ namespace UI.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CityDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
-    [System.SerializableAttribute()]
-    public partial class CityDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CityNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.CountryDTO CountryField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CountryIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.HotelsDTO[] HotelsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ShowPlaceDTO[] ShowPlaceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.WaysInToursDTO[] WaysInToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.WaysInToursDTO[] WaysInTours1Field;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CityName {
-            get {
-                return this.CityNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityNameField, value) != true)) {
-                    this.CityNameField = value;
-                    this.RaisePropertyChanged("CityName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.CountryDTO Country {
-            get {
-                return this.CountryField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
-                    this.CountryField = value;
-                    this.RaisePropertyChanged("Country");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CountryId {
-            get {
-                return this.CountryIdField;
-            }
-            set {
-                if ((this.CountryIdField.Equals(value) != true)) {
-                    this.CountryIdField = value;
-                    this.RaisePropertyChanged("CountryId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.HotelsDTO[] Hotels {
-            get {
-                return this.HotelsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HotelsField, value) != true)) {
-                    this.HotelsField = value;
-                    this.RaisePropertyChanged("Hotels");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ShowPlaceDTO[] ShowPlace {
-            get {
-                return this.ShowPlaceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ShowPlaceField, value) != true)) {
-                    this.ShowPlaceField = value;
-                    this.RaisePropertyChanged("ShowPlace");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.WaysInToursDTO[] WaysInTours {
-            get {
-                return this.WaysInToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.WaysInToursField, value) != true)) {
-                    this.WaysInToursField = value;
-                    this.RaisePropertyChanged("WaysInTours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.WaysInToursDTO[] WaysInTours1 {
-            get {
-                return this.WaysInTours1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.WaysInTours1Field, value) != true)) {
-                    this.WaysInTours1Field = value;
-                    this.RaisePropertyChanged("WaysInTours1");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CountryDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
-    [System.SerializableAttribute()]
-    public partial class CountryDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.CityDTO[] CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CountryNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.CityDTO[] City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CountryName {
-            get {
-                return this.CountryNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CountryNameField, value) != true)) {
-                    this.CountryNameField = value;
-                    this.RaisePropertyChanged("CountryName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="HotelsDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
-    [System.SerializableAttribute()]
-    public partial class HotelsDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.CityDTO CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string HotelsNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ImagesHotelsDTO[] ImagesHotelsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PriceDayField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StarsField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.CityDTO City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CityId {
-            get {
-                return this.CityIdField;
-            }
-            set {
-                if ((this.CityIdField.Equals(value) != true)) {
-                    this.CityIdField = value;
-                    this.RaisePropertyChanged("CityId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string HotelsName {
-            get {
-                return this.HotelsNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HotelsNameField, value) != true)) {
-                    this.HotelsNameField = value;
-                    this.RaisePropertyChanged("HotelsName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ImagesHotelsDTO[] ImagesHotels {
-            get {
-                return this.ImagesHotelsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImagesHotelsField, value) != true)) {
-                    this.ImagesHotelsField = value;
-                    this.RaisePropertyChanged("ImagesHotels");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal PriceDay {
-            get {
-                return this.PriceDayField;
-            }
-            set {
-                if ((this.PriceDayField.Equals(value) != true)) {
-                    this.PriceDayField = value;
-                    this.RaisePropertyChanged("PriceDay");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Stars {
-            get {
-                return this.StarsField;
-            }
-            set {
-                if ((this.StarsField.Equals(value) != true)) {
-                    this.StarsField = value;
-                    this.RaisePropertyChanged("Stars");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ShowPlaceDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
-    [System.SerializableAttribute()]
-    public partial class ShowPlaceDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.CityDTO CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ImagesShowPlaceDTO[] ImagesShowPlaceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.PointInToursDTO[] PointInToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PriceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ShowPlaceNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.CityDTO City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CityId {
-            get {
-                return this.CityIdField;
-            }
-            set {
-                if ((this.CityIdField.Equals(value) != true)) {
-                    this.CityIdField = value;
-                    this.RaisePropertyChanged("CityId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ImagesShowPlaceDTO[] ImagesShowPlace {
-            get {
-                return this.ImagesShowPlaceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImagesShowPlaceField, value) != true)) {
-                    this.ImagesShowPlaceField = value;
-                    this.RaisePropertyChanged("ImagesShowPlace");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.PointInToursDTO[] PointInTours {
-            get {
-                return this.PointInToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PointInToursField, value) != true)) {
-                    this.PointInToursField = value;
-                    this.RaisePropertyChanged("PointInTours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Price {
-            get {
-                return this.PriceField;
-            }
-            set {
-                if ((this.PriceField.Equals(value) != true)) {
-                    this.PriceField = value;
-                    this.RaisePropertyChanged("Price");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ShowPlaceName {
-            get {
-                return this.ShowPlaceNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ShowPlaceNameField, value) != true)) {
-                    this.ShowPlaceNameField = value;
-                    this.RaisePropertyChanged("ShowPlaceName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="WaysInToursDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
-    [System.SerializableAttribute()]
-    public partial class WaysInToursDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.CityDTO CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.CityDTO City1Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int EndCityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StartCityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ToursDTO ToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ToursIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.WaysOfTransportationDTO WaysOfTransportationField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int WaysOfTransportationIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.CityDTO City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.CityDTO City1 {
-            get {
-                return this.City1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.City1Field, value) != true)) {
-                    this.City1Field = value;
-                    this.RaisePropertyChanged("City1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int EndCityId {
-            get {
-                return this.EndCityIdField;
-            }
-            set {
-                if ((this.EndCityIdField.Equals(value) != true)) {
-                    this.EndCityIdField = value;
-                    this.RaisePropertyChanged("EndCityId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int StartCityId {
-            get {
-                return this.StartCityIdField;
-            }
-            set {
-                if ((this.StartCityIdField.Equals(value) != true)) {
-                    this.StartCityIdField = value;
-                    this.RaisePropertyChanged("StartCityId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ToursDTO Tours {
-            get {
-                return this.ToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ToursField, value) != true)) {
-                    this.ToursField = value;
-                    this.RaisePropertyChanged("Tours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ToursId {
-            get {
-                return this.ToursIdField;
-            }
-            set {
-                if ((this.ToursIdField.Equals(value) != true)) {
-                    this.ToursIdField = value;
-                    this.RaisePropertyChanged("ToursId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.WaysOfTransportationDTO WaysOfTransportation {
-            get {
-                return this.WaysOfTransportationField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.WaysOfTransportationField, value) != true)) {
-                    this.WaysOfTransportationField = value;
-                    this.RaisePropertyChanged("WaysOfTransportation");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int WaysOfTransportationId {
-            get {
-                return this.WaysOfTransportationIdField;
-            }
-            set {
-                if ((this.WaysOfTransportationIdField.Equals(value) != true)) {
-                    this.WaysOfTransportationIdField = value;
-                    this.RaisePropertyChanged("WaysOfTransportationId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ImagesHotelsDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
-    [System.SerializableAttribute()]
-    public partial class ImagesHotelsDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.HotelsDTO HotelsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int HotelsIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ImageURLField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.HotelsDTO Hotels {
-            get {
-                return this.HotelsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HotelsField, value) != true)) {
-                    this.HotelsField = value;
-                    this.RaisePropertyChanged("Hotels");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int HotelsId {
-            get {
-                return this.HotelsIdField;
-            }
-            set {
-                if ((this.HotelsIdField.Equals(value) != true)) {
-                    this.HotelsIdField = value;
-                    this.RaisePropertyChanged("HotelsId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ImageURL {
-            get {
-                return this.ImageURLField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImageURLField, value) != true)) {
-                    this.ImageURLField = value;
-                    this.RaisePropertyChanged("ImageURL");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ImagesShowPlaceDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
-    [System.SerializableAttribute()]
-    public partial class ImagesShowPlaceDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ImageURLField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ShowPlaceDTO ShowPlaceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ShowPlaceIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ImageURL {
-            get {
-                return this.ImageURLField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImageURLField, value) != true)) {
-                    this.ImageURLField = value;
-                    this.RaisePropertyChanged("ImageURL");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ShowPlaceDTO ShowPlace {
-            get {
-                return this.ShowPlaceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ShowPlaceField, value) != true)) {
-                    this.ShowPlaceField = value;
-                    this.RaisePropertyChanged("ShowPlace");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ShowPlaceId {
-            get {
-                return this.ShowPlaceIdField;
-            }
-            set {
-                if ((this.ShowPlaceIdField.Equals(value) != true)) {
-                    this.ShowPlaceIdField = value;
-                    this.RaisePropertyChanged("ShowPlaceId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PointInToursDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
-    [System.SerializableAttribute()]
-    public partial class PointInToursDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DateOfVisitField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsPriceInToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ShowPlaceDTO ShowPlaceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ShowPlaceIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UI.ServiceReference1.ToursDTO ToursField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ToursIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DateOfVisit {
-            get {
-                return this.DateOfVisitField;
-            }
-            set {
-                if ((this.DateOfVisitField.Equals(value) != true)) {
-                    this.DateOfVisitField = value;
-                    this.RaisePropertyChanged("DateOfVisit");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsPriceInTours {
-            get {
-                return this.IsPriceInToursField;
-            }
-            set {
-                if ((this.IsPriceInToursField.Equals(value) != true)) {
-                    this.IsPriceInToursField = value;
-                    this.RaisePropertyChanged("IsPriceInTours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ShowPlaceDTO ShowPlace {
-            get {
-                return this.ShowPlaceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ShowPlaceField, value) != true)) {
-                    this.ShowPlaceField = value;
-                    this.RaisePropertyChanged("ShowPlace");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ShowPlaceId {
-            get {
-                return this.ShowPlaceIdField;
-            }
-            set {
-                if ((this.ShowPlaceIdField.Equals(value) != true)) {
-                    this.ShowPlaceIdField = value;
-                    this.RaisePropertyChanged("ShowPlaceId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UI.ServiceReference1.ToursDTO Tours {
-            get {
-                return this.ToursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ToursField, value) != true)) {
-                    this.ToursField = value;
-                    this.RaisePropertyChanged("Tours");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ToursId {
-            get {
-                return this.ToursIdField;
-            }
-            set {
-                if ((this.ToursIdField.Equals(value) != true)) {
-                    this.ToursIdField = value;
-                    this.RaisePropertyChanged("ToursId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ToursDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
     [System.SerializableAttribute()]
     public partial class ToursDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1470,6 +454,147 @@ namespace UI.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PointInToursDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
+    [System.SerializableAttribute()]
+    public partial class PointInToursDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateOfVisitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsPriceInToursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.ShowPlaceDTO ShowPlaceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ShowPlaceIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.ToursDTO ToursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ToursIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateOfVisit {
+            get {
+                return this.DateOfVisitField;
+            }
+            set {
+                if ((this.DateOfVisitField.Equals(value) != true)) {
+                    this.DateOfVisitField = value;
+                    this.RaisePropertyChanged("DateOfVisit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsPriceInTours {
+            get {
+                return this.IsPriceInToursField;
+            }
+            set {
+                if ((this.IsPriceInToursField.Equals(value) != true)) {
+                    this.IsPriceInToursField = value;
+                    this.RaisePropertyChanged("IsPriceInTours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.ShowPlaceDTO ShowPlace {
+            get {
+                return this.ShowPlaceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ShowPlaceField, value) != true)) {
+                    this.ShowPlaceField = value;
+                    this.RaisePropertyChanged("ShowPlace");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ShowPlaceId {
+            get {
+                return this.ShowPlaceIdField;
+            }
+            set {
+                if ((this.ShowPlaceIdField.Equals(value) != true)) {
+                    this.ShowPlaceIdField = value;
+                    this.RaisePropertyChanged("ShowPlaceId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.ToursDTO Tours {
+            get {
+                return this.ToursField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ToursField, value) != true)) {
+                    this.ToursField = value;
+                    this.RaisePropertyChanged("Tours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ToursId {
+            get {
+                return this.ToursIdField;
+            }
+            set {
+                if ((this.ToursIdField.Equals(value) != true)) {
+                    this.ToursIdField = value;
+                    this.RaisePropertyChanged("ToursId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ResponsibleForTheToursDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
     [System.SerializableAttribute()]
     public partial class ResponsibleForTheToursDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1563,6 +688,179 @@ namespace UI.ServiceReference1 {
                 if ((this.ToursIdField.Equals(value) != true)) {
                     this.ToursIdField = value;
                     this.RaisePropertyChanged("ToursId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WaysInToursDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
+    [System.SerializableAttribute()]
+    public partial class WaysInToursDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.CityDTO CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.CityDTO City1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EndCityIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StartCityIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.ToursDTO ToursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ToursIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.WaysOfTransportationDTO WaysOfTransportationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int WaysOfTransportationIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.CityDTO City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.CityDTO City1 {
+            get {
+                return this.City1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.City1Field, value) != true)) {
+                    this.City1Field = value;
+                    this.RaisePropertyChanged("City1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EndCityId {
+            get {
+                return this.EndCityIdField;
+            }
+            set {
+                if ((this.EndCityIdField.Equals(value) != true)) {
+                    this.EndCityIdField = value;
+                    this.RaisePropertyChanged("EndCityId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StartCityId {
+            get {
+                return this.StartCityIdField;
+            }
+            set {
+                if ((this.StartCityIdField.Equals(value) != true)) {
+                    this.StartCityIdField = value;
+                    this.RaisePropertyChanged("StartCityId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.ToursDTO Tours {
+            get {
+                return this.ToursField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ToursField, value) != true)) {
+                    this.ToursField = value;
+                    this.RaisePropertyChanged("Tours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ToursId {
+            get {
+                return this.ToursIdField;
+            }
+            set {
+                if ((this.ToursIdField.Equals(value) != true)) {
+                    this.ToursIdField = value;
+                    this.RaisePropertyChanged("ToursId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.WaysOfTransportationDTO WaysOfTransportation {
+            get {
+                return this.WaysOfTransportationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WaysOfTransportationField, value) != true)) {
+                    this.WaysOfTransportationField = value;
+                    this.RaisePropertyChanged("WaysOfTransportation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int WaysOfTransportationId {
+            get {
+                return this.WaysOfTransportationIdField;
+            }
+            set {
+                if ((this.WaysOfTransportationIdField.Equals(value) != true)) {
+                    this.WaysOfTransportationIdField = value;
+                    this.RaisePropertyChanged("WaysOfTransportationId");
                 }
             }
         }
@@ -1832,6 +1130,708 @@ namespace UI.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ShowPlaceDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
+    [System.SerializableAttribute()]
+    public partial class ShowPlaceDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.CityDTO CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CityIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.ImagesShowPlaceDTO[] ImagesShowPlaceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.PointInToursDTO[] PointInToursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ShowPlaceNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.CityDTO City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CityId {
+            get {
+                return this.CityIdField;
+            }
+            set {
+                if ((this.CityIdField.Equals(value) != true)) {
+                    this.CityIdField = value;
+                    this.RaisePropertyChanged("CityId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.ImagesShowPlaceDTO[] ImagesShowPlace {
+            get {
+                return this.ImagesShowPlaceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImagesShowPlaceField, value) != true)) {
+                    this.ImagesShowPlaceField = value;
+                    this.RaisePropertyChanged("ImagesShowPlace");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.PointInToursDTO[] PointInTours {
+            get {
+                return this.PointInToursField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PointInToursField, value) != true)) {
+                    this.PointInToursField = value;
+                    this.RaisePropertyChanged("PointInTours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ShowPlaceName {
+            get {
+                return this.ShowPlaceNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ShowPlaceNameField, value) != true)) {
+                    this.ShowPlaceNameField = value;
+                    this.RaisePropertyChanged("ShowPlaceName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CityDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
+    [System.SerializableAttribute()]
+    public partial class CityDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.CountryDTO CountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountryIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.HotelsDTO[] HotelsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.ShowPlaceDTO[] ShowPlaceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.WaysInToursDTO[] WaysInToursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.WaysInToursDTO[] WaysInTours1Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CityName {
+            get {
+                return this.CityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityNameField, value) != true)) {
+                    this.CityNameField = value;
+                    this.RaisePropertyChanged("CityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.CountryDTO Country {
+            get {
+                return this.CountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CountryId {
+            get {
+                return this.CountryIdField;
+            }
+            set {
+                if ((this.CountryIdField.Equals(value) != true)) {
+                    this.CountryIdField = value;
+                    this.RaisePropertyChanged("CountryId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.HotelsDTO[] Hotels {
+            get {
+                return this.HotelsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HotelsField, value) != true)) {
+                    this.HotelsField = value;
+                    this.RaisePropertyChanged("Hotels");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.ShowPlaceDTO[] ShowPlace {
+            get {
+                return this.ShowPlaceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ShowPlaceField, value) != true)) {
+                    this.ShowPlaceField = value;
+                    this.RaisePropertyChanged("ShowPlace");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.WaysInToursDTO[] WaysInTours {
+            get {
+                return this.WaysInToursField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WaysInToursField, value) != true)) {
+                    this.WaysInToursField = value;
+                    this.RaisePropertyChanged("WaysInTours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.WaysInToursDTO[] WaysInTours1 {
+            get {
+                return this.WaysInTours1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WaysInTours1Field, value) != true)) {
+                    this.WaysInTours1Field = value;
+                    this.RaisePropertyChanged("WaysInTours1");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ImagesShowPlaceDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
+    [System.SerializableAttribute()]
+    public partial class ImagesShowPlaceDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ImageURLField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.ShowPlaceDTO ShowPlaceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ShowPlaceIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ImageURL {
+            get {
+                return this.ImageURLField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImageURLField, value) != true)) {
+                    this.ImageURLField = value;
+                    this.RaisePropertyChanged("ImageURL");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.ShowPlaceDTO ShowPlace {
+            get {
+                return this.ShowPlaceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ShowPlaceField, value) != true)) {
+                    this.ShowPlaceField = value;
+                    this.RaisePropertyChanged("ShowPlace");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ShowPlaceId {
+            get {
+                return this.ShowPlaceIdField;
+            }
+            set {
+                if ((this.ShowPlaceIdField.Equals(value) != true)) {
+                    this.ShowPlaceIdField = value;
+                    this.RaisePropertyChanged("ShowPlaceId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CountryDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
+    [System.SerializableAttribute()]
+    public partial class CountryDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.CityDTO[] CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountryNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.CityDTO[] City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CountryName {
+            get {
+                return this.CountryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryNameField, value) != true)) {
+                    this.CountryNameField = value;
+                    this.RaisePropertyChanged("CountryName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HotelsDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
+    [System.SerializableAttribute()]
+    public partial class HotelsDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.CityDTO CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CityIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HotelsNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.ImagesHotelsDTO[] ImagesHotelsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceDayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StarsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.CityDTO City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CityId {
+            get {
+                return this.CityIdField;
+            }
+            set {
+                if ((this.CityIdField.Equals(value) != true)) {
+                    this.CityIdField = value;
+                    this.RaisePropertyChanged("CityId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HotelsName {
+            get {
+                return this.HotelsNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HotelsNameField, value) != true)) {
+                    this.HotelsNameField = value;
+                    this.RaisePropertyChanged("HotelsName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.ImagesHotelsDTO[] ImagesHotels {
+            get {
+                return this.ImagesHotelsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImagesHotelsField, value) != true)) {
+                    this.ImagesHotelsField = value;
+                    this.RaisePropertyChanged("ImagesHotels");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal PriceDay {
+            get {
+                return this.PriceDayField;
+            }
+            set {
+                if ((this.PriceDayField.Equals(value) != true)) {
+                    this.PriceDayField = value;
+                    this.RaisePropertyChanged("PriceDay");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Stars {
+            get {
+                return this.StarsField;
+            }
+            set {
+                if ((this.StarsField.Equals(value) != true)) {
+                    this.StarsField = value;
+                    this.RaisePropertyChanged("Stars");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ImagesHotelsDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
+    [System.SerializableAttribute()]
+    public partial class ImagesHotelsDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UI.ServiceReference1.HotelsDTO HotelsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int HotelsIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ImageURLField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UI.ServiceReference1.HotelsDTO Hotels {
+            get {
+                return this.HotelsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HotelsField, value) != true)) {
+                    this.HotelsField = value;
+                    this.RaisePropertyChanged("Hotels");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int HotelsId {
+            get {
+                return this.HotelsIdField;
+            }
+            set {
+                if ((this.HotelsIdField.Equals(value) != true)) {
+                    this.HotelsIdField = value;
+                    this.RaisePropertyChanged("HotelsId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ImageURL {
+            get {
+                return this.ImageURLField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImageURLField, value) != true)) {
+                    this.ImageURLField = value;
+                    this.RaisePropertyChanged("ImageURL");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WaysOfTransportationDTO", Namespace="http://schemas.datacontract.org/2004/07/BLL.DTO")]
     [System.SerializableAttribute()]
     public partial class WaysOfTransportationDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1910,6 +1910,18 @@ namespace UI.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IAgensyService")]
     public interface IAgensyService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/getActualTour", ReplyAction="http://tempuri.org/IAgensyService/getActualTourResponse")]
+        UI.ServiceReference1.ToursDTO[] getActualTour();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/getActualTour", ReplyAction="http://tempuri.org/IAgensyService/getActualTourResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.ToursDTO[]> getActualTourAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/getMyTour", ReplyAction="http://tempuri.org/IAgensyService/getMyTourResponse")]
+        UI.ServiceReference1.ToursDTO[] getMyTour(UI.ServiceReference1.PersonDTO person);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/getMyTour", ReplyAction="http://tempuri.org/IAgensyService/getMyTourResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.ToursDTO[]> getMyTourAsync(UI.ServiceReference1.PersonDTO person);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAgensyService/AddItemCity")]
         void AddItemCity(UI.ServiceReference1.CityDTO item);
@@ -2219,6 +2231,22 @@ namespace UI.ServiceReference1 {
         
         public AgensyServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public UI.ServiceReference1.ToursDTO[] getActualTour() {
+            return base.Channel.getActualTour();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.ToursDTO[]> getActualTourAsync() {
+            return base.Channel.getActualTourAsync();
+        }
+        
+        public UI.ServiceReference1.ToursDTO[] getMyTour(UI.ServiceReference1.PersonDTO person) {
+            return base.Channel.getMyTour(person);
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.ToursDTO[]> getMyTourAsync(UI.ServiceReference1.PersonDTO person) {
+            return base.Channel.getMyTourAsync(person);
         }
         
         public void AddItemCity(UI.ServiceReference1.CityDTO item) {

@@ -34,7 +34,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" >Прізвище</Label>
             <TextBox x:Name="tb_P" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
-                     Grid.Column="1" Text="{Binding selectClient.FIO}">
+                     Grid.Column="1" Text="{Binding selectClient.LastName}">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>
@@ -45,7 +45,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="1">Імя</Label>
             <TextBox x:Name="tb_I" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
-                     Grid.Column="1" Grid.Row="1" Text="{Binding selectClient.FIO}">
+                     Grid.Column="1" Grid.Row="1" Text="{Binding selectClient.FirstName}">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>
@@ -56,7 +56,7 @@
 
             <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Grid.Row="2">По батькові</Label>
             <TextBox x:Name="tb_B" FontSize="25" Margin="10" Width="350" VerticalAlignment="Center"
-                     Grid.Column="1" Grid.Row="2" Text="{Binding selectClient.FIO}">
+                     Grid.Column="1" Grid.Row="2" Text="{Binding selectClient.SurName}">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC1C1C1" Offset="0"/>

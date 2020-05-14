@@ -5,36 +5,39 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using UI.ServiceReference1;
 
 namespace UI.Classes
 {
-    public class EndedTours : INotifyPropertyChanged
+    public class MyTours : INotifyPropertyChanged
     {
         AgensyServiceClient proxy;
+        public PersonDTO person;
 
-        public EndedTours()
+        public MyTours(PersonDTO pers)
         {
             proxy = new AgensyServiceClient();
+            person = pers;
             getTour();
         }
 
         public async void getTour()
         {
-            END_T_LIST = await proxy.getActualTourAsync();
+            MY_T_LIST = await proxy.getMyTourAsync(person);
         }
 
-        private IEnumerable<ToursDTO> end_t_list;
-        public IEnumerable<ToursDTO> END_T_LIST
+        private IEnumerable<ToursDTO> my_t_list;
+        public IEnumerable<ToursDTO> MY_T_LIST
         {
             get
             {
-                return end_t_list;
+                return my_t_list;
             }
             set
             {
-                end_t_list = value;
-                OnPropertyChanged("END_T_LIST");
+                my_t_list = value;
+                OnPropertyChanged("MY_T_LIST");
             }
         }
 

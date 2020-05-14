@@ -507,6 +507,7 @@ namespace BLL
                            select item).ToList();
             return mapper.Map<IEnumerable<Tours>, IEnumerable<ToursDTO>>(actualTours);
         }
+        
 
         public IEnumerable<ToursDTO> getMyTour(PersonDTO person)
         {

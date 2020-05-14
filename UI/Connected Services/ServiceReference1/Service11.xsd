@@ -1,101 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:61430/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BLL.DTO" />
+  <xs:element name="getActualTour">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getActualTourResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="getActualTourResult" nillable="true" type="q1:ArrayOfToursDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMyTour">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="person" nillable="true" type="q2:PersonDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMyTourResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="getMyTourResult" nillable="true" type="q3:ArrayOfToursDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AddItemCity">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q1:CityDTO" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q4:CityDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemCountry">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q2:CountryDTO" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q5:CountryDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemHotels">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q3:HotelsDTO" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q6:HotelsDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemImagesHotels">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q4:ImagesHotelsDTO" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q7:ImagesHotelsDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemImagesShowPlace">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q5:ImagesShowPlaceDTO" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q8:ImagesShowPlaceDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemListClientShowInfoTour">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q6:ListClientShowInfoTourDTO" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q9:ListClientShowInfoTourDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemListOfTouristBuy">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q7:ListOfTouristBuyDTO" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q10:ListOfTouristBuyDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemPerson">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q8:PersonDTO" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q11:PersonDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemPointInTours">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q9:PointInToursDTO" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q12:PointInToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemResponsibleForTheTours">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q10:ResponsibleForTheToursDTO" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q13:ResponsibleForTheToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemShowPlace">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q11:ShowPlaceDTO" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q14:ShowPlaceDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemTours">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q12:ToursDTO" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q15:ToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemWaysInTours">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q13:WaysInToursDTO" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q16:WaysInToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddItemWaysOfTransportation">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q14:WaysOfTransportationDTO" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q17:WaysOfTransportationDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -107,7 +133,7 @@
   <xs:element name="GetAllCitysResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllCitysResult" nillable="true" type="q15:ArrayOfCityDTO" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllCitysResult" nillable="true" type="q18:ArrayOfCityDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -119,7 +145,7 @@
   <xs:element name="GetAllToursResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllToursResult" nillable="true" type="q16:ArrayOfToursDTO" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllToursResult" nillable="true" type="q19:ArrayOfToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -131,7 +157,7 @@
   <xs:element name="GetAllCountryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllCountryResult" nillable="true" type="q17:ArrayOfCountryDTO" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllCountryResult" nillable="true" type="q20:ArrayOfCountryDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -143,7 +169,7 @@
   <xs:element name="GetAllHotelsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllHotelsResult" nillable="true" type="q18:ArrayOfHotelsDTO" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllHotelsResult" nillable="true" type="q21:ArrayOfHotelsDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -155,7 +181,7 @@
   <xs:element name="GetAllImagesHotelsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllImagesHotelsResult" nillable="true" type="q19:ArrayOfImagesHotelsDTO" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllImagesHotelsResult" nillable="true" type="q22:ArrayOfImagesHotelsDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -167,7 +193,7 @@
   <xs:element name="GetAllImagesShowPlaceResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllImagesShowPlaceResult" nillable="true" type="q20:ArrayOfImagesShowPlaceDTO" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllImagesShowPlaceResult" nillable="true" type="q23:ArrayOfImagesShowPlaceDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -179,7 +205,7 @@
   <xs:element name="GetAllListClientShowInfoTourResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllListClientShowInfoTourResult" nillable="true" type="q21:ArrayOfListClientShowInfoTourDTO" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllListClientShowInfoTourResult" nillable="true" type="q24:ArrayOfListClientShowInfoTourDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -191,7 +217,7 @@
   <xs:element name="GetAllListOfTouristBuyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllListOfTouristBuyResult" nillable="true" type="q22:ArrayOfListOfTouristBuyDTO" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllListOfTouristBuyResult" nillable="true" type="q25:ArrayOfListOfTouristBuyDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -203,7 +229,7 @@
   <xs:element name="GetAllPersonResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllPersonResult" nillable="true" type="q23:ArrayOfPersonDTO" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllPersonResult" nillable="true" type="q26:ArrayOfPersonDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -215,7 +241,7 @@
   <xs:element name="GetAllPointInToursResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllPointInToursResult" nillable="true" type="q24:ArrayOfPointInToursDTO" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllPointInToursResult" nillable="true" type="q27:ArrayOfPointInToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -227,7 +253,7 @@
   <xs:element name="GetAllResponsibleForTheToursResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllResponsibleForTheToursResult" nillable="true" type="q25:ArrayOfResponsibleForTheToursDTO" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllResponsibleForTheToursResult" nillable="true" type="q28:ArrayOfResponsibleForTheToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -239,7 +265,7 @@
   <xs:element name="GetAllShowPlaceResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllShowPlaceResult" nillable="true" type="q26:ArrayOfShowPlaceDTO" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllShowPlaceResult" nillable="true" type="q29:ArrayOfShowPlaceDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -251,7 +277,7 @@
   <xs:element name="GetAllWaysInToursResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllWaysInToursResult" nillable="true" type="q27:ArrayOfWaysInToursDTO" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllWaysInToursResult" nillable="true" type="q30:ArrayOfWaysInToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -263,14 +289,14 @@
   <xs:element name="GetAllWaysOfTransportationResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllWaysOfTransportationResult" nillable="true" type="q28:ArrayOfWaysOfTransportationDTO" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="GetAllWaysOfTransportationResult" nillable="true" type="q31:ArrayOfWaysOfTransportationDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Registration">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="person" nillable="true" type="q29:PersonDTO" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="person" nillable="true" type="q32:PersonDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -285,14 +311,14 @@
   <xs:element name="LoginResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="LoginResult" nillable="true" type="q30:PersonDTO" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="LoginResult" nillable="true" type="q33:PersonDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="IsPersonOnline">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="person" nillable="true" type="q31:PersonDTO" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="person" nillable="true" type="q34:PersonDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -320,105 +346,105 @@
   <xs:element name="Disconect">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="person" nillable="true" type="q32:PersonDTO" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="person" nillable="true" type="q35:PersonDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateCity">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q33:CityDTO" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q36:CityDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateCountry">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q34:CountryDTO" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q37:CountryDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateHotels">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q35:HotelsDTO" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q38:HotelsDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateImageHotels">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q36:ImagesHotelsDTO" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q39:ImagesHotelsDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateImageShowPlace">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q37:ImagesShowPlaceDTO" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q40:ImagesShowPlaceDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateListClientShowInfoTour">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q38:ListClientShowInfoTourDTO" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q41:ListClientShowInfoTourDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateListOfTouristBuy">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q39:ListOfTouristBuyDTO" />
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q42:ListOfTouristBuyDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdatePerson">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q40:PersonDTO" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q43:PersonDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdatePointInTours">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q41:PointInToursDTO" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q44:PointInToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateResponsibleForTheTours">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q42:ResponsibleForTheToursDTO" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q45:ResponsibleForTheToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateShowPlace">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q43:ShowPlaceDTO" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q46:ShowPlaceDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateTours">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q44:ToursDTO" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q47:ToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateWaysInTours">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q45:WaysInToursDTO" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q48:WaysInToursDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateWaysOfTransportation">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q46:WaysOfTransportationDTO" />
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/BLL.DTO" minOccurs="0" name="item" nillable="true" type="q49:WaysOfTransportationDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

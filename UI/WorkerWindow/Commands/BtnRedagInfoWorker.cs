@@ -6,16 +6,24 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using UI.Classes;
 
-namespace UI.ClientWindow.Commands
+namespace UI.WorkerWindow.Commands
 {
-    public class BtnAddMyTours: ICommand
+    public class BtnRedagInfoWorker : ICommand
     {
-        private NextTours nextTours;
+        private ProfilWorker profilWorker;
 
-        public BtnAddMyTours(NextTours nextTours)
+        public BtnRedagInfoWorker(ProfilWorker profilWorker)
         {
-            this.nextTours = nextTours;
+            this.profilWorker = profilWorker;
         }
+
+        //public ClientDTO Clients { get; set; }
+
+        //public BtnRedagInfoClient(ClientDTO clients)
+        //{
+
+        //    Clients = clients;
+        //}
 
         public event EventHandler CanExecuteChanged
         {
@@ -36,7 +44,7 @@ namespace UI.ClientWindow.Commands
 
         public void Execute(object parameter)
         {
-            this.nextTours.AddingMyTour();
+            //Clients.CencelAddCl();        //добавити функцію update
         }
     }
 }

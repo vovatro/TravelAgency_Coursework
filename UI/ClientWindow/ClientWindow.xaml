@@ -10,7 +10,7 @@
         Title="ClientWindow" Height="600" Width="800" Closing="ClosingWindow">
     <Window.Resources>
         <bind:ShowPlaces x:Key="ShowPlaces_DataContext"/>
-        <bind:ShowHotel x:Key="ShowHotels_DataContext"/>
+        <bind:ShowHotel x:Key="ShowHotels_DataContext"/>        
     </Window.Resources>
     <Grid x:Name="ClientW">
         <Grid.Effect>
@@ -83,13 +83,13 @@
 
 
 
-            <TabItem Header="Мої тури" FontSize="15">
-                <StackPanel x:Name="sp_myTours" Orientation="Horizontal" Margin="5 5 5 40">
+            <TabItem x:Name="ti_myTours" Header="Мої тури" FontSize="15" DataContext="{Binding}">
+                <StackPanel x:Name="sp_myTours" Orientation="Horizontal" Margin="5 30 5 40">
                     <ListBox Name="lb_myTours"
                              Height="{Binding ElementName=sp_myTours, Path=ActualHeight}"
                              Width="{Binding ElementName=sp_myTours, Path=ActualWidth}"
                              HorizontalContentAlignment="Stretch"
-                             ItemsSource="{Binding}">
+                             ItemsSource="{Binding MY_T_LIST}">
 
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -101,10 +101,10 @@
                                         <ColumnDefinition Width="100*"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
 
-                                    <TextBlock Margin="5 0 0 0" Text="{Binding CityName}"/>
-                                    <TextBlock Margin="5 0 0 0" Text="" Grid.Column="1"/>
-                                    <TextBlock Margin="5 0 0 0" Text="" Grid.Column="2"/>
-                                    <TextBlock Margin="5 0 20 0" Text="" Grid.Column="3"/>
+                                    <TextBlock Margin="5 0 0 0" Text="{Binding TourName}"/>
+                                    <TextBlock Margin="5 0 0 0" Text="{Binding StartDate.Date}" Grid.Column="1"/>
+                                    <TextBlock Margin="5 0 0 0" Text="{Binding EndDate.Date}" Grid.Column="2"/>
+                                    <TextBlock Margin="5 0 20 0" Text="{Binding Price}" Grid.Column="3"/>
                                 </Grid>
 
                             </DataTemplate>
@@ -115,13 +115,13 @@
 
 
 
-            <TabItem Header="Доступні тури" FontSize="15">
+            <TabItem x:Name="ti_actualT" Header="Доступні тури" FontSize="15" DataContext="{Binding}">
                 <StackPanel Orientation="Vertical">
                     <StackPanel x:Name="sp_ActualTours" Orientation="Horizontal" Margin="5 5 5 40">
                         <ListBox Name="lb_ActualTours"
                              Height="{Binding ElementName=sp_ActualTours, Path=Height}"
                              Width="{Binding ElementName=sp_ActualTours, Path=ActualWidth}"
-                             HorizontalContentAlignment="Stretch">
+                             HorizontalContentAlignment="Stretch" ItemsSource="{Binding NEXT_T_LIST}" SelectedItem="{Binding toursBR}">
                             <ListBox.ItemTemplate>
 
                                 <DataTemplate>
@@ -133,10 +133,10 @@
                                             <ColumnDefinition Width="100*"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
 
-                                        <TextBlock Margin="5 0 0 0" Text=""/>
-                                        <TextBlock Margin="5 0 0 0" Text="" Grid.Column="1"/>
-                                        <TextBlock Margin="5 0 0 0" Text="" Grid.Column="2"/>
-                                        <TextBlock Margin="5 0 20 0" Text="" Grid.Column="3"/>
+                                        <TextBlock Margin="5 0 0 0" Text="{Binding TourName}"/>
+                                        <TextBlock Margin="5 0 0 0" Text="{Binding StartDate.Date}" Grid.Column="1"/>
+                                        <TextBlock Margin="5 0 0 0" Text="{Binding EndDate.Date}" Grid.Column="2"/>
+                                        <TextBlock Margin="5 0 20 0" Text="{Binding Price}" Grid.Column="3"/>
                                     </Grid>
 
                                 </DataTemplate>
@@ -145,7 +145,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBox Width="220" Margin="50 10 0 0" FontSize="20" 
-                                 md:HintAssist.Hint="Бажана кількість міць" HorizontalContentAlignment="Center"></TextBox>
+                                 md:HintAssist.Hint="Бажана кількість міць" HorizontalContentAlignment="Center" Text="{Binding bronya}"></TextBox>
                         <Button Margin="50 10 25 10" Height="35" FontSize="20" FontStyle="Italic"
                                 Command="{Binding BtnAddMyTours}">Бронювання</Button>
                     </StackPanel>
@@ -170,7 +170,7 @@
                         <ListBox Name="lb_InfoPlace"
                                  Height="{Binding ElementName=sp_InfoPlace, Path=ActualHeight}"
                                  Width="{Binding ElementName=sp_InfoPlace, Path=ActualWidth}"
-                                 HorizontalContentAlignment="Stretch" ItemsSource="{Binding SPI_LIST, Mode=TwoWay}">
+                                 HorizontalContentAlignment="Stretch" ItemsSource="{Binding SPI_LIST}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <Grid>
@@ -221,7 +221,7 @@
                     </StackPanel>
 
                     <StackPanel x:Name="sp_Info_h" Orientation="Horizontal" Margin="5 5 5 40" Grid.Row="1">
-                        <ListBox Name="list_Info_h" ItemsSource="{Binding Hotel_list, Mode=TwoWay}" Height="{Binding ElementName=sp_Info_h, Path=ActualHeight}"
+                        <ListBox Name="list_Info_h" ItemsSource="{Binding Hotel_list}" Height="{Binding ElementName=sp_Info_h, Path=ActualHeight}"
                                  Width="{Binding ElementName=sp_Info_h, Path=ActualWidth}" HorizontalContentAlignment="Stretch">
                             <ListBox.ItemTemplate>
 

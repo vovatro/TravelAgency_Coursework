@@ -16,6 +16,7 @@ using UI.ServiceReference1;
 
 namespace UI.ClientWindow
 {
+    
     /// <summary>
     /// Логика взаимодействия для ClientWindow.xaml
     /// </summary>
@@ -23,6 +24,8 @@ namespace UI.ClientWindow
     {
         public PersonDTO personOWNER;
         public ProfilClient profilClient { get; set; }
+        public MyTours myTours { get; set; }
+        public NextTours actualTours { get; set; }
 
         public ClientWindow()
         {
@@ -35,7 +38,11 @@ namespace UI.ClientWindow
             InitializeComponent();
             personOWNER = person;
             profilClient = new ProfilClient(personOWNER);
+            myTours = new MyTours(personOWNER);
+            actualTours = new NextTours(personOWNER); 
             ti_ProfilClient.DataContext = profilClient;
+            ti_myTours.DataContext = myTours;
+            ti_actualT.DataContext = actualTours;
         }
 
         private void ClosingWindow(object sender, System.ComponentModel.CancelEventArgs e)

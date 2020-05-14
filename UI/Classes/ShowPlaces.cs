@@ -21,9 +21,7 @@ namespace UI.Classes
 
         public ShowPlaces()
         {
-            //cb_selCountry = new CB_selectCountry(this);
             proxy = new AgensyServiceClient();
-            //countries = new IEnumerable<CountryDTO>;
             list_showPlace = new List<ShowPlaceInfo>();
             var t = from i in proxy.GetAllImagesShowPlace()
                     join sp in proxy.GetAllShowPlace() on i.Id equals sp.Id
@@ -100,7 +98,7 @@ namespace UI.Classes
 
                 
 
-        public void selShowList()
+        public async void selShowList()
         {
             if (SelectCountry == "Всі країни")
             {
@@ -109,10 +107,11 @@ namespace UI.Classes
             else
             {
                 spi_list.Clear();
-                var t = from i in proxy.GetAllImagesShowPlace()
-                        join sp in proxy.GetAllShowPlace() on i.Id equals sp.Id
-                        join ct in proxy.GetAllCitys() on sp.CityId equals ct.Id
-                        join c in proxy.GetAllCountry() on ct.CountryId equals c.Id
+
+                var t = from i in await proxy.GetAllImagesShowPlaceAsync()
+                        join sp in await proxy.GetAllShowPlaceAsync() on i.Id equals sp.Id
+                        join ct in await proxy.GetAllCitysAsync() on sp.CityId equals ct.Id
+                        join c in await proxy.GetAllCountryAsync() on ct.CountryId equals c.Id
                         where c.CountryName == SelectCountry
                         select new { i.ImageURL, sp.ShowPlaceName, ct.CityName, c.CountryName };
                 foreach (var item in t)

@@ -5,39 +5,37 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using UI.ServiceReference1;
-using UI.RedagClientWindow;
-using UI.RedagClientWindow.Commands;
 using System.Windows;
+using UI.Registration;
+using UI.ServiceReference1;
+using UI.WorkerWindow.Commands;
 
 namespace UI.Classes
 {
-    public class ClientsAgency : INotifyPropertyChanged
+    public class Workers : INotifyPropertyChanged
     {
         AgensyServiceClient proxy = null;
 
-        public PersonDTO selectClient { get; set; }
-
-        public ButtonOpenRedagCl ButtonClick { get; set; }
-        public ButtonOkRedag ButtonOk { get; set; }
-        public ButtonCencelRedag ButtonCen { get; set; }
+        public BtnAddWorker ButtonAddWork { get; set; }
 
 
-        public ClientsAgency()
+        public Workers()
         {
             proxy = new AgensyServiceClient();
-            selectClient = new PersonDTO();
-            getClients();
-            ButtonClick = new ButtonOpenRedagCl(this);
-            ButtonOk = new ButtonOkRedag(this);
-            ButtonCen = new ButtonCencelRedag(this);
+
+            getWorkers();
+
+            ButtonAddWork = new BtnAddWorker(this);
         }
 
-        public async void getClients()
+        private RegistrationWindow addWorkWind = null;
+        public RegistrationWindow AddWorkWind { get => addWorkWind; set => addWorkWind = value; }
+
+        public async void getWorkers()
         {
 
             C_LIST = from i in await proxy.GetAllPersonAsync()
-                     where i.PersonStatus == "client"
+                     where i.PersonStatus != "client"
                      select new PersonDTO
                      {
                          LastName = i.LastName,
@@ -87,40 +85,16 @@ namespace UI.Classes
         }
 
 
-        public void OpenRadag()
+        public void OpenAddWindow()
         {
-            if (selectClient != null)
+            try
             {
-                redagWindow = new RedagClientWindow.RedagClientWindow() { DataContext = this };
-                RedagWindow.ShowDialog();
+                addWorkWind = new RegistrationWindow();
+                addWorkWind.ShowDialog();
             }
-            else
-                MessageBox.Show("Виберіть клієнта для редагування");
-        }
-
-        public void CencelRadag()
-        {
-            redagWindow.Close();
-        }
-
-        public async void OkRadag()
-        {
-            if (RedagWindow.tb_P.Text != "" && RedagWindow.tb_I.Text != "" && RedagWindow.tb_B.Text != "" &&
-                RedagWindow.tb_EMAIL.Text != "" && RedagWindow.tb_PHONE.Text != "" && RedagWindow.tp_Birt.SelectedDate != null)
+            catch (Exception ex)
             {
-                PersonDTO temp = selectClient;
-                temp.LastName = redagWindow.tb_P.Text;
-                temp.FirstName = redagWindow.tb_I.Text;
-                temp.SurName = redagWindow.tb_B.Text;
-                temp.Email = redagWindow.tb_EMAIL.Text;
-                temp.PhoneNumber = redagWindow.tb_PHONE.Text;
-                temp.DateOfBirth = redagWindow.tp_Birt.SelectedDate.Value.Date;
-                await proxy.UpdatePersonAsync(temp);
-                redagWindow.Close();
-            }
-            else
-            {
-                MessageBox.Show("Заповніть всі пусті поля!!!");
+                MessageBox.Show(ex.Message, "Error");
             }
         }
     }

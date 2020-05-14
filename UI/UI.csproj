@@ -81,15 +81,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\AddWorker.cs" />
     <Compile Include="Classes\CB_selectCountry.cs" />
     <Compile Include="Classes\ClientsAgency.cs" />
     <Compile Include="Classes\EndedTours.cs" />
     <Compile Include="Classes\LogIn.cs" />
+    <Compile Include="Classes\MyTours.cs" />
     <Compile Include="Classes\NextTours.cs" />
     <Compile Include="Classes\ProfilClient.cs" />
+    <Compile Include="Classes\ProfilWorker.cs" />
     <Compile Include="Classes\Registr.cs" />
     <Compile Include="Classes\ShowHotel.cs" />
     <Compile Include="Classes\ShowPlaces.cs" />
+    <Compile Include="Classes\Workers.cs" />
     <Compile Include="ClientWindow\Commands\BtnAddMyTours.cs" />
     <Compile Include="ClientWindow\Commands\BtnRedagInfoClient.cs" />
     <Compile Include="ClientWindow\Commands\CbSelectCity.cs" />
@@ -114,6 +118,8 @@
     <Compile Include="Registration\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WorkerWindow\Commands\BtnAddWorker.cs" />
+    <Compile Include="WorkerWindow\Commands\BtnRedagInfoWorker.cs" />
     <Compile Include="WorkerWindow\WorkerWindow.xaml.cs">
       <DependentUpon>WorkerWindow.xaml</DependentUpon>
     </Compile>
@@ -228,9 +234,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="WorkerWindow\Commands\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

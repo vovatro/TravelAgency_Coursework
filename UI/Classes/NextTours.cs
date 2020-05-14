@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using UI.ClientWindow.Commands;
 using UI.ServiceReference1;
 
 namespace UI.Classes
@@ -12,20 +14,52 @@ namespace UI.Classes
     public class NextTours : INotifyPropertyChanged
     {
         AgensyServiceClient proxy;
+        public PersonDTO person;
+        public BtnAddMyTours ButtonAddMyTours { get; set; }
+        public int bronya { get; set; }
+        public ToursDTO toursBR { get; set; }
 
         public NextTours()
         {
             proxy = new AgensyServiceClient();
-          //  getTour();
+            getTour();
         }
 
-        //public async void getTour()
-        //{
-        //    NEXT_T_LIST = await proxy.getActualTour();
-        //}
+        public NextTours(PersonDTO pers)
+        {
+            proxy = new AgensyServiceClient();
+            person = pers;
+            ButtonAddMyTours = new BtnAddMyTours(this);
+            toursBR = new ToursDTO();
+            getTour();
+        }
 
-        private List<ToursDTO> next_t_list;
-        public List<ToursDTO> NEXT_T_LIST
+        public async void getTour()
+        {
+            NEXT_T_LIST = await proxy.getActualTourAsync();
+        }
+
+        public void AddingMyTour()
+        {
+            if (bronya > 0)
+            {
+                ListOfTouristBuyDTO bye = new ListOfTouristBuyDTO { Person = person, ClientId = person.Id, Tours = toursBR, ToursId = toursBR.Id };
+                for (int i = 0; i < bronya; i++)
+                {
+                    proxy.AddItemListOfTouristBuy(bye);
+                }
+                bronya = 0;
+            }
+            else if (bronya < 1)
+            {
+                MessageBox.Show("Заповніть кількість броньованих місць!!!");            
+            }
+            else
+                MessageBox.Show("Виберіть тур для бронювання!!!");
+        }
+
+        private IEnumerable<ToursDTO> next_t_list;
+        public IEnumerable<ToursDTO> NEXT_T_LIST
         {
             get
             {

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using UI.Classes;
 
-namespace UI.ClientWindow.Commands
+namespace UI.WorkerWindow.Commands
 {
-    public class BtnAddMyTours: ICommand
+    public class BtnAddWorker : ICommand
     {
-        private NextTours nextTours;
+        private Workers workers;
 
-        public BtnAddMyTours(NextTours nextTours)
+        public BtnAddWorker(Workers workers)
         {
-            this.nextTours = nextTours;
+            this.workers = workers;
         }
 
         public event EventHandler CanExecuteChanged
@@ -36,7 +36,7 @@ namespace UI.ClientWindow.Commands
 
         public void Execute(object parameter)
         {
-            this.nextTours.AddingMyTour();
+            this.workers.OpenAddWindow();
         }
     }
 }

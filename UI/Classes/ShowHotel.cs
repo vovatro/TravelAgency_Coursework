@@ -19,9 +19,7 @@ namespace UI.Classes
 
         public ShowHotel()
         {
-            //cb_selCountry = new CB_selectCountry(this);
             proxy = new AgensyServiceClient();
-            //countries = new IEnumerable<CountryDTO>;
             list_showHotel = new List<HotelInfo>();
             var t = from i in proxy.GetAllImagesHotels()
                     join h in proxy.GetAllHotels() on i.Id equals h.Id
@@ -98,7 +96,7 @@ namespace UI.Classes
 
 
 
-        public void selShowList()
+        public async void selShowList()
         {
             if (SelectCountry == "Всі країни")
             {
@@ -107,10 +105,10 @@ namespace UI.Classes
             else
             {
                 hotel_list.Clear();
-                var t = from i in proxy.GetAllImagesHotels()
-                        join h in proxy.GetAllHotels() on i.Id equals h.Id
-                        join ct in proxy.GetAllCitys() on h.CityId equals ct.Id
-                        join c in proxy.GetAllCountry() on ct.CountryId equals c.Id
+                var t = from i in await proxy.GetAllImagesHotelsAsync()
+                        join h in await proxy.GetAllHotelsAsync() on i.Id equals h.Id
+                        join ct in await proxy.GetAllCitysAsync() on h.CityId equals ct.Id
+                        join c in await proxy.GetAllCountryAsync() on ct.CountryId equals c.Id
                         where c.CountryName == SelectCountry
                         select new { i.ImageURL, h.HotelsName, ct.CityName, c.CountryName };
                 foreach (var item in t)

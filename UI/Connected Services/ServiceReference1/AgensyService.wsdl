@@ -7,6 +7,18 @@
       <xsd:import schemaLocation="http://localhost:61430/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BLL.DTO" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IAgensyService_getActualTour_InputMessage">
+    <wsdl:part name="parameters" element="tns:getActualTour" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_getActualTour_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getActualTourResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_getMyTour_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMyTour" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_getMyTour_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMyTourResponse" />
+  </wsdl:message>
   <wsdl:message name="IAgensyService_AddItemCity_InputMessage">
     <wsdl:part name="parameters" element="tns:AddItemCity" />
   </wsdl:message>
@@ -200,6 +212,14 @@
     <wsdl:part name="parameters" element="tns:UpdateWaysOfTransportation" />
   </wsdl:message>
   <wsdl:portType name="IAgensyService">
+    <wsdl:operation name="getActualTour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/getActualTour" message="tns:IAgensyService_getActualTour_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/getActualTourResponse" message="tns:IAgensyService_getActualTour_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyTour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/getMyTour" message="tns:IAgensyService_getMyTour_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/getMyTourResponse" message="tns:IAgensyService_getMyTour_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="AddItemCity">
       <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/AddItemCity" message="tns:IAgensyService_AddItemCity_InputMessage" />
     </wsdl:operation>
@@ -361,6 +381,24 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAgensyService" type="tns:IAgensyService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getActualTour">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/getActualTour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyTour">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/getMyTour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="AddItemCity">
       <soap:operation soapAction="http://tempuri.org/IAgensyService/AddItemCity" style="document" />
       <wsdl:input>

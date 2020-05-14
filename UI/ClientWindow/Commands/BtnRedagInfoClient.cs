@@ -18,14 +18,6 @@ namespace UI.ClientWindow.Commands
             this.profilClient = profilClient;
         }
 
-        //public ClientDTO Clients { get; set; }
-
-        //public BtnRedagInfoClient(ClientDTO clients)
-        //{
-
-        //    Clients = clients;
-        //}
-
         public event EventHandler CanExecuteChanged
         {
             add

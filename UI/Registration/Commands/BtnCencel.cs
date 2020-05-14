@@ -11,10 +11,16 @@ namespace UI.Registration.Commands
     public class BtnCencel: ICommand
     {
         private Registr registr;
+        private AddWorker addWorker;
 
         public BtnCencel(Registr registr)
         {
             this.registr = registr;
+        }
+
+        public BtnCencel(AddWorker addWorker)
+        {
+            this.addWorker = addWorker;
         }
 
         public event EventHandler CanExecuteChanged
