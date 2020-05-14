@@ -523,5 +523,15 @@ namespace BLL
             }
             return resault;
         }
+
+        public IEnumerable<ToursDTO> getNotActualTour()
+        {
+            IEnumerable<Tours> notActualTours = new List<Tours>();
+            var temp = wrapperTours.GetItems();
+            notActualTours = (from item in temp
+                           where DateTime.Now > item.StartDate
+                           select item).ToList();
+            return mapper.Map<IEnumerable<Tours>, IEnumerable<ToursDTO>>(notActualTours);
+        }
     }
 }

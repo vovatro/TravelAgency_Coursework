@@ -19,18 +19,18 @@ namespace TestBLL
             //toursdto.MaxTourists = 15;
             //client.UpdateTours(toursdto);
 
-            var tempTours = client.getActualTour();
-            foreach (var item in tempTours)
-            {
-                Console.Write(item.Id);
-                Console.Write(" ");
-                Console.Write(item.TourName);
-                Console.Write(" ");
-                Console.Write(item.StartDate);
-                Console.Write(" ");
-                Console.Write(item.MaxTourists);
-                Console.WriteLine();
-            }
+            //var tempTours = client.getActualTour();
+            //foreach (var item in tempTours)
+            //{
+            //    Console.Write(item.Id);
+            //    Console.Write(" ");
+            //    Console.Write(item.TourName);
+            //    Console.Write(" ");
+            //    Console.Write(item.StartDate);
+            //    Console.Write(" ");
+            //    Console.Write(item.MaxTourists);
+            //    Console.WriteLine();
+            //}
             var tempPersons = client.GetAllPerson();
             foreach (var item in tempPersons)
             {

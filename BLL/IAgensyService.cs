@@ -16,6 +16,8 @@ namespace BLL
         [OperationContract]
         IEnumerable<ToursDTO> getActualTour();
         [OperationContract]
+        IEnumerable<ToursDTO> getNotActualTour();
+        [OperationContract]
         IEnumerable<ToursDTO> getMyTour(PersonDTO person);
         #region AddItem
         [OperationContract(IsOneWay = true,Name = "AddItemCity")]
