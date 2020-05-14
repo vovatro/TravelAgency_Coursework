@@ -43,7 +43,7 @@ namespace UI.Classes
         {
             if (bronya > 0)
             {
-                ListOfTouristBuyDTO bye = new ListOfTouristBuyDTO { Person = person, ClientId = person.Id, Tours = toursBR, ToursId = toursBR.Id };
+                ListOfTouristBuyDTO bye = new ListOfTouristBuyDTO { ClientId = person.Id, ToursId = toursBR.Id };
                 for (int i = 0; i < bronya; i++)
                 {
                     proxy.AddItemListOfTouristBuy(bye);

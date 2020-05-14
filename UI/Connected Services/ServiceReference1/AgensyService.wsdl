@@ -13,6 +13,12 @@
   <wsdl:message name="IAgensyService_getActualTour_OutputMessage">
     <wsdl:part name="parameters" element="tns:getActualTourResponse" />
   </wsdl:message>
+  <wsdl:message name="IAgensyService_getNotActualTour_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNotActualTour" />
+  </wsdl:message>
+  <wsdl:message name="IAgensyService_getNotActualTour_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNotActualTourResponse" />
+  </wsdl:message>
   <wsdl:message name="IAgensyService_getMyTour_InputMessage">
     <wsdl:part name="parameters" element="tns:getMyTour" />
   </wsdl:message>
@@ -216,6 +222,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/getActualTour" message="tns:IAgensyService_getActualTour_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/getActualTourResponse" message="tns:IAgensyService_getActualTour_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="getNotActualTour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/getNotActualTour" message="tns:IAgensyService_getNotActualTour_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/getNotActualTourResponse" message="tns:IAgensyService_getNotActualTour_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="getMyTour">
       <wsdl:input wsaw:Action="http://tempuri.org/IAgensyService/getMyTour" message="tns:IAgensyService_getMyTour_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAgensyService/getMyTourResponse" message="tns:IAgensyService_getMyTour_OutputMessage" />
@@ -383,6 +393,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="getActualTour">
       <soap:operation soapAction="http://tempuri.org/IAgensyService/getActualTour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNotActualTour">
+      <soap:operation soapAction="http://tempuri.org/IAgensyService/getNotActualTour" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

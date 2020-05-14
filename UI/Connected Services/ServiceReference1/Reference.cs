@@ -1917,6 +1917,12 @@ namespace UI.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/getActualTour", ReplyAction="http://tempuri.org/IAgensyService/getActualTourResponse")]
         System.Threading.Tasks.Task<UI.ServiceReference1.ToursDTO[]> getActualTourAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/getNotActualTour", ReplyAction="http://tempuri.org/IAgensyService/getNotActualTourResponse")]
+        UI.ServiceReference1.ToursDTO[] getNotActualTour();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/getNotActualTour", ReplyAction="http://tempuri.org/IAgensyService/getNotActualTourResponse")]
+        System.Threading.Tasks.Task<UI.ServiceReference1.ToursDTO[]> getNotActualTourAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgensyService/getMyTour", ReplyAction="http://tempuri.org/IAgensyService/getMyTourResponse")]
         UI.ServiceReference1.ToursDTO[] getMyTour(UI.ServiceReference1.PersonDTO person);
         
@@ -2239,6 +2245,14 @@ namespace UI.ServiceReference1 {
         
         public System.Threading.Tasks.Task<UI.ServiceReference1.ToursDTO[]> getActualTourAsync() {
             return base.Channel.getActualTourAsync();
+        }
+        
+        public UI.ServiceReference1.ToursDTO[] getNotActualTour() {
+            return base.Channel.getNotActualTour();
+        }
+        
+        public System.Threading.Tasks.Task<UI.ServiceReference1.ToursDTO[]> getNotActualTourAsync() {
+            return base.Channel.getNotActualTourAsync();
         }
         
         public UI.ServiceReference1.ToursDTO[] getMyTour(UI.ServiceReference1.PersonDTO person) {

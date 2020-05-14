@@ -21,7 +21,7 @@ namespace UI.Classes
 
         public async void getTour()
         {
-            END_T_LIST = await proxy.getActualTourAsync();
+            END_T_LIST = await proxy.getNotActualTourAsync();
         }
 
         private IEnumerable<ToursDTO> end_t_list;
